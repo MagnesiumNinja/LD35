@@ -33,6 +33,9 @@
         <sprite>sprites\sprDoorMaskOpen</sprite>
       </sprites>
     </sprites>
+    <sprites name="Abilities">
+      <sprite>sprites\sprPhantomStab</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
@@ -100,6 +103,9 @@
     </objects>
     <objects name="Particles">
       <object>objects\objChangeParticle</object>
+    </objects>
+    <objects name="Abilities">
+      <object>objects\objPhantomStab</object>
     </objects>
   </objects>
   <rooms name="rooms">
