@@ -48,6 +48,7 @@ ACCEL = 0.8;
 FRIC = 0.6;
 
 CHANGE_SPEED = 20;
+NUM_CHANGE_PARTICLES = 4;
 
 
 // VARIABLES //
@@ -120,15 +121,26 @@ changeTarget = noone;
         
     }
 }
+
+// CHANGING //
 else
 {
+    // Moving towards the new body
     if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 2)
     {
         var angle = point_direction(x, y, changeTarget.x, changeTarget.y);
         
         x = approach(x, changeTarget.x, abs(lengthdir_x(CHANGE_SPEED, angle)));
         y = approach(y, changeTarget.y, abs(lengthdir_y(CHANGE_SPEED, angle)));
+        
+        // generate particles
+        for (var i = 0; i &lt; NUM_CHANGE_PARTICLES; i++)
+        {
+            instance_create(x, y, objChangeParticle);
+        }
     }
+    
+    // Have gotten to the new body
     else
     {
         changing = false;
