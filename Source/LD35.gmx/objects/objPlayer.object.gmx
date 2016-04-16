@@ -53,8 +53,16 @@ NUM_CHANGE_PARTICLES = 4;
 PRIMARY_COOLDOWN = 0;
 SECONDARY_COOLDOWN = 0;
 
+DASH_TIMER = 9;
+DASH_SPEED = 14;
+
 
 // VARIABLES //
+
+aimAngle = 0;
+
+dashing = false;
+dashTimer = DASH_TIMER;
 
 type = EnemyType.PHANTOM;
 changing = false;
@@ -91,57 +99,82 @@ event_user(15);
             <kind>1</kind>
             <string>if (!changing)
 {
-    // MOVEMENT //
-    
-    var horComp = 0, vertComp = 0;
-    
-    // Calculate movement angle
-    if (isDownMove(global.MOVE_LEFT))
-        horComp = -1;
-    else if (isDownMove(global.MOVE_RIGHT))
-        horComp = 1;
-        
-    if (isDownMove(global.MOVE_UP))
-        vertComp = -1;
-    else if (isDownMove(global.MOVE_DOWN))
-        vertComp = 1;
-        
-    var angle = point_direction(0, 0, horComp, vertComp);
-    
-    // Apply movement acceleration and friction
-    if (horComp != 0)
-        hspd = approach(hspd, MAX_SPEED * lengthdir_x(1, angle), ACCEL);
-    else
-        hspd = approach(hspd, 0, FRIC);
-        
-    if (vertComp != 0)
-        vspd = approach(vspd, MAX_SPEED * lengthdir_y(1, angle), ACCEL);
-    else
-        vspd = approach(vspd, 0, FRIC);
-        
-        
-    // ABILITIES //
-    if (primaryCooldown &gt; 0)
-        primaryCooldown--;
-    
-    if (secondaryCooldown &gt; 0)
-        secondaryCooldown--;
-    
-    if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
+    if (!dashing)
     {
-        if (primaryCooldown == 0)
+        // MOVEMENT //
+        
+        var horComp = 0, vertComp = 0;
+        
+        // Calculate movement angle
+        if (isDownMove(global.MOVE_LEFT))
+            horComp = -1;
+        else if (isDownMove(global.MOVE_RIGHT))
+            horComp = 1;
+            
+        if (isDownMove(global.MOVE_UP))
+            vertComp = -1;
+        else if (isDownMove(global.MOVE_DOWN))
+            vertComp = 1;
+            
+        var angle = point_direction(0, 0, horComp, vertComp);
+        
+        // Apply movement acceleration and friction
+        if (horComp != 0)
+            hspd = approach(hspd, MAX_SPEED * lengthdir_x(1, angle), ACCEL);
+        else
+            hspd = approach(hspd, 0, FRIC);
+            
+        if (vertComp != 0)
+            vspd = approach(vspd, MAX_SPEED * lengthdir_y(1, angle), ACCEL);
+        else
+            vspd = approach(vspd, 0, FRIC);
+    }
+    else
+    {
+        // DASH TIMEOUT //
+        if (dashTimer &gt; 0)
+            dashTimer--;
+        else
         {
-            useAbility(primaryAbility);
-            primaryCooldown = PRIMARY_COOLDOWN;
+            dashing = false;
+            dashTimer = DASH_TIMER;
+            hspd /= 4;
+            vspd /= 4;
         }
     }
+       
+        
+    // AIMING //
     
-    if (mouse_check_button_pressed(global.SECONDARY_ABILITY) || gamepad_button_check_pressed(0, global.SECONDARY_ABILITY_GP))
+    aimAngle = point_direction(x, y, mouse_x, mouse_y);
+             
+        
+    if (!dashing)
     {
-        if (secondaryCooldown == 0)
+        // ABILITIES //
+        
+        if (primaryCooldown &gt; 0)
+            primaryCooldown--;
+        
+        if (secondaryCooldown &gt; 0)
+            secondaryCooldown--;
+        
+        if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
         {
-            useAbility(secondaryAbility);
-            secondaryCooldown = SECONDARY_COOLDOWN;
+            if (primaryCooldown == 0)
+            {
+                useAbility(primaryAbility);
+                primaryCooldown = PRIMARY_COOLDOWN;
+            }
+        }
+        
+        if (mouse_check_button_pressed(global.SECONDARY_ABILITY) || gamepad_button_check_pressed(0, global.SECONDARY_ABILITY_GP))
+        {
+            if (secondaryCooldown == 0)
+            {
+                useAbility(secondaryAbility);
+                secondaryCooldown = SECONDARY_COOLDOWN;
+            }
         }
     }
 }
@@ -150,7 +183,7 @@ event_user(15);
 else
 {
     // Moving towards the new body
-    if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 2)
+    if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 5)
     {
         var angle = point_direction(x, y, changeTarget.x, changeTarget.y);
         
@@ -167,6 +200,9 @@ else
     // Have gotten to the new body
     else
     {
+        x = changeTarget.x;
+        y = changeTarget.y;
+    
         changing = false;
         state = changeTarget.type;
         
