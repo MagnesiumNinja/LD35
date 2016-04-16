@@ -89,7 +89,7 @@ if (!dead)
     {
         case GunnerAIState.IDLE:
         {
-            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objBlock, false, true))
+            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
                 state = PhantomAIState.MOVE;
@@ -126,7 +126,7 @@ if (!dead)
                         destX = x + random_range(-MOVE_RANGE, MOVE_RANGE);
                         destY = y + random_range(-MOVE_RANGE, MOVE_RANGE);
                     }
-                    until(!collision_line(destX, destY, objPlayer.x, objPlayer.y, objBlock, false, true));
+                    until(!collision_line(destX, destY, objPlayer.x, objPlayer.y, objCollide, false, true));
                     
                     findPath = true;
                 }
@@ -139,7 +139,7 @@ if (!dead)
         {   
             path_end();
             
-            if (collision_line(x, y, target.x, target.y, objBlock, false, true))
+            if (collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 state = PhantomAIState.IDLE;
             }

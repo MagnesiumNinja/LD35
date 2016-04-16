@@ -61,6 +61,7 @@ recalcTime = RECALCULATE_TIME;
 type = EnemyType.PHANTOM;
 target = objPlayer;
 
+dodgeAngle = 0;
 state = PhantomAIState.IDLE;
 cooldownTime = COOLDOWN_TIME;
 chargeTime = CHARGE_TIME;
@@ -94,7 +95,7 @@ if (!dead)
     {
         case PhantomAIState.IDLE:
         {
-            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objBlock, false, true))
+            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
                 state = PhantomAIState.MOVE;
@@ -180,10 +181,10 @@ if (!dead)
             
             if (cooldownTime = COOLDOWN_TIME)
             {
-                var newAngle = point_direction(x, y, target.x, target.y) + choose(-1, 1) * 45;
+                dodgeAngle = point_direction(x, y, target.x, target.y) + choose(-1, 1) * 45;
                 
-                hspd = lengthdir_x(DODGE_SPEED, newAngle);
-                vspd = lengthdir_y(DODGE_SPEED, newAngle);
+                hspd = lengthdir_x(DODGE_SPEED, dodgeAngle);
+                vspd = lengthdir_y(DODGE_SPEED, dodgeAngle);
                 
                 cooldownTime--;
             }
@@ -194,6 +195,12 @@ if (!dead)
                 // Slow down
                 hspd = approach(hspd, 0, FRIC);
                 vspd = approach(vspd, 0, FRIC);
+                
+                if (sqrt(sqr(hspd) + sqr(vspd)) &gt; 0)
+                {
+                    // Create dodge particles
+                    
+                }
             }
             else
             {
