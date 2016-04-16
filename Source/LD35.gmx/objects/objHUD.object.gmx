@@ -56,10 +56,12 @@ ICON_BUFFER = 32;
           <argument>
             <kind>1</kind>
             <string>// Draw the health
-
+for (i=0; i&lt;objPlayer.hp; i++)
+{
+    draw_sprite(sprHealthHeart, 0, view_xview[0]+sprite_get_width(sprHealthHeart)*0.5+ICON_BUFFER + i*sprite_get_width(sprHealthHeart), view_yview[0]+sprite_get_height(sprHealthHeart)*0.5+ICON_BUFFER);
+}
 
 // Draw the abilities
-
 draw_sprite(sprAbilityBase, 0, view_xview[0] + view_wview[0] - sprite_get_width(sprAbilityBase) * 1.5 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 0.5 + ICON_BUFFER);
 
