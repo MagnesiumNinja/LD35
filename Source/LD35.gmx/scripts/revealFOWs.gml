@@ -4,7 +4,7 @@ Y = argument[1];
 
 with (objFOW)
 {
-    if (!dead && distance_to_point(X, Y) < 64)
+    if (!dead && distance_to_point(X, Y) < 16)
     {
         dead = true;
     }

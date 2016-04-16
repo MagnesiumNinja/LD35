@@ -13,6 +13,7 @@
         <sprite>sprites\sprPlayerPrimary_Normal</sprite>
         <sprite>sprites\sprPlayerSecondary_Normal</sprite>
       </sprites>
+      <sprite>sprites\sprPlayerMask</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
@@ -128,8 +129,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmTest</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
