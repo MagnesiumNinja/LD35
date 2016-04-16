@@ -104,6 +104,7 @@
     </objects>
     <objects name="Particles">
       <object>objects\objChangeParticle</object>
+      <object>objects\objPhantomDashParticle</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>

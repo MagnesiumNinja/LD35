@@ -49,6 +49,7 @@ FRIC = 0.6;
 
 CHANGE_SPEED = 20;
 NUM_CHANGE_PARTICLES = 4;
+NUM_DASH_PARTICLES = 15;
 
 PRIMARY_COOLDOWN = 0;
 SECONDARY_COOLDOWN = 0;
@@ -131,6 +132,13 @@ event_user(15);
     }
     else
     {
+        // generate dash particles
+        for (var i = 0; i &lt; NUM_DASH_PARTICLES; i++)
+        {
+            var dashPart = instance_create(x, y, objPhantomDashParticle);
+            dashPart.angle = aimAngle - 180;
+        }
+        
         // DASH TIMEOUT //
         if (dashTimer &gt; 0)
             dashTimer--;
@@ -190,7 +198,7 @@ else
         x = approach(x, changeTarget.x, abs(lengthdir_x(CHANGE_SPEED, angle)));
         y = approach(y, changeTarget.y, abs(lengthdir_y(CHANGE_SPEED, angle)));
         
-        // generate particles
+        // generate change particles
         for (var i = 0; i &lt; NUM_CHANGE_PARTICLES; i++)
         {
             instance_create(x, y, objChangeParticle);

@@ -32,28 +32,42 @@ MIN_ALPHA = 0.2;
 MAX_ALPHA = 0.9;
 
 //speed
-MIN_FADE_SPEED = 0.02;
-MAX_FADE_SPEED = 0.05;
+MIN_FADE_SPEED = 0.01;
+MAX_FADE_SPEED = 0.02;
 
 //radius
 MIN_RADIUS = 0.30;
 //remember the max radius equal to a block would be 8
-MAX_RADIUS = 8;
+MAX_RADIUS = 7;
 
 //spread from initial location
-MIN_X_SPREAD = -12;
-MAX_X_SPREAD = 12;
+MIN_X_SPREAD = -3;
+MAX_X_SPREAD = 3;
 
-MIN_Y_SPREAD = -9;
-MAX_Y_SPREAD = 9;
+MIN_Y_SPREAD = -3;
+MAX_Y_SPREAD = 3;
+
+//angles
+MIN_ANGLE_CHANGE = -10;
+MAX_ANGLE_CHANGE = 10;
+ANGLE_ACCEL = 1.5;
+
+//speed of drifting
+MIN_SPEED = 0;
+MAX_SPEED = 2;
 
 // VARIABLES //
+//set the angle to a dummy for now
+angle = -9999;
+
 alpha = random_range(MIN_ALPHA, MAX_ALPHA);
-color = make_color_rgb(74, 108, 108);
+color = make_color_rgb(88,88,88);
 radius = random_range(MIN_RADIUS, MAX_RADIUS);
 fade = random_range(MIN_FADE_SPEED, MAX_FADE_SPEED);
 x_spread = random_range(MIN_X_SPREAD, MAX_X_SPREAD);
-y_spread = random_range (MIN_Y_SPREAD, MAX_Y_SPREAD);
+y_spread = random_range(MIN_Y_SPREAD, MAX_Y_SPREAD);
+angle_spread = random_range(MIN_ANGLE_CHANGE, MAX_ANGLE_CHANGE);
+drift_speed = random_range(MIN_SPEED, MAX_SPEED);
 </string>
           </argument>
         </arguments>
@@ -86,6 +100,18 @@ if (alpha &lt;= 0)
 {
     instance_destroy();    
 }
+
+//update position
+if (angle_spread &gt; 0)
+{
+    angle_spread += ANGLE_ACCEL;
+}
+else
+{
+    angle_spread -= ANGLE_ACCEL;
+}
+x += lengthdir_x(drift_speed, angle + angle_spread);
+y += lengthdir_y(drift_speed, angle + angle_spread);
 
 </string>
           </argument>
