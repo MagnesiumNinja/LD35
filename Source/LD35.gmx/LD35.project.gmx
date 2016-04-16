@@ -26,8 +26,8 @@
         <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
       <sprites name="Health">
-        <sprite>sprites\sprHealthGradient</sprite>
         <sprite>sprites\sprHealthHeart</sprite>
+        <sprite>sprites\sprHealthBreak</sprite>
       </sprites>
     </sprites>
     <sprites name="Interactables">
