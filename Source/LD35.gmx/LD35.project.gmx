@@ -35,6 +35,7 @@
     </sprites>
     <sprites name="Abilities">
       <sprite>sprites\sprPhantomStab</sprite>
+      <sprite>sprites\sprGunnerGunshot</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -65,6 +66,7 @@
       <script>scripts\getAbilityCooldown.gml</script>
       <script>scripts\getPrimaryAbility.gml</script>
       <script>scripts\getSecondaryAbility.gml</script>
+      <script>scripts\setTypeAttributes.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -107,6 +109,7 @@
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>
+      <object>objects\objGunnerGunshot</object>
     </objects>
   </objects>
   <rooms name="rooms">

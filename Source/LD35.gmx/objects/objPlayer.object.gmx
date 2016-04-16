@@ -30,14 +30,16 @@
 enum EnemyType
 {
     NORMAL,
-    PHANTOM
+    PHANTOM,
+    GUNNER
 }
 
 enum AbilityType
 {
     NOTHING,
     PHANTOM_STAB,
-    PHANTOM_DASH
+    PHANTOM_DASH,
+    GUNNER_GUNSHOT
 }
 
 
@@ -64,7 +66,7 @@ aimAngle = 0;
 dashing = false;
 dashTimer = DASH_TIMER;
 
-type = EnemyType.PHANTOM;
+type = EnemyType.GUNNER;
 changing = false;
 changeTarget = noone;
 
@@ -204,7 +206,8 @@ else
         y = changeTarget.y;
     
         changing = false;
-        state = changeTarget.type;
+        type = changeTarget.type;
+        event_user(15);
         
         // Destroy the enemy
         with (changeTarget) instance_destroy();

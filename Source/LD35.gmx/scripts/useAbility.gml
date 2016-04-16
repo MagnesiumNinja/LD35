@@ -27,4 +27,12 @@ switch(ability)
     
         break;
     }
+    
+    case AbilityType.GUNNER_GUNSHOT:
+    {
+        var gunshot = instance_create(x, y, objGunnerGunshot);
+        gunshot.angle = aimAngle;
+    
+        break;
+    }
 }
