@@ -5,10 +5,65 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Player">
+      <sprites name="Normal">
+        <sprite>sprites\sprPlayerIdle_Normal</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Blocks">
+      <sprite>sprites\sprBlock</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <shaders name="shaders"/>
+  <scripts name="scripts">
+    <scripts name="Controls">
+      <script>scripts\isPressed.gml</script>
+      <script>scripts\isDown.gml</script>
+      <script>scripts\isReleased.gml</script>
+      <script>scripts\isDownMove.gml</script>
+    </scripts>
+    <scripts name="Movement">
+      <script>scripts\approach.gml</script>
+      <script>scripts\smoothChange.gml</script>
+      <script>scripts\smoothRotate.gml</script>
+    </scripts>
+    <scripts name="Debug">
+      <script>scripts\pDebug.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fntDebug</font>
+  </fonts>
+  <objects name="objects">
+    <objects name="Controllers">
+      <object>objects\objGameSettings</object>
+      <object>objects\objController</object>
+      <object>objects\objRoomController</object>
+      <object>objects\objDebugController</object>
+    </objects>
+    <objects name="HUD">
+      <object>objects\objCamera</object>
+    </objects>
+    <objects name="Blocks">
+      <object>objects\objCollide</object>
+      <object>objects\objBlock</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\objMoveEntity</object>
+      <object>objects\objPathfindingEntity</object>
+      <objects name="Player">
+        <object>objects\objPlayer</object>
+      </objects>
+      <objects name="Enemies">
+        <object>objects\objEnemyTest</object>
+      </objects>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rmTest</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
