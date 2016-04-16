@@ -30,14 +30,16 @@
 enum EnemyType
 {
     NORMAL,
-    PHANTOM
+    PHANTOM,
+    GUNNER
 }
 
 enum AbilityType
 {
     NOTHING,
     PHANTOM_STAB,
-    PHANTOM_DASH
+    PHANTOM_DASH,
+    GUNNER_GUNSHOT
 }
 
 
@@ -49,6 +51,7 @@ FRIC = 0.6;
 
 CHANGE_SPEED = 20;
 NUM_CHANGE_PARTICLES = 4;
+NUM_DASH_PARTICLES = 15;
 
 PRIMARY_COOLDOWN = 0;
 SECONDARY_COOLDOWN = 0;
@@ -64,7 +67,7 @@ aimAngle = 0;
 dashing = false;
 dashTimer = DASH_TIMER;
 
-type = EnemyType.PHANTOM;
+type = EnemyType.GUNNER;
 changing = false;
 changeTarget = noone;
 
@@ -131,6 +134,13 @@ event_user(15);
     }
     else
     {
+        // generate dash particles
+        for (var i = 0; i &lt; NUM_DASH_PARTICLES; i++)
+        {
+            var dashPart = instance_create(x, y, objPhantomDashParticle);
+            dashPart.angle = aimAngle - 180;
+        }
+        
         // DASH TIMEOUT //
         if (dashTimer &gt; 0)
             dashTimer--;
@@ -190,7 +200,7 @@ else
         x = approach(x, changeTarget.x, abs(lengthdir_x(CHANGE_SPEED, angle)));
         y = approach(y, changeTarget.y, abs(lengthdir_y(CHANGE_SPEED, angle)));
         
-        // generate particles
+        // generate change particles
         for (var i = 0; i &lt; NUM_CHANGE_PARTICLES; i++)
         {
             instance_create(x, y, objChangeParticle);
@@ -204,7 +214,8 @@ else
         y = changeTarget.y;
     
         changing = false;
-        state = changeTarget.type;
+        type = changeTarget.type;
+        event_user(15);
         
         // Destroy the enemy
         with (changeTarget) instance_destroy();

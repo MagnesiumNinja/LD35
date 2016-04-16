@@ -4,4 +4,5 @@ switch(type)
 {
     case EnemyType.NORMAL: return AbilityType.NOTHING;
     case EnemyType.PHANTOM: return AbilityType.PHANTOM_STAB;
+    case EnemyType.GUNNER: return AbilityType.GUNNER_GUNSHOT;
 }
