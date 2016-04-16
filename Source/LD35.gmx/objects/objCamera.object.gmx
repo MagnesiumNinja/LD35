@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BASE_WIDTH = 1280;
-BASE_HEIGHT = 720;
+            <string>BASE_WIDTH = 640;
+BASE_HEIGHT = 360;
 CENTRE_X = room_width / 2;
 CENTRE_Y = room_height / 2;
 MOVE_FACTOR_X = 1.2;
