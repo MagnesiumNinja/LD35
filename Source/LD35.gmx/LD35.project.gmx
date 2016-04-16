@@ -103,6 +103,7 @@
       </objects>
       <objects name="Enemies">
         <object>objects\objEnemyPhantom</object>
+        <object>objects\objEnemyGunner</object>
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>

@@ -37,6 +37,9 @@ MAX_HP = 1;
 hp = MAX_HP;
 dead = false;
 target = noone;
+
+hitX = 0;
+hitY = 0;
 </string>
           </argument>
         </arguments>

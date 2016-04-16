@@ -65,6 +65,7 @@
     <instance objName="objBlock" x="176" y="64" name="inst_456B348A" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="528" y="80" name="inst_25506C3F" locked="0" code="" scaleX="1" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="192" y="80" name="inst_383B6B7E" locked="0" code="" scaleX="21" scaleY="17" colour="4294967295" rotation="0"/>
+    <instance objName="objEnemyGunner" x="240" y="240" name="inst_DF1876CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
