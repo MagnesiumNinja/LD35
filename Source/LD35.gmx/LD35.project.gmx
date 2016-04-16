@@ -83,6 +83,9 @@
         <object>objects\objDoor</object>
       </objects>
     </objects>
+    <objects name="Particles">
+      <object>objects\objChangeParticle</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTest</room>
