@@ -13,6 +13,7 @@
         <sprite>sprites\sprPlayerPrimary_Normal</sprite>
         <sprite>sprites\sprPlayerSecondary_Normal</sprite>
       </sprites>
+      <sprite>sprites\sprPlayerMask</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
@@ -64,6 +65,8 @@
       <script>scripts\approach.gml</script>
       <script>scripts\smoothChange.gml</script>
       <script>scripts\smoothRotate.gml</script>
+      <script>scripts\normalizeRotation.gml</script>
+      <script>scripts\isAngleBetween.gml</script>
     </scripts>
     <scripts name="Debug">
       <script>scripts\pDebug.gml</script>
@@ -77,6 +80,9 @@
       <script>scripts\getPrimaryAbility.gml</script>
       <script>scripts\getSecondaryAbility.gml</script>
       <script>scripts\setTypeAttributes.gml</script>
+    </scripts>
+    <scripts name="HUD">
+      <script>scripts\revealFOWs.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
