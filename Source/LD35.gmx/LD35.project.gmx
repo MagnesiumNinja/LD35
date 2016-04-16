@@ -42,6 +42,7 @@
     </sprites>
     <sprites name="Abilities">
       <sprite>sprites\sprPhantomStab</sprite>
+      <sprite>sprites\sprPhantomStab_Enemy</sprite>
       <sprite>sprites\sprGunnerGunshot</sprite>
     </sprites>
   </sprites>
