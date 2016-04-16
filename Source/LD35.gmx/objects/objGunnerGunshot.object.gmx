@@ -31,7 +31,7 @@
 
 MOVE_SPEED = 12;
 DAMAGE = 3;
-
+NUM_DESTRUCT_PARTICLES = 20;
 
 // VARIABLES //
 
@@ -58,6 +58,12 @@ DAMAGE = 3;
           <argument>
             <kind>1</kind>
             <string>/// Destruction particles
+for (var i = 0; i &lt; NUM_DESTRUCT_PARTICLES; i++)
+{
+    var destructPart = instance_create(x, y, objGunshotHitParticle);
+    destructPart.angle = angle - 180;
+}
+
 </string>
           </argument>
         </arguments>

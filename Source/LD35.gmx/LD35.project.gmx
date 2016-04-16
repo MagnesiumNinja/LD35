@@ -111,6 +111,7 @@
     <objects name="Particles">
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
+      <object>objects\objGunshotHitParticle</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>

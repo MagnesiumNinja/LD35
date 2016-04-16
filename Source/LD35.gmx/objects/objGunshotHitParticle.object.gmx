@@ -29,16 +29,16 @@
 
 //transparency 
 MIN_ALPHA = 0.2;
-MAX_ALPHA = 0.9;
+MAX_ALPHA = 0.1;
 
 //speed
-MIN_FADE_SPEED = 0.01;
+MIN_FADE_SPEED = 0.009;
 MAX_FADE_SPEED = 0.02;
 
 //radius
-MIN_RADIUS = 0.30;
+MIN_RADIUS = 2;
 //remember the max radius equal to a block would be 8
-MAX_RADIUS = 7;
+MAX_RADIUS = 20;
 
 //spread from initial location
 MIN_X_SPREAD = -3;
@@ -53,15 +53,15 @@ MAX_ANGLE_CHANGE = 10;
 ANGLE_ACCEL = 1.5;
 
 //speed of drifting
-MIN_SPEED = 0;
-MAX_SPEED = 2;
+MIN_SPEED = 0.3;
+MAX_SPEED = 0.8;
 
 // VARIABLES //
 //set the angle to a dummy for now
 angle = -9999;
 
 alpha = random_range(MIN_ALPHA, MAX_ALPHA);
-color = make_color_rgb(73,73,73);
+color = make_color_rgb(129,129,129);
 radius = random_range(MIN_RADIUS, MAX_RADIUS);
 fade = random_range(MIN_FADE_SPEED, MAX_FADE_SPEED);
 x_spread = random_range(MIN_X_SPREAD, MAX_X_SPREAD);
@@ -110,6 +110,7 @@ else
 {
     angle_spread -= ANGLE_ACCEL;
 }
+
 x += lengthdir_x(drift_speed, angle + angle_spread);
 y += lengthdir_y(drift_speed, angle + angle_spread);
 
