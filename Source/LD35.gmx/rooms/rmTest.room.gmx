@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1596</w>
-    <h>870</h>
+    <w>1588</w>
+    <h>867</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -58,7 +58,7 @@
     <instance objName="objRoomController" x="48" y="0" name="inst_9FD374DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="176" y="112" name="inst_758A1204" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="192" y="352" name="inst_2AA30413" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objEnemyTest" x="496" y="136" name="inst_5302EBF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objEnemyPhantom" x="496" y="136" name="inst_5302EBF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="432" y="360" name="inst_B1D71CC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="184" y="96" name="inst_36F9E584" locked="0" code="hor = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="objBlock" x="448" y="352" name="inst_7F7F7910" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>

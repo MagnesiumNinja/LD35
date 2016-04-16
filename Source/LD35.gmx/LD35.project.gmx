@@ -18,6 +18,9 @@
       <sprite>sprites\sprAbilityBase</sprite>
       <sprites name="FOW">
         <sprite>sprites\sprFOW</sprite>
+        <sprite>sprites\sprFOWCentre</sprite>
+        <sprite>sprites\sprFOWEdge</sprite>
+        <sprite>sprites\sprFOWCorner</sprite>
       </sprites>
     </sprites>
     <sprites name="Interactables">
@@ -77,7 +80,7 @@
         <object>objects\objPlayer</object>
       </objects>
       <objects name="Enemies">
-        <object>objects\objEnemyTest</object>
+        <object>objects\objEnemyPhantom</object>
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>

@@ -3,7 +3,7 @@
   <spriteName>sprDoor</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-6000</depth>
   <persistent>0</persistent>
   <parentName>objInteractEntity</parentName>
   <maskName>sprDoorMaskClosed</maskName>

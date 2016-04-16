@@ -29,7 +29,15 @@
 
 enum EnemyType
 {
-    NORMAL
+    NORMAL,
+    PHANTOM
+}
+
+enum AbilityType
+{
+    NOTHING,
+    PHANTOM_STAB,
+    PHANTOM_DASH
 }
 
 
@@ -99,6 +107,18 @@ changeTarget = noone;
         vspd = approach(vspd, MAX_SPEED * lengthdir_y(1, angle), ACCEL);
     else
         vspd = approach(vspd, 0, FRIC);
+        
+        
+    // ABILITIES //
+    if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
+    {
+        
+    }
+    
+    if (mouse_check_button_pressed(global.SECONDARY_ABILITY) || gamepad_button_check_pressed(0, global.SECONDARY_ABILITY_GP))
+    {
+        
+    }
 }
 else
 {
