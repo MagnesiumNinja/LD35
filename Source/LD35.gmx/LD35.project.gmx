@@ -25,6 +25,10 @@
         <sprite>sprites\sprAbilityBase</sprite>
         <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
+      <sprites name="Health">
+        <sprite>sprites\sprHealthGradient</sprite>
+        <sprite>sprites\sprHealthHeart</sprite>
+      </sprites>
     </sprites>
     <sprites name="Interactables">
       <sprites name="Door">
