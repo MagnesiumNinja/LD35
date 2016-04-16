@@ -14,6 +14,16 @@
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
     </sprites>
+    <sprites name="HUD">
+      <sprite>sprites\sprAbilityBase</sprite>
+    </sprites>
+    <sprites name="Interactables">
+      <sprites name="Door">
+        <sprite>sprites\sprDoor</sprite>
+        <sprite>sprites\sprDoorMaskClosed</sprite>
+        <sprite>sprites\sprDoorMaskOpen</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +42,9 @@
     <scripts name="Debug">
       <script>scripts\pDebug.gml</script>
     </scripts>
+    <scripts name="Drawing">
+      <script>scripts\drawSpriteOutline.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntDebug</font>
@@ -45,6 +58,7 @@
     </objects>
     <objects name="HUD">
       <object>objects\objCamera</object>
+      <object>objects\objHUD</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -52,12 +66,17 @@
     </objects>
     <objects name="Entities">
       <object>objects\objMoveEntity</object>
+      <object>objects\objCombatEntity</object>
       <object>objects\objPathfindingEntity</object>
+      <object>objects\objInteractEntity</object>
       <objects name="Player">
         <object>objects\objPlayer</object>
       </objects>
       <objects name="Enemies">
         <object>objects\objEnemyTest</object>
+      </objects>
+      <objects name="Interactables">
+        <object>objects\objDoor</object>
       </objects>
     </objects>
   </objects>

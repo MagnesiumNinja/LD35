@@ -26,41 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>// Create the camera
-
 camera = instance_create(0, 0, objCamera);
 camera.focus = objPlayer;
 
+// Create the HUD
+instance_create(0, 0, objHUD);
+
+
 // Set up the path-finding grid
-var hCells = room_width / global.CELL_SIZE;
-var vCells = room_height / global.CELL_SIZE;
+global.H_CELLS = room_width / global.CELL_SIZE;
+global.V_CELLS = room_height / global.CELL_SIZE;
 
-global.PATH_GRID = mp_grid_create(0, 0, hCells, vCells, global.CELL_SIZE, global.CELL_SIZE);
-mp_grid_add_instances(global.PATH_GRID, objBlock, false);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Destroy the pathfinding grid
-mp_grid_destroy(global.PATH_GRID);
 </string>
           </argument>
         </arguments>

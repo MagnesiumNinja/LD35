@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objCollide</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,35 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BASE_WIDTH = 1280;
-BASE_HEIGHT = 720;
-CENTRE_X = room_width / 2;
-CENTRE_Y = room_height / 2;
-MOVE_FACTOR_X = 1.2;
-MOVE_FACTOR_Y = 1.2;
-CAMERA_SPEED = 1.5;
-MIN_SCALE = 1;
-SCALE_SHRINK = 0.005;
-SCALE_GROW = 0.01;
+            <string>// CONSTANTS //
 
-CAMERA_DIVISOR = 4;
+INTERACT_DISTANCE = 32;
+USE_TIMER = 30;
+
 
 // VARIABLES //
 
-xOff = 0;
-yOff = 0;
-
-// INITIALIZE VIEWS //
-
-focus = noone;
-scale = 1;
-
-// Regular view
-view_wview[0] = BASE_WIDTH;
-view_hview[0] = BASE_HEIGHT;
-view_object[0] = id;
-
-global.CAMERA_OBJECT = id;
+canInteract = false;
+user = objPlayer;
+used = false;
+useTimer = -1;
 </string>
           </argument>
         </arguments>
@@ -76,20 +59,66 @@ global.CAMERA_OBJECT = id;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// POSITIONING //
-
-if (instance_exists(objPlayer))
-{   
-    //x += smoothChange(x, focus.x + xOff, CAMERA_SPEED);
-    //x += smoothChange(x, focus.x + xOff, CAMERA_SPEED);
-    
-    var angle = point_direction(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
-    var dis = point_distance(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
-    
-    x = objPlayer.x + lengthdir_x(dis / CAMERA_DIVISOR, angle);
-    y = objPlayer.y + lengthdir_y(dis / CAMERA_DIVISOR, angle);
+            <string>// Check for interaction
+if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt;= INTERACT_DISTANCE &amp;&amp; !used)
+{
+    canInteract = true;
+}
+else
+{
+    canInteract = false;
 }
 
+if (canInteract)
+{
+    if (isPressed(global.INTERACT, global.INTERACT_GP))
+    {
+        // Trigger the use event
+        used = true;
+        user = objPlayer;
+        event_user(2);
+    }
+}
+
+if (used)
+{
+    if (useTimer != -1)
+    {
+        if (useTimer &gt; 0)
+            useTimer--;
+        else
+        {
+            useTimer = USE_TIMER;
+            used = false;
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (canInteract)
+{
+    drawSpriteOutline(sprite_index, image_index, x, y, c_black, 2);
+}
 </string>
           </argument>
         </arguments>
