@@ -26,8 +26,8 @@
         <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
       <sprites name="Health">
-        <sprite>sprites\sprHealthGradient</sprite>
         <sprite>sprites\sprHealthHeart</sprite>
+        <sprite>sprites\sprHealthBreak</sprite>
       </sprites>
     </sprites>
     <sprites name="Interactables">
@@ -112,6 +112,7 @@
     <objects name="Particles">
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
+      <object>objects\objGunshotHitParticle</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>
