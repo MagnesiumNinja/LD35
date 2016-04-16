@@ -91,7 +91,9 @@ path = path_add();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Calculating the path
+            <string>event_inherited();
+
+// Calculating the path
 if (findPath)
 {
     hasPath = mp_grid_path(pathGrid, path, x, y, destX, destY, true);

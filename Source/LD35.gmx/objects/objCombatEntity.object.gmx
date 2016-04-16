@@ -35,6 +35,7 @@ MAX_HP = 1;
 // VARIABLES //
 
 hp = MAX_HP;
+dead = false;
 target = noone;
 </string>
           </argument>
