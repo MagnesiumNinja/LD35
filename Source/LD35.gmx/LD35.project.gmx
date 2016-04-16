@@ -58,6 +58,8 @@
       <script>scripts\approach.gml</script>
       <script>scripts\smoothChange.gml</script>
       <script>scripts\smoothRotate.gml</script>
+      <script>scripts\normalizeRotation.gml</script>
+      <script>scripts\isAngleBetween.gml</script>
     </scripts>
     <scripts name="Debug">
       <script>scripts\pDebug.gml</script>
@@ -71,6 +73,9 @@
       <script>scripts\getPrimaryAbility.gml</script>
       <script>scripts\getSecondaryAbility.gml</script>
       <script>scripts\setTypeAttributes.gml</script>
+    </scripts>
+    <scripts name="HUD">
+      <script>scripts\revealFOWs.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -120,8 +125,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmTest</room>
+    <room>rooms\rmLevel1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

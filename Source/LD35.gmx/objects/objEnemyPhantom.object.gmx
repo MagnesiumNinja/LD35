@@ -46,10 +46,11 @@ FRIC = 0.6;
 KNOCKBACK_SPEED = 6;
 
 AGGRO_DIS = 650;
+VIEW_ANGLE = 45;
 ATTACK_DIS = 16;
 DODGE_DIS = 64;
 DODGE_SPEED = 15;
-COOLDOWN_TIME = 60;
+COOLDOWN_TIME = 80;
 CHARGE_TIME = 50;
 ATTACK_TIME = 40;
 
@@ -95,7 +96,9 @@ if (!dead)
     {
         case PhantomAIState.IDLE:
         {
-            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
+            var tarAngle = point_direction(x, y, target.x, target.y);
+            
+            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; isAngleBetween(tarAngle, image_angle - VIEW_ANGLE, image_angle + VIEW_ANGLE) &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
                 state = PhantomAIState.MOVE;
@@ -255,6 +258,29 @@ if (!(hitX == 0 &amp;&amp; hitY == 0))
     hspd = lengthdir_x(KNOCKBACK_SPEED, kbAngle);
     vspd = lengthdir_y(KNOCKBACK_SPEED, kbAngle);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
 </string>
           </argument>
         </arguments>
