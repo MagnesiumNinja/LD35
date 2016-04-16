@@ -53,6 +53,7 @@ COOLDOWN_TIME = 60;
 CHARGE_TIME = 50;
 ATTACK_TIME = 40;
 
+NUM_DASH_PARTICLES = 15;
 
 // VARIABLES //
 
@@ -198,8 +199,12 @@ if (!dead)
                 
                 if (sqrt(sqr(hspd) + sqr(vspd)) &gt; 0)
                 {
-                    // Create dodge particles
-                    
+                    // generate dash particles
+                    for (var i = 0; i &lt; NUM_DASH_PARTICLES; i++)
+                    {
+                        var dashPart = instance_create(x, y, objPhantomDashParticle);
+                        dashPart.angle = dodgeAngle - 180;
+                    }
                 }
             }
             else
