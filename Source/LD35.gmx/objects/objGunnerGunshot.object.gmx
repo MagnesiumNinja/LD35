@@ -29,12 +29,13 @@
 
 // CONSTANTS //
 
-MOVE_SPEED = 12;
+MOVE_SPEED = 10;
 DAMAGE = 3;
 NUM_DESTRUCT_PARTICLES = 20;
 
 // VARIABLES //
 
+target = noone;
 </string>
           </argument>
         </arguments>
@@ -95,10 +96,21 @@ if (x &lt; 0 || x &gt; room_width || y &lt; 0 || y &gt; room_height)
 
 
 // Enemy collision
-var e = collision_line(x, y, xprevious, yprevious, objEnemyEntity, false, true);
+var e;
+
+if (target == noone)
+{
+    e = collision_line(x, y, xprevious, yprevious, objEnemyEntity, false, true);
+}
+else
+{
+    e = collision_line(x, y, xprevious, yprevious, objPlayer, false, true);
+}
+
 if (e)
 {
     e.hp -= DAMAGE;
+    e.killer = id;
 
     instance_destroy();
 }
