@@ -62,9 +62,17 @@ ICON_BUFFER = 32;
 
 draw_sprite(sprAbilityBase, 0, view_xview[0] + view_wview[0] - sprite_get_width(sprAbilityBase) * 1.5 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 0.5 + ICON_BUFFER);
+
+draw_sprite(sprAbilityIcon, objPlayer.primaryAbility, view_xview[0] + view_wview[0] - sprite_get_width(sprAbilityBase) * 1.5 - ICON_BUFFER,
+    view_yview[0] + sprite_get_height(sprAbilityBase) * 0.5 + ICON_BUFFER);
+    
     
 draw_sprite(sprAbilityBase, 0, view_xview[0] +  view_wview[0] - sprite_get_width(sprAbilityBase) * 0.5 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 1.5 + ICON_BUFFER);
+
+draw_sprite(sprAbilityIcon, objPlayer.secondaryAbility, view_xview[0] +  view_wview[0] - sprite_get_width(sprAbilityBase) * 0.5 - ICON_BUFFER,
+    view_yview[0] + sprite_get_height(sprAbilityBase) * 1.5 + ICON_BUFFER);
+    
 </string>
           </argument>
         </arguments>

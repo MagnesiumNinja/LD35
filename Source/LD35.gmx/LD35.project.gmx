@@ -15,12 +15,15 @@
       <sprite>sprites\sprBlock</sprite>
     </sprites>
     <sprites name="HUD">
-      <sprite>sprites\sprAbilityBase</sprite>
       <sprites name="FOW">
         <sprite>sprites\sprFOW</sprite>
         <sprite>sprites\sprFOWCentre</sprite>
         <sprite>sprites\sprFOWEdge</sprite>
         <sprite>sprites\sprFOWCorner</sprite>
+      </sprites>
+      <sprites name="Abilities">
+        <sprite>sprites\sprAbilityBase</sprite>
+        <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
     </sprites>
     <sprites name="Interactables">
@@ -50,6 +53,12 @@
     </scripts>
     <scripts name="Drawing">
       <script>scripts\drawSpriteOutline.gml</script>
+    </scripts>
+    <scripts name="Combat">
+      <script>scripts\useAbility.gml</script>
+      <script>scripts\getAbilityCooldown.gml</script>
+      <script>scripts\getPrimaryAbility.gml</script>
+      <script>scripts\getSecondaryAbility.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

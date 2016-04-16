@@ -32,8 +32,13 @@ global.MOVE_RIGHT = ord("D");
 global.MOVE_UP = ord("W");
 global.MOVE_DOWN = ord("S");
 global.INTERACT = ord("E");
+global.PRIMARY_ABILITY = mb_left;
+global.SECONDARY_ABILITY = mb_right;
 
 global.INTERACT_GP = gp_face1;
+global.PRIMARY_ABILITY_GP = gp_shoulderrb;
+global.SECONDARY_ABILITY_GP = gp_shoulderr;
+
 global.GAMEPAD_AXIS_THRESHOLD = 0.7;
 
 

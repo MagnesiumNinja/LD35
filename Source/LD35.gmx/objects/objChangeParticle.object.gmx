@@ -49,7 +49,7 @@ MAX_Y_SPREAD = 18;
 
 // VARIABLES //
 alpha = random_range(MIN_ALPHA, MAX_ALPHA);
-color = make_color(74, 108, 108);
+color = make_color_rgb(74, 108, 108);
 radius = random_range(MIN_RADIUS, MAX_RADIUS);
 fade = random_range(MIN_FADE_SPEED, MAX_FADE_SPEED);
 x_spread = random_range(MIN_X_SPREAD, MAX_X_SPREAD);

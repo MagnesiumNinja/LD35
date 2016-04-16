@@ -50,13 +50,23 @@ FRIC = 0.6;
 CHANGE_SPEED = 20;
 NUM_CHANGE_PARTICLES = 4;
 
+PRIMARY_COOLDOWN = 0;
+SECONDARY_COOLDOWN = 0;
+
 
 // VARIABLES //
 
-type = EnemyType.NORMAL;
+type = EnemyType.PHANTOM;
 changing = false;
 changeTarget = noone;
 
+primaryAbility = AbilityType.NOTHING;
+primaryCooldown = 0;
+
+secondaryAbility = AbilityType.NOTHING;
+secondaryCooldown = 0;
+
+event_user(15);
 </string>
           </argument>
         </arguments>
@@ -111,14 +121,28 @@ changeTarget = noone;
         
         
     // ABILITIES //
+    if (primaryCooldown &gt; 0)
+        primaryCooldown--;
+    
+    if (secondaryCooldown &gt; 0)
+        secondaryCooldown--;
+    
     if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
     {
-        
+        if (primaryCooldown == 0)
+        {
+            useAbility(primaryAbility);
+            primaryCooldown = PRIMARY_COOLDOWN;
+        }
     }
     
     if (mouse_check_button_pressed(global.SECONDARY_ABILITY) || gamepad_button_check_pressed(0, global.SECONDARY_ABILITY_GP))
     {
-        
+        if (secondaryCooldown == 0)
+        {
+            useAbility(secondaryAbility);
+            secondaryCooldown = SECONDARY_COOLDOWN;
+        }
     }
 }
 
@@ -150,6 +174,38 @@ else
         with (changeTarget) instance_destroy();
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="25">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// CHANGE ABILITIES event
+
+primaryAbility = getPrimaryAbility(type);
+secondaryAbility = getSecondaryAbility(type);
+
+PRIMARY_COOLDOWN = getAbilityCooldown(primaryAbility);
+primaryCooldown = PRIMARY_COOLDOWN;
+
+SECONDARY_COOLDOWN = getAbilityCooldown(secondaryAbility);
+secondaryCooldown = SECONDARY_COOLDOWN;
 </string>
           </argument>
         </arguments>
