@@ -91,6 +91,7 @@
       <object>objects\objCombatEntity</object>
       <object>objects\objPathfindingEntity</object>
       <object>objects\objInteractEntity</object>
+      <object>objects\objEnemyEntity</object>
       <objects name="Player">
         <object>objects\objPlayer</object>
       </objects>
