@@ -9,6 +9,9 @@
     <sprites name="Player">
       <sprites name="Normal">
         <sprite>sprites\sprPlayerIdle_Normal</sprite>
+        <sprite>sprites\sprPlayerMove_Normal</sprite>
+        <sprite>sprites\sprPlayerPrimary_Normal</sprite>
+        <sprite>sprites\sprPlayerSecondary_Normal</sprite>
       </sprites>
     </sprites>
     <sprites name="Blocks">
