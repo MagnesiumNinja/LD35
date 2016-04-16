@@ -27,10 +27,30 @@
             <kind>1</kind>
             <string>event_inherited();
 
+enum PhantomAIState
+{
+    IDLE,
+    MOVE,
+    DODGE,
+    ATTACK
+}
+
+
 // CONSTANTS //
 
 RECALCULATE_TIME = 10;
 MAX_HP = 3;
+MOVE_SPEED = 4;
+
+FRIC = 0.6;
+
+AGGRO_DIS = 650;
+ATTACK_DIS = 16;
+DODGE_DIS = 64;
+DODGE_SPEED = 15;
+COOLDOWN_TIME = 60;
+CHARGE_TIME = 50;
+ATTACK_TIME = 40;
 
 
 // VARIABLES //
@@ -38,6 +58,11 @@ MAX_HP = 3;
 hp = MAX_HP;
 recalcTime = RECALCULATE_TIME;
 type = EnemyType.PHANTOM;
+target = objPlayer;
+
+state = PhantomAIState.IDLE;
+cooldownTime = COOLDOWN_TIME;
+chargeTime = CHARGE_TIME;
 </string>
           </argument>
         </arguments>
@@ -64,33 +89,128 @@ type = EnemyType.PHANTOM;
 
 if (!dead)
 {
-    if (recalcTime &gt; 0)
-        recalcTime--;
-    else
+    switch(state)
     {
-        // Recalculate the path to the player
-        destX = objPlayer.x;
-        destY = objPlayer.y;
-        findPath = true;
-        recalcTime = RECALCULATE_TIME;
-    }
-    
-    if (followingPath)
-    {
-        if (path_index = -1)
+        case PhantomAIState.IDLE:
         {
+            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; !collision_line(x, y, target.x, target.y, objBlock, false, true))
+            {
+                // Line of sight
+                state = PhantomAIState.MOVE;
+            }
+        
+            break;    
+        }
+    
+    
+        case PhantomAIState.MOVE:
+        {
+            // Checking attack
+            if (point_distance(x, y, target.x, target.y) &lt; ATTACK_DIS)
+            {
+                state = PhantomAIState.ATTACK;
+            }
+            else if (distance_to_object(objGunnerGunshot) &lt; DODGE_DIS)
+            {
+                state = PhantomAIState.DODGE;
+            }
+        
+            if (recalcTime &gt; 0)
+                recalcTime--;
+            else
+            {
+                // Recalculate the path to the player
+                destX = target.x;
+                destY = target.y;
+                findPath = true;
+                recalcTime = RECALCULATE_TIME;
+            }
+            
+            if (followingPath)
+            {
+                if (path_index = -1)
+                {
+                    followingPath = false;
+                    hasPath = false;
+                }
+            }
+            else
+            {
+                if (hasPath)
+                {
+                    path_start(path, MOVE_SPEED, path_action_stop, true);
+                    followingPath = true;
+                }
+            }
+            
+            break;
+        }
+        
+        case PhantomAIState.ATTACK:
+        {
+            path_end();
             followingPath = false;
             hasPath = false;
+        
+            if (chargeTime &gt; 0)
+                chargeTime--;
+            
+            if (chargeTime == ATTACK_TIME)
+            {
+                // Attack
+                var attack = instance_create(x, y, objPhantomStab);
+                attack.image_angle = point_direction(x, y, target.x, target.y);
+                attack.target = target;
+                attack.par = id;
+            }
+            else if (chargeTime == 0)
+            {
+                chargeTime = CHARGE_TIME;
+                state = PhantomAIState.IDLE;
+            }
+        
+            break;
         }
-    }
-    else
-    {
-        if (hasPath)
+        
+        
+        case PhantomAIState.DODGE:
         {
-            path_start(path, 3, path_action_stop, true);
-            followingPath = true;
+            path_end();
+            
+            if (cooldownTime = COOLDOWN_TIME)
+            {
+                var newAngle = point_direction(x, y, target.x, target.y) + choose(-1, 1) * 45;
+                
+                hspd = lengthdir_x(DODGE_SPEED, newAngle);
+                vspd = lengthdir_y(DODGE_SPEED, newAngle);
+                
+                cooldownTime--;
+            }
+            else if (cooldownTime &gt; 0)
+            {
+                cooldownTime--;
+                
+                // Slow down
+                hspd = approach(hspd, 0, FRIC);
+                vspd = approach(vspd, 0, FRIC);
+            }
+            else
+            {
+                state = PhantomAIState.IDLE;
+                cooldownTime = COOLDOWN_TIME;
+            }
+            
+            break;
         }
     }
+}
+else
+{
+    path_end();
+                
+    // Slow down
+    hspd = approach(hspd, 0, FRIC);
+    vspd = approach(vspd, 0, FRIC);   
 }
 </string>
           </argument>

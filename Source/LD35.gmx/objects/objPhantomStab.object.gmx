@@ -34,6 +34,7 @@ DAMAGE = 1;
 
 hit = false;
 par = noone;
+target = noone;
 image_speed = 0.3;
 </string>
           </argument>
@@ -73,7 +74,17 @@ if (par != noone)
 // Hitting an enemy
 if (!hit)
 {
-    var e = instance_place(x, y, objEnemyEntity);
+    var e;
+    
+    if (target == noone)
+    {
+        e = instance_place(x, y, objEnemyEntity);
+    }
+    else
+    {
+        e = instance_place(x, y, target);
+    }
+    
     if (e)
     {
         e.hp -= DAMAGE;
