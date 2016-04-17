@@ -285,6 +285,8 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
 {
     var dashPart = instance_create(x, y, objBloodSplatter);
 }
+
+instance_create(x, y, objSliceParticle);
 </string>
           </argument>
         </arguments>
