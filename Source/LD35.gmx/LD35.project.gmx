@@ -36,6 +36,13 @@
       <sound>sound\sndGross2</sound>
       <sound>sound\sndGross3</sound>
     </sounds>
+    <sounds name="Environmental">
+      <sounds name="Blood">
+        <sound>sound\sndSplatter1</sound>
+        <sound>sound\sndSplatter2</sound>
+        <sound>sound\sndSplatter3</sound>
+      </sounds>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">

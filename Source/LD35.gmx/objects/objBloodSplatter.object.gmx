@@ -57,6 +57,9 @@ image_xscale = random_range(0, 0.5);
 image_yscale = image_xscale;
 
 secondary_splatter = false;
+
+// Starting actions
+audio_play_sound(choose(sndSplatter1, sndSplatter2, sndSplatter3), 5, false);
 </string>
           </argument>
         </arguments>

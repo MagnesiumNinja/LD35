@@ -59,6 +59,8 @@ yOffset = random_range(MIN_Y_OFFSET, MAX_Y_OFFSET);
 
 image_xscale = random_range(0, 0.2);
 image_yscale = image_xscale;
+
+hitGround = false;
 </string>
           </argument>
         </arguments>
@@ -87,6 +89,11 @@ image_yscale = image_xscale;
 }
 else
 {
+    if (!hitGround)
+    {
+        audio_play_sound(choose(sndSplatter1, sndSplatter2, sndSplatter3), 5, false);
+        hitGround = true;
+    }
     image_xscale = approach(image_xscale, scale, spreadSpeed);
     image_yscale = approach(image_yscale, scale, spreadSpeed);
 }
