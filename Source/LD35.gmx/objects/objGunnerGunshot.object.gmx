@@ -112,15 +112,9 @@ if (e)
     e.hp -= DAMAGE;
     e.hitX = xprevious;
     e.hitY = yprevious;
-                                
-    if (e.hp &gt; 0)
-    {
-        for (var i = 0; i &lt; 10; i++)
-            instance_create(e.x, e.y, objBloodParticle);
-    
-        instance_create(e.x, e.y, objSliceParticle);
-    }
 
+    with (e) event_user(3);
+    
     instance_destroy();
 }
 </string>

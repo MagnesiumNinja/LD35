@@ -62,6 +62,18 @@ DASH_SPEED = 14;
 
 // VARIABLES //
 
+// Sprites
+idleSprite = -1;
+moveSprite = -1;
+primarySprite = -1;
+secondarySprite = -1;
+
+idleAnim = 0;
+moveAnim = 0;
+primaryAnim = 0;
+secondaryAnim = 0;
+
+
 aimAngle = 0;
 
 dashing = false;
@@ -173,6 +185,7 @@ event_user(15);
             if (primaryCooldown == 0)
             {
                 useAbility(primaryAbility);
+                image_index = 0;
                 primaryCooldown = PRIMARY_COOLDOWN;
             }
         }
@@ -182,6 +195,7 @@ event_user(15);
             if (secondaryCooldown == 0)
             {
                 useAbility(secondaryAbility);
+                image_index = 0;
                 secondaryCooldown = SECONDARY_COOLDOWN;
             }
         }
@@ -248,10 +262,10 @@ primaryAbility = getPrimaryAbility(type);
 secondaryAbility = getSecondaryAbility(type);
 
 PRIMARY_COOLDOWN = getAbilityCooldown(primaryAbility);
-primaryCooldown = PRIMARY_COOLDOWN;
+primaryCooldown = 0;
 
 SECONDARY_COOLDOWN = getAbilityCooldown(secondaryAbility);
-secondaryCooldown = SECONDARY_COOLDOWN;
+secondaryCooldown = 0;
 
 setTypeAttributes(type);
 </string>
@@ -276,7 +290,34 @@ setTypeAttributes(type);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprPlayerShadow, 0, x, y);
+            <string>// Set the sprite index
+
+if (primaryCooldown != PRIMARY_COOLDOWN &amp;&amp; primaryCooldown != 0)
+{
+    sprite_index = primarySprite;
+    image_speed = primarySpeed;
+}
+else if (secondaryCooldown != SECONDARY_COOLDOWN &amp;&amp; secondaryCooldown != 0)
+{
+    sprite_index = secondarySprite;
+    image_speed = secondarySpeed;
+}
+else
+{
+    if (hspd == 0 &amp;&amp; vspd == 0)
+    {
+        sprite_index = idleSprite;
+        image_speed = idleSpeed;
+    }
+    else
+    {
+        sprite_index = moveSprite;
+        image_speed = moveSpeed;
+    }
+}
+
+
+draw_sprite(sprPlayerShadow, 0, x, y);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, aimAngle, c_white, image_alpha);
 </string>
           </argument>
