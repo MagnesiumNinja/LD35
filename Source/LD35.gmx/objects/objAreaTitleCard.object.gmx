@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-9999</depth>
+  <depth>-2000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,44 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Save the game
-saveGame(0);
+            <string>// CONSTANTS //
 
-// Create the camera
-global.CAMERA_OBJECT = noone;
-global.CAMERA_X = 0;
-global.CAMERA_Y = 0;
+SHADOW_OFFSET = 2;
 
-camera = instance_create(0, 0, objCamera);
-camera.focus = objPlayer;
+FADE_IN_RATE = 14;
+FADE_OUT_RATE = 20;
 
-// Create the HUD
-instance_create(0, 0, objHUD);
-instance_create(0, 0, objChangeOverlay);
+WAIT_TIME = 180;
+
+Y_OFFSET = -128;
 
 
-// Set up the path-finding grid
-global.H_CELLS = room_width / global.CELL_SIZE;
-global.V_CELLS = room_height / global.CELL_SIZE;
+// VARIABLES //
 
+text = "";
+area = 0;
+alpha = 0;
+state = 0;
+waitTime = WAIT_TIME;
+start = false;
 
-// SCREEN SHAKE //
-
-global.SCREEN_SHAKE = false;
-global.DEFAULT_SHAKE_VALUE = 4;
-
-default_x = view_xport[0]; //Find what the view was originally
-default_y = view_yport[0]; //Find what the view was originally
-
-shakes = global.DEFAULT_SHAKE_VALUE; //The shake intensity (maximum-pixel-shake-per-side)
-incr = 2; //The amount of intensity increment when the quake starts and stops.
-factor = 0; //Current Intensity.
-shakeTimer = -1;
-
-
-// STARTING ACTIONS //
-
-instance_create(0, 0, objLightController);
+//audio_play_sound(sndNewArea, 50, false);
 </string>
           </argument>
         </arguments>
@@ -85,60 +69,85 @@ instance_create(0, 0, objLightController);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (instance_exists(global.CAMERA_OBJECT))
+            <string>if (!start)
 {
-    if (global.CAMERA_OBJECT &gt;= 0)
+    if (instance_number(objAreaTitleCard) == 1)
     {
-        global.CAMERA_X = (global.CAMERA_OBJECT.x - view_wview[0] / 2);
-        global.CAMERA_Y = (global.CAMERA_OBJECT.y - view_hview[0] / 2);
-    }
-    
-    if (global.SCREEN_SHAKE == true) 
-    {
-        // If we are shaking
-        if (factor &lt; shakes) 
-        {
-            factor += incr;
-        } 
-        else 
-        {
-            factor = shakes;
-        }
-    }
-    else 
-    {
-        // Stop the shaking
-        if (factor &gt; 0) 
-        {
-            factor -= incr;
-        }
-        else 
-        {
-            factor = 0;
-        }
-    }
-    
-    if (factor &gt; 0) 
-    { 
-        view_object[0] = noone;
-        view_xview[0] = clamp(global.CAMERA_X - factor + random(factor * 2), 0, room_width - view_wview[0]);
-        view_yview[0] = clamp(global.CAMERA_Y - factor + random(factor * 2), 0, room_height - view_hview[0]);
-    } 
-    else 
-    {
-        view_object[0] = global.CAMERA_OBJECT;
-    }
-    
-    if (shakeTimer &gt; 0) 
-    {
-        shakeTimer--;
-    } 
-    else 
-    {
-        global.SCREEN_SHAKE = false;
+        start = true;
     }
 }
+else
+{
+    if (state == 0)
+    {
+        if (alpha &lt; 0.99)
+        {
+            alpha += smoothChange(alpha, 1, FADE_IN_RATE);
+        }
+        else
+        {
+            state++;
+        }
+    }
+    else if (state == 1)
+    {
+        if (waitTime &gt; 0)
+        {
+            waitTime--;
+        }
+        else
+        {
+            state++;
+        }
+    }
+    else
+    {
+        if (alpha &gt; 0.01)
+        {
+            alpha += smoothChange(alpha, 0, FADE_OUT_RATE);
+        }
+        else
+        {
+            instance_destroy();
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_alpha(alpha);
+draw_set_font(fntTitleCard);
+draw_set_halign(fa_center);
+draw_set_valign(fa_center);
+
+draw_set_color(c_black);
+draw_text(view_xview[0] + view_wview[0] / 2 + SHADOW_OFFSET, view_yview[0] + view_hview[0] / 2 + SHADOW_OFFSET + Y_OFFSET, text);
+
+draw_set_color(c_white);
+draw_text(view_xview[0] + view_wview[0] / 2, view_yview[0] + view_hview[0] / 2 + Y_OFFSET, text);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
