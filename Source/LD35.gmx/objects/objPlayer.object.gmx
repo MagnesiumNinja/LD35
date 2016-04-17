@@ -132,6 +132,15 @@ event_user(15);
             <kind>1</kind>
             <string>event_inherited();
 
+if (!instance_exists(objScreenTransition))
+{
+    if (isPressed(global.RESTART, global.RESTART_GP))
+    {
+        var trans = instance_create(x, y, objScreenTransition);
+        trans.rm = room;
+    }
+}
+
 if (!changing &amp;&amp; !dead)
 {
     if (golemWait &gt; 0)
