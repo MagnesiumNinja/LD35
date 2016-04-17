@@ -308,7 +308,7 @@ if (state == GolemAIState.ATTACK &amp;&amp; chargeTime &lt; ATTACK_TIME &amp;&am
 else if (state == GolemAIState.MOVE)
 {
     sprite_index = sprMove_Golem;
-    image_speed = 0.2;
+    image_speed = 0.1;
 }
 else
 {

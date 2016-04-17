@@ -118,6 +118,7 @@
       <sprite>sprites\sprPhantomStab_Enemy</sprite>
       <sprite>sprites\sprGunnerGunshot</sprite>
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
+      <sprite>sprites\sprBrainFocus</sprite>
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
@@ -220,6 +221,7 @@
         <object>objects\objEnemyPhantom</object>
         <object>objects\objEnemyGolem</object>
         <object>objects\objEnemyGunner</object>
+        <object>objects\objEnemyBrain</object>
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>
@@ -247,13 +249,15 @@
       <object>objects\objGolemPunch</object>
       <object>objects\objPlayerSlice</object>
       <object>objects\objGunnerGunshot</object>
+      <object>objects\objBrainShot</object>
+      <object>objects\objBrainFocus</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
+    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
-    <room>rooms\rmLevel1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

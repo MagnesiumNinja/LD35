@@ -32,7 +32,8 @@ enum EnemyType
     NORMAL,
     PHANTOM,
     GUNNER,
-    GOLEM
+    GOLEM,
+    BRAIN
 }
 
 enum AbilityType
@@ -42,7 +43,9 @@ enum AbilityType
     PHANTOM_STAB,
     PHANTOM_DASH,
     GUNNER_GUNSHOT,
-    GOLEM_PUNCH
+    GOLEM_PUNCH,
+    BRAIN_SHOT,
+    BRAIN_FOCUS
 }
 
 
@@ -225,10 +228,11 @@ if (!changing &amp;&amp; !dead)
         }
     }
 }
-
 // CHANGING //
 else if (!dead)
 {
+    canBeHit = false;
+    
     // Moving towards the new body
     if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 10)
     {
@@ -260,6 +264,7 @@ else if (!dead)
         }
         
         changing = false;
+        canBeHit = true;
         type = changeTarget.type;
         event_user(15);
         

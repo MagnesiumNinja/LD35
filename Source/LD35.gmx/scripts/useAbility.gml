@@ -66,5 +66,23 @@ switch(ability)
         
         break;
     }
+
+    case AbilityType.BRAIN_SHOT:
+    {
+        var gunshot = instance_create(x, y, objBrainShot);
+        gunshot.angle = aimAngle;
+    
+        audio_play_sound(choose(sndShot_Fire1, sndShot_Fire2), 9, false);
+        
+        break;
+    }
+    
+    case AbilityType.BRAIN_FOCUS:
+    {
+        with (objEnemyEntity)
+            instance_create(x, y, objBrainFocus);
+    
+        break;
+    }
     
 }
