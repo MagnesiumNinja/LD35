@@ -101,7 +101,8 @@ if (!dead)
         {
             var tarAngle = point_direction(x, y, target.x, target.y);
             
-            if (distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; isAngleBetween(tarAngle, image_angle - VIEW_ANGLE, image_angle + VIEW_ANGLE) &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
+            if (point_distance(x, y, target.x, target.y) &lt;= NOTICE_DIS || 
+                distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; isAngleBetween(tarAngle, image_angle - VIEW_ANGLE, image_angle + VIEW_ANGLE) &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
                 state = PhantomAIState.MOVE;
@@ -321,7 +322,7 @@ else
     image_speed = 0.2;
 }
 
-
+draw_sprite_ext(sprite_index, image_index, x + 3, y + 3, image_xscale, image_yscale, image_angle, c_black, 0.3 * fowAlpha);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
 
 if (alertTime != ALERT_TIME &amp;&amp; alertTime != 0)

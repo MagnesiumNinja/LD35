@@ -117,7 +117,7 @@ if (used)
             <kind>1</kind>
             <string>if (canInteract)
 {
-    drawSpriteOutline(sprite_index, image_index, x, y, c_black, 2);
+    drawSpriteOutline(sprite_index, image_index, x, y, c_black, 3);
 }
 </string>
           </argument>
