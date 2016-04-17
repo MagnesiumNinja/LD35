@@ -30,7 +30,7 @@
 // CONSTANTS //
 
 MOVE_SPEED = 5;
-DAMAGE = 0.5;
+DAMAGE = 1;
 NUM_DESTRUCT_PARTICLES = 20;
 
 // VARIABLES //
@@ -114,11 +114,8 @@ else
 if (e &amp;&amp; e.canBeHit)
 {
     e.prevHp = e.hp;
-    
-    if (e == objPlayer)
-        e.hp = max(0, e.hp - DAMAGE * 2);
-    else
-        e.hp = max(0, e.hp - DAMAGE);
+
+    e.hp = max(0, e.hp - DAMAGE);
     
     e.hitX = xprevious;
     e.hitY = yprevious;
