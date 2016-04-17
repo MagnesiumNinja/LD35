@@ -27,6 +27,8 @@ switch(ability)
         
         dashing = true;
     
+        audio_play_sound(choose(sndDash1, sndDash2, sndDash3), 8, false);
+        
         break;
     }
     

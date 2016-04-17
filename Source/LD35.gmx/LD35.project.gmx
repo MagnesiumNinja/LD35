@@ -21,6 +21,11 @@
         <sound>sound\sndShot_Hit2</sound>
         <sound>sound\sndShot_HitWall</sound>
       </sounds>
+      <sounds name="Dash">
+        <sound>sound\sndDash1</sound>
+        <sound>sound\sndDash2</sound>
+        <sound>sound\sndDash3</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
