@@ -40,7 +40,7 @@ enum PhantomAIState
 
 RECALCULATE_TIME = 10;
 MAX_HP = 1;
-MOVE_SPEED = 4;
+MOVE_SPEED = 3;
 ROTATE_SPEED = 0.25;
 
 FRIC = 0.6;
@@ -115,7 +115,7 @@ if (!dead)
         {
             if (!collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
-                image_angle = smoothRotate(point_direction(x, y, target.x, target.y), ROTATE_SPEED, image_angle);
+                image_angle = point_direction(x, y, target.x, target.y);
             }
         
             // Checking attack
@@ -219,7 +219,7 @@ if (!dead)
             }
             else
             {
-                state = PhantomAIState.IDLE;
+                state = PhantomAIState.MOVE;
                 cooldownTime = COOLDOWN_TIME;
             }
             

@@ -34,6 +34,7 @@
         <sprite>sprites\sprHealthHeart</sprite>
         <sprite>sprites\sprHealthBreak</sprite>
       </sprites>
+      <sprite>sprites\sprAlert</sprite>
     </sprites>
     <sprites name="Interactables">
       <sprites name="Door">

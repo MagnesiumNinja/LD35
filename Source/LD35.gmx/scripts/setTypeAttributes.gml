@@ -5,7 +5,7 @@ switch(type)
 {
     case EnemyType.NORMAL:
     {
-        MAX_SPEED = 5;
+        MAX_SPEED = 3;
         ACCEL = 0.8;
         FRIC = 0.6;
         
@@ -17,7 +17,7 @@ switch(type)
     
     case EnemyType.PHANTOM:
     {
-        MAX_SPEED = 7;
+        MAX_SPEED = 4.5;
         ACCEL = 0.9;
         FRIC = 0.3;
         

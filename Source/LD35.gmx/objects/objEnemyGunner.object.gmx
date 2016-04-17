@@ -31,6 +31,7 @@ enum GunnerAIState
 {
     IDLE,
     MOVE,
+    ALERT,
     ATTACK
 }
 
@@ -45,12 +46,16 @@ AGGRO_DIS = 750;
 VIEW_ANGLE = 30;
 CHARGE_TIME = 60;
 ATTACK_TIME = 30;
+ALERT_TIME = 30;
 
 NUM_BLOOD_SPLATTERS = 3;
 
-MOVE_RANGE = 96;
+MIN_MOVE_RANGE = 16;
+MAX_MOVE_RANGE = 160;
+
 FRIC = 0.4;
 KNOCKBACK_SPEED = 3;
+ALERT_FADE_SPEED = 0.05;
 
 
 // VARIABLES //
@@ -62,6 +67,8 @@ target = objPlayer;
 
 state = GunnerAIState.IDLE;
 chargeTime = CHARGE_TIME;
+alertTime = ALERT_TIME;
+alertAlpha = 0;
 </string>
           </argument>
         </arguments>
@@ -106,34 +113,50 @@ if (!dead)
     
         case GunnerAIState.MOVE:
         {
-            if (followingPath)
-            {
-                if (path_index = -1)
-                {
-                    followingPath = false;
-                    hasPath = false;
-                    
-                    state = GunnerAIState.ATTACK;
-                }
-            }
+            if (alertTime &gt; 0)
+                alertTime--;
             else
             {
-                if (hasPath)
+                if (!collision_line(x, y, target.x, target.y, objCollide, false, true))
                 {
-                    path_start(path, MOVE_SPEED, path_action_stop, true);
-                    followingPath = true;
+                    image_angle = point_direction(x, y, target.x, target.y);
+                }
+                
+                if (followingPath)
+                {
+                    if (path_index = -1)
+                    {
+                        followingPath = false;
+                        hasPath = false;
+                        
+                        state = GunnerAIState.ATTACK;
+                    }
                 }
                 else
                 {
-                    // Find a new place to stand
-                    do
+                    if (hasPath)
                     {
-                        destX = x + random_range(-MOVE_RANGE, MOVE_RANGE);
-                        destY = y + random_range(-MOVE_RANGE, MOVE_RANGE);
+                        path_start(path, MOVE_SPEED, path_action_stop, true);
+                        followingPath = true;
                     }
-                    until(!collision_line(destX, destY, objPlayer.x, objPlayer.y, objCollide, false, true));
-                    
-                    findPath = true;
+                    else
+                    {
+                        // Find a new place to stand
+                        var tries = 20;
+                        
+                        do
+                        {
+                            destX = target.x + random_range(MIN_MOVE_RANGE, MAX_MOVE_RANGE);
+                            destY = target.y + random_range(MIN_MOVE_RANGE, MAX_MOVE_RANGE);
+                            tries--;
+                        }
+                        until(!collision_line(destX, destY, target.x, target.y, objCollide, false, true) || tries == 0);
+                        
+                        if (tries != 0)
+                        {
+                            findPath = true;
+                        }
+                    }
                 }
             }
             
@@ -150,6 +173,8 @@ if (!dead)
             }
             else
             {
+                image_angle = point_direction(x, y, target.x, target.y);
+            
                 if (chargeTime &gt; 0)
                     chargeTime--;
                 
@@ -164,7 +189,7 @@ if (!dead)
                 else if (chargeTime == 0)
                 {
                     chargeTime = CHARGE_TIME;
-                    state = PhantomAIState.IDLE;
+                    state = PhantomAIState.MOVE;
                 }
             }
             break;
@@ -245,6 +270,20 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
             <string>event_inherited();
 
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
+
+if (alertTime != ALERT_TIME &amp;&amp; alertTime != 0)
+{
+    alertAlpha = 1;    
+}
+else
+{
+    if (alertAlpha &gt; 0)
+        alertAlpha -= ALERT_FADE_SPEED;
+}
+
+draw_sprite_ext(sprAlert, 0, x, y - 24, 1, 1, 0, c_white, alertAlpha);
+
+
 </string>
           </argument>
         </arguments>

@@ -65,32 +65,32 @@ if (image_index &gt; image_number - image_speed)
 }
 
 // Following the parent
-if (par != noone)
+if (par != noone &amp;&amp; instance_exists(par))
 {
     x = par.x;
     y = par.y;
-}
-
-// Hitting an enemy
-if (!hit)
-{
-    var e;
     
-    if (target == noone)
+    // Hitting an enemy
+    if (!hit)
     {
-        e = instance_place(x, y, objEnemyEntity);
-    }
-    else
-    {
-        e = instance_place(x, y, target);
-    }
-    
-    if (e)
-    {
-        e.hp -= DAMAGE;
-        e.hitX = x;
-        e.hitY = y;
-        hit = true;
+        var e;
+        
+        if (target == noone)
+        {
+            e = instance_place(x, y, objEnemyEntity);
+        }
+        else
+        {
+            e = instance_place(x, y, target);
+        }
+        
+        if (e &amp;&amp; !collision_line(par.x, par.y, e.x, e.y, objCollide, false, true))
+        {
+            e.hp -= DAMAGE;
+            e.hitX = x;
+            e.hitY = y;
+            hit = true;
+        }
     }
 }
 </string>
@@ -115,7 +115,7 @@ if (!hit)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (par != noone)
+            <string>if (par != noone &amp;&amp; instance_exists(par))
 {
     draw_sprite_ext(sprite_index, image_index, par.x, par.y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 }

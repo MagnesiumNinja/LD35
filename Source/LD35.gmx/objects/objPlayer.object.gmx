@@ -252,6 +252,8 @@ primaryCooldown = PRIMARY_COOLDOWN;
 
 SECONDARY_COOLDOWN = getAbilityCooldown(secondaryAbility);
 secondaryCooldown = SECONDARY_COOLDOWN;
+
+setTypeAttributes(type);
 </string>
           </argument>
         </arguments>
