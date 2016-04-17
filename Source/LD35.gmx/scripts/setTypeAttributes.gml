@@ -41,7 +41,7 @@ switch(type)
         
         idleSpeed = 0.3;
         moveSpeed = 0.2;
-        primarySpeed = 0.08;
+        primarySpeed = 0.2;
         secondarySpeed = 0.3;
         break;
     }
