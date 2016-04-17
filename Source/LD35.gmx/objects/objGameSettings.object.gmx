@@ -58,7 +58,7 @@ global.V_CELLS = 0;
 
 // DEBUGGING //
 
-global.DEBUG = true;
+global.DEBUG = false;
 </string>
           </argument>
         </arguments>

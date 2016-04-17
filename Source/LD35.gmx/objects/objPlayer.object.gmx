@@ -232,6 +232,15 @@ else
         x = changeTarget.x;
         y = changeTarget.y;
     
+        var obj = instance_nearest(x, y, objCollide);
+        var objAngle = point_direction(obj.x, obj.y, x, y);
+        
+        while (place_meeting(x, y, obj))
+        {
+            x += lengthdir_x(1, objAngle);
+            y += lengthdir_y(1, objAngle);
+        }
+        
         changing = false;
         type = changeTarget.type;
         event_user(15);
