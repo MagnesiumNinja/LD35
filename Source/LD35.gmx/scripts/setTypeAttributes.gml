@@ -89,4 +89,25 @@ switch(type)
         break;
     }
     
+    case EnemyType.BRAIN:
+    {
+        MAX_SPEED = 3;
+        ACCEL = 0.7;
+        FRIC = 0.4;
+        
+        MAX_HP = 2;
+        hp = MAX_HP;
+        
+        idleSprite = sprIdle_Golem;
+        moveSprite = sprMove_Golem;
+        primarySprite = sprPrimary_Golem;
+        secondarySprite = sprSecondary_Golem;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.05;
+        primarySpeed = 0.1;
+        secondarySpeed = 0.02;
+        break;
+    }
+    
 }
