@@ -104,7 +104,8 @@ if (!dead)
         {
             var tarAngle = point_direction(x, y, target.x, target.y);
             
-            if (point_distance(x, y, target.x, target.y) &lt;= NOTICE_DIS || 
+            if (place_meeting(x, y, objAudioSource) ||
+                point_distance(x, y, target.x, target.y) &lt;= NOTICE_DIS || 
                 distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; isAngleBetween(tarAngle, image_angle - VIEW_ANGLE, image_angle + VIEW_ANGLE) &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
