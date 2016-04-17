@@ -82,6 +82,7 @@
     <sprites name="HUD">
       <sprites name="Abilities">
         <sprite>sprites\sprAbilityBase</sprite>
+        <sprite>sprites\sprAbilityCooldown</sprite>
         <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
       <sprites name="FOW">
@@ -229,8 +230,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -63,6 +63,11 @@ hitAngle = 90;
     image_single = 1;
     mask_index = sprDoorMaskOpen;
     
+    var audio = instance_create(x, y, objAudioSource);
+    audio.life = 20;
+    audio.image_xscale = 7;
+    audio.image_yscale = 7;
+    
      // generate break particles
     for (var i = 0; i &lt; NUM_BREAK_PARTICLES; i++)
     {
