@@ -89,6 +89,15 @@ if (par != noone &amp;&amp; instance_exists(par))
             e.hp -= DAMAGE;
             e.hitX = x;
             e.hitY = y;
+                            
+            if (e.hp &gt; 0)
+            {
+                for (var i = 0; i &lt; 10; i++)
+                    instance_create(e.x, e.y, objBloodParticle);
+            
+                instance_create(e.x, e.y, objSliceParticle);
+            }
+            
             hit = true;
         }
     }

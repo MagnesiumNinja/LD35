@@ -136,6 +136,7 @@
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
       <object>objects\objGunshotHitParticle</object>
+      <object>objects\objBloodParticle</object>
       <object>objects\objBloodSplatter</object>
       <object>objects\objBloodSplatterDelayed</object>
       <object>objects\objSliceParticle</object>
