@@ -79,7 +79,7 @@ aimAngle = 0;
 dashing = false;
 dashTimer = DASH_TIMER;
 
-type = EnemyType.GUNNER;
+type = EnemyType.PHANTOM;
 changing = false;
 changeTarget = noone;
 
@@ -169,17 +169,17 @@ event_user(15);
     // AIMING //
     
     aimAngle = point_direction(x, y, mouse_x, mouse_y);
-        
+
+    // ABILITIES //
+    
+    if (primaryCooldown &gt; 0)
+        primaryCooldown--;
+    
+    if (secondaryCooldown &gt; 0)
+        secondaryCooldown--;
+       
     if (!dashing)
-    {
-        // ABILITIES //
-        
-        if (primaryCooldown &gt; 0)
-            primaryCooldown--;
-        
-        if (secondaryCooldown &gt; 0)
-            secondaryCooldown--;
-        
+    { 
         if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
         {
             if (primaryCooldown == 0)

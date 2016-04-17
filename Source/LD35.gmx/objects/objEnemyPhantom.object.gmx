@@ -38,7 +38,7 @@ enum PhantomAIState
 
 // CONSTANTS //
 
-RECALCULATE_TIME = 10;
+RECALCULATE_TIME = 4;
 MAX_HP = 1;
 MOVE_SPEED = 3;
 ROTATE_SPEED = 0.25;
@@ -48,7 +48,7 @@ KNOCKBACK_SPEED = 3;
 
 AGGRO_DIS = 650;
 VIEW_ANGLE = 25;
-ATTACK_DIS = 16;
+ATTACK_DIS = 24;
 DODGE_DIS = 64;
 DODGE_SPEED = 15;
 COOLDOWN_TIME = 80;
@@ -172,7 +172,7 @@ if (!dead)
             {
                 // Attack
                 var attack = instance_create(x, y, objPhantomStab);
-                attack.image_angle = point_direction(x, y, target.x, target.y);
+                attack.image_angle = image_angle;
                 attack.target = target;
                 attack.par = id;
             }
@@ -336,6 +336,27 @@ instance_create(x, y, objSliceParticle);
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
+if (state == PhantomAIState.DODGE &amp;&amp; !(hspd == 0 &amp;&amp; vspd == 0))
+{
+    sprite_index = sprSecondary_Phantom;
+    image_speed = 0.3;
+}
+else if (state == PhantomAIState.ATTACK &amp;&amp; chargeTime &lt; ATTACK_TIME &amp;&amp; chargeTime &gt; 0)
+{
+    sprite_index = sprPrimary_Phantom;
+    image_speed = 0.01;
+}
+else if (state == PhantomAIState.MOVE)
+{
+    sprite_index = sprMove_Phantom;
+    image_speed = 0.2;
+}
+else
+{
+    sprite_index = sprIdle_Phantom;
+    image_speed = 0.3;
+}
 
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
 

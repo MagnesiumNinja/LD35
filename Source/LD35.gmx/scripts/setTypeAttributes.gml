@@ -34,6 +34,15 @@ switch(type)
         MAX_HP = 1;
         hp = MAX_HP;
         
+        idleSprite = sprIdle_Phantom;
+        moveSprite = sprMove_Phantom;
+        primarySprite = sprPrimary_Phantom;
+        secondarySprite = sprSecondary_Phantom;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.2;
+        primarySpeed = 0.08;
+        secondarySpeed = 0.3;
         break;
     }
     
