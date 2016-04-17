@@ -33,6 +33,11 @@ global.CAMERA_OBJECT = noone;
 // PATH-FINDING //
 
 global.PATH_GRID = -1;
+
+
+// STARTING ACTIONS //
+
+instance_create(0, 0, objLightController);
 </string>
           </argument>
         </arguments>

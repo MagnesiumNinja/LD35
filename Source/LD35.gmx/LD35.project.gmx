@@ -68,6 +68,10 @@
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
+    <sprites name="Lights">
+      <sprite>sprites\sprLightPlayer</sprite>
+      <sprite>sprites\sprLightEnemy</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
@@ -121,6 +125,7 @@
       <object>objects\objController</object>
       <object>objects\objRoomController</object>
       <object>objects\objDebugController</object>
+      <object>objects\objLightController</object>
     </objects>
     <objects name="HUD">
       <object>objects\objCamera</object>
