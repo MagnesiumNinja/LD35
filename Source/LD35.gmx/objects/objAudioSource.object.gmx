@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-LIFE = -1;
 SCALE = 1;
+SPEED = 0.1;
 color = c_dkgray;
 alpha = 0.9;
 
@@ -36,7 +36,7 @@ alpha = 0.9;
 // VARIABLES //
 
 par = noone;
-life = -1;
+life = false;
 </string>
           </argument>
         </arguments>
@@ -65,19 +65,13 @@ life = -1;
     y = par.y;
 }
 
-
-
-
-if (life &gt; 0)
+if (life)
 {
-    life--;
+    image_xscale = approach(image_xscale, SCALE, SPEED);
+    image_yscale = image_xscale;
     
-    image_xscale = SCALE * (1 - life / LIFE);
-    image_yscale = SCALE * (1 - life / LIFE);
-}
-else if (life == 0)
-{
-    instance_destroy();
+    if (image_xscale &gt;= SCALE)
+        instance_destroy();
 }
 else
 {
@@ -107,10 +101,11 @@ else
           <argument>
             <kind>1</kind>
             <string>draw_set_color(color);
-draw_set_alpha(alpha);
+draw_set_alpha(alpha * (1 - image_xscale / SCALE));
 
-draw_circle(x, y, 16 * image_xscale, true);
+draw_circle(x, y, 8 * image_xscale, true);
 
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

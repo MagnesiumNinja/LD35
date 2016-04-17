@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>objCollide</parentName>
+  <parentName>objBlock</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -60,13 +60,15 @@ hitAngle = 90;
             <kind>1</kind>
             <string>if (broken &amp;&amp; image_single == 0)
 {
-    image_single = 1;
-    mask_index = sprDoorMaskOpen;
+    //image_single = 1;
+    //mask_index = sprDoorMaskOpen;
     
     var audio = instance_create(x, y, objAudioSource);
-    audio.LIFE = 20;
-    audio.life = audio.LIFE;
-    audio.SCALE = 7;
+    audio.life = true;
+    audio.SCALE = 10;
+    
+    // Reveal nearby FOWs
+    revealFOWs(x, y);
     
      // generate break particles
     for (var i = 0; i &lt; NUM_BREAK_PARTICLES; i++)
@@ -74,6 +76,11 @@ hitAngle = 90;
         var breakPart = instance_create(x, y, objWallBreakParticle);
         breakPart.angle = hitAngle;
     }
+    
+    instance_destroy();
+
+    with (objPathfindingEntity)
+        updateGrid = 5;
 }
 </string>
           </argument>

@@ -64,6 +64,9 @@ if (image_index &gt; image_number - image_speed)
     instance_destroy();
 }
 
+if (image_index &gt; 1)
+    hit = true;
+
 // Following the parent
 if (par != noone &amp;&amp; instance_exists(par))
 {
