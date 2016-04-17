@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-7000</depth>
-  <persistent>0</persistent>
+  <depth>-9999</depth>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -27,24 +27,23 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-OVERLAY_ALPHA = 0.7;
-OVERLAY_COLOUR = c_black;
-
-TINT_COLD_ALPHA = 0.2;
-TINT_WARM_ALPHA = 0;
-TINT_COLD_COLOUR = make_color_rgb(0, 0, 50);
-TINT_WARM_COLOUR = c_orange;
+CIRCLE_SPEED = 14;
+WAIT_TIME = 30;
 
 
 // VARIABLES //
 
+radius = view_wview[0] / 2;
+state = 0;
+wait = WAIT_TIME;
+rm = -1;
 surface = surface_create(view_wview[0], view_hview[0]);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="72">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -61,51 +60,58 @@ surface = surface_create(view_wview[0], view_hview[0]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Make sure the surface hasn't been destroyed
-if (!surface_exists(surface)) 
-{
+            <string>// Surface drawing
+if (!surface_exists(surface))
     surface = surface_create(view_wview[0], view_hview[0]);
-}
-
 
 surface_set_target(surface);
 
-// Clear old stuff
-draw_set_blend_mode(bm_subtract);
-
-draw_set_color(c_white);
-draw_set_alpha(1);
-draw_rectangle(0, 0, view_wview[0], view_hview[0], false);
-draw_set_alpha(1);
-
-draw_set_blend_mode(bm_normal);
-
-
-// Darkness
-draw_set_color(OVERLAY_COLOUR);
-draw_set_alpha(OVERLAY_ALPHA);
-draw_rectangle(0, 0, view_wview[0], view_hview[0], false);
-draw_set_color(c_white);
-draw_set_alpha(1);
-
+draw_clear(c_black);
 
 draw_set_blend_mode(bm_subtract);
 
-//Lights
-draw_sprite_ext(sprLightPlayer, 0, objPlayer.x - view_xview[0], 
-    objPlayer.y - view_yview[0], image_xscale, image_yscale, image_angle, c_white, 1);
+draw_set_color(c_white);
+draw_circle(view_wview[0] / 2, view_hview[0] / 2, radius, false);
 
-with (objEnemyEntity)
-{
-    if (fowAlpha &gt; 0)
-        draw_sprite_ext(sprLightEnemy, 0, x - view_xview[0], 
-            y - view_yview[0], image_xscale, image_yscale, image_angle, c_white, 1);
-}
-    
-    
-draw_set_blend_mode(bm_normal);
+draw_set_blend_mode(bm_add);
 
 surface_reset_target();
+
+
+// State changing
+switch(state)
+{
+    case 0:
+    {
+        if (radius &gt; 0)
+            radius = approach(radius, 0, CIRCLE_SPEED);
+        else
+        {
+            room_goto(rm);
+            state++;
+        }
+        
+        break;
+    }
+    
+    case 1:
+    {
+        if (wait &gt; 0)
+            wait--;
+        else
+            state++;
+        break;
+    }
+    
+    case 2:
+    {
+        if (radius &lt; view_wview[0] / 2)
+            radius = approach(radius, view_wview[0] / 2, CIRCLE_SPEED);
+        else
+            instance_destroy();
+        break;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -128,34 +134,7 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Light colouring
-
-// Cold tint
-draw_set_blend_mode(bm_add)
-draw_set_alpha(TINT_COLD_ALPHA)
-draw_rectangle_color(view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0], 
-    TINT_COLD_COLOUR, TINT_COLD_COLOUR, TINT_COLD_COLOUR, TINT_COLD_COLOUR, false)
-
-// Player
-with (objPlayer) 
-{
-    draw_sprite_ext(sprLightPlayer, 0, x, y, 1, 1, 0, objLightController.TINT_WARM_COLOUR, objLightController.TINT_WARM_ALPHA);
-}    
-
-with (objEnemyEntity)
-{
-    if (fowAlpha &gt; 0)
-        draw_sprite_ext(sprLightEnemy, 0, x, y, 1, 1, 0, objLightController.TINT_WARM_COLOUR, objLightController.TINT_WARM_ALPHA);
-}
-
-
-draw_set_alpha(1);
-draw_set_blend_mode(bm_normal);
-
-
-//Actual lights
-draw_surface(surface, view_xview[0], view_yview[0]);
-
+            <string>draw_surface(surface, view_xview[0], view_yview[0]);
 </string>
           </argument>
         </arguments>

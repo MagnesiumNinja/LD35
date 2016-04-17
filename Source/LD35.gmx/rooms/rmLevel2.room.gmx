@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1540</w>
-    <h>849</h>
+    <w>1008</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>1058</xoffset>
-    <yoffset>1233</yoffset>
+    <page>1</page>
+    <xoffset>-124</xoffset>
+    <yoffset>-181</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -51,10 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="objDebugController" x="32" y="0" name="inst_96439846" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objGameSettings" x="0" y="0" name="inst_EE3595CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objController" x="16" y="0" name="inst_9BEE0345" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRoomController" x="48" y="0" name="inst_9FD374DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRoomController" x="0" y="0" name="inst_9FD374DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="128" y="176" name="inst_05B7FFAD" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="112" y="176" name="inst_D131709A" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="128" y="288" name="inst_2FD0772F" locked="0" code="" scaleX="35" scaleY="1" colour="4294967295" rotation="0"/>
@@ -86,7 +83,7 @@
     <instance objName="objDoor" x="896" y="248" name="inst_28D72A10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="1224" y="112" name="inst_F86194CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
     <instance objName="objDoor" x="1000" y="624" name="inst_8B45C8FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="objPlayer" x="368" y="88" name="inst_3DA82688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlayer" x="176" y="224" name="inst_3DA82688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEnemyGunner" x="712" y="296" name="inst_A92E1AE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="300"/>
     <instance objName="objEnemyGunner" x="1088" y="88" name="inst_0AB19118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="200"/>
     <instance objName="objEnemyGunner" x="1120" y="576" name="inst_71832575" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="150"/>

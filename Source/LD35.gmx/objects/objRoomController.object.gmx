@@ -55,6 +55,11 @@ shakes = global.DEFAULT_SHAKE_VALUE; //The shake intensity (maximum-pixel-shake-
 incr = 2; //The amount of intensity increment when the quake starts and stops.
 factor = 0; //Current Intensity.
 shakeTimer = -1;
+
+
+// STARTING ACTIONS //
+
+instance_create(0, 0, objLightController);
 </string>
           </argument>
         </arguments>

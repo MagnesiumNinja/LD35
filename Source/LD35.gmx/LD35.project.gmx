@@ -103,6 +103,7 @@
         <sprite>sprites\sprDoorMaskClosed</sprite>
         <sprite>sprites\sprDoorMaskOpen</sprite>
       </sprites>
+      <sprite>sprites\sprEOL</sprite>
     </sprites>
     <sprites name="Abilities">
       <sprite>sprites\sprPhantomStab</sprite>
@@ -179,6 +180,7 @@
       <object>objects\objFramePause</object>
       <object>objects\objHurtOverlay</object>
       <object>objects\objChangeOverlay</object>
+      <object>objects\objScreenTransition</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -199,6 +201,7 @@
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>
+        <object>objects\objEOL</object>
       </objects>
       <object>objects\objAudioSource</object>
     </objects>
@@ -220,8 +223,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmMenu</room>
     <room>rooms\rmLevel1</room>
-    <room>rooms\rmTest</room>
+    <room>rooms\rmLevel2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

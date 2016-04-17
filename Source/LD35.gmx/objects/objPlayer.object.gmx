@@ -119,7 +119,7 @@ event_user(15);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!changing)
+            <string>if (!changing &amp;&amp; !dead)
 {
     if (!dashing)
     {
@@ -211,7 +211,7 @@ event_user(15);
 }
 
 // CHANGING //
-else
+else if (!dead)
 {
     // Moving towards the new body
     if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 10)
@@ -322,6 +322,30 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
     var dashPart = instance_create(x, y, objBloodSplatter);
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var trans = instance_create(x, y, objScreenTransition);
+trans.rm = room;
 </string>
           </argument>
         </arguments>
