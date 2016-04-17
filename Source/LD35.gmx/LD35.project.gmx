@@ -230,8 +230,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel3</room>
+    <room>rooms\rmLevel1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
