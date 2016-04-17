@@ -56,6 +56,7 @@ CHARGE_TIME = 50;
 ATTACK_TIME = 40;
 
 NUM_DASH_PARTICLES = 15;
+NUM_BLOOD_SPLATTERS = 3;
 
 // VARIABLES //
 
@@ -269,6 +270,12 @@ if (!(hitX == 0 &amp;&amp; hitY == 0))
     var kbAngle = point_direction(hitX, hitY, x, y);
     hspd = lengthdir_x(KNOCKBACK_SPEED, kbAngle);
     vspd = lengthdir_y(KNOCKBACK_SPEED, kbAngle);
+}
+
+// generate blood splatters
+for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
+{
+    var dashPart = instance_create(x, y, objBloodSplatter);
 }
 </string>
           </argument>
