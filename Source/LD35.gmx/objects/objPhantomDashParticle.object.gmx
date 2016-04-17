@@ -32,13 +32,12 @@ MIN_ALPHA = 0.2;
 MAX_ALPHA = 0.9;
 
 //speed
-MIN_FADE_SPEED = 0.01;
-MAX_FADE_SPEED = 0.02;
+MIN_FADE_SPEED = 0.03;
+MAX_FADE_SPEED = 0.07;
 
 //radius
-MIN_RADIUS = 0.30;
-//remember the max radius equal to a block would be 8
-MAX_RADIUS = 7;
+MIN_RADIUS = 0.10;
+MAX_RADIUS = 5;
 
 //spread from initial location
 MIN_X_SPREAD = -3;

@@ -51,6 +51,7 @@
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
     <background>background\tsEarlyExterior_Stone</background>
+    <background>background\tsEarlyInterior_Floor</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
