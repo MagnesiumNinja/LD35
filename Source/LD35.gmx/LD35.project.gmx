@@ -64,7 +64,7 @@
       <sprite>sprites\sprGunnerGunshot</sprite>
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
     </sprites>
-    <sprite>sprites\bloodSplatters</sprite>
+    <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
   </sprites>
   <backgrounds name="background">
@@ -156,6 +156,7 @@
       <object>objects\objBloodSplatter</object>
       <object>objects\objBloodSplatterDelayed</object>
       <object>objects\objSliceParticle</object>
+      <object>objects\objHeartBreakParticle</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>

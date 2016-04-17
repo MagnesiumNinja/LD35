@@ -40,6 +40,9 @@ target = noone;
 
 hitX = 0;
 hitY = 0;
+
+prevHp = -1;
+
 </string>
           </argument>
         </arguments>
