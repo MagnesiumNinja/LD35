@@ -263,6 +263,7 @@
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
+    <room>rooms\rmLevel5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
