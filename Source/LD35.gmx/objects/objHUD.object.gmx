@@ -93,13 +93,28 @@ for (i = 0; i &lt; objPlayer.hp; i++)
 }
 
 // Draw the abilities
+var primAlpha = 1;
+var secAlpha = 1;
+
+if (objPlayer.primaryAbility != AbilityType.NOTHING &amp;&amp; objPlayer.primaryCooldown != 0)
+{
+    primAlpha = 0.3;
+}
+
+if (objPlayer.secondaryAbility != AbilityType.NOTHING &amp;&amp; objPlayer.secondaryCooldown != 0)
+{
+    secAlpha = 0.3;
+}
+
+
+
 draw_sprite_ext(sprAbilityBase, 0, view_xview[0] + view_wview[0] - sprite_get_width(sprAbilityBase) * 1 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 0.5 + ICON_BUFFER,
-        HUD_SCALE, HUD_SCALE, 0, c_white, 1);
-
+    HUD_SCALE, HUD_SCALE, 0, c_white, 1);
+      
 draw_sprite_ext(sprAbilityIcon, objPlayer.primaryAbility, view_xview[0] + view_wview[0] - sprite_get_width(sprAbilityBase) * 1 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 0.5 + ICON_BUFFER,
-        HUD_SCALE, HUD_SCALE, 0, c_white, 1);
+        HUD_SCALE, HUD_SCALE, 0, c_white, primAlpha);
     
     
 draw_sprite_ext(sprAbilityBase, 0, view_xview[0] +  view_wview[0] - sprite_get_width(sprAbilityBase) * 0.5 - ICON_BUFFER,
@@ -108,7 +123,7 @@ draw_sprite_ext(sprAbilityBase, 0, view_xview[0] +  view_wview[0] - sprite_get_w
 
 draw_sprite_ext(sprAbilityIcon, objPlayer.secondaryAbility, view_xview[0] +  view_wview[0] - sprite_get_width(sprAbilityBase) * 0.5 - ICON_BUFFER,
     view_yview[0] + sprite_get_height(sprAbilityBase) * 1 + ICON_BUFFER,
-        HUD_SCALE, HUD_SCALE, 0, c_white, 1);
+        HUD_SCALE, HUD_SCALE, 0, c_white, secAlpha);
     
 </string>
           </argument>

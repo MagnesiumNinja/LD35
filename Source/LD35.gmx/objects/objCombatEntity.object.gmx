@@ -77,9 +77,9 @@ if (!dead &amp;&amp; hp &lt;= 0)
     event_perform(ev_other, ev_user2);
     
     var audio = instance_create(x, y, objAudioSource);
-    audio.life = 30;
-    audio.image_xscale = 6;
-    audio.image_yscale = 6;
+    audio.LIFE = 30;
+    audio.life = audio.LIFE;
+    audio.SCALE = 6;
     
     shakeScreen(2, 0.2);
 }

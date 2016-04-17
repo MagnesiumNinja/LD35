@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>objBlock</parentName>
+  <parentName>objCollide</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -64,9 +64,9 @@ hitAngle = 90;
     mask_index = sprDoorMaskOpen;
     
     var audio = instance_create(x, y, objAudioSource);
-    audio.life = 20;
-    audio.image_xscale = 7;
-    audio.image_yscale = 7;
+    audio.LIFE = 20;
+    audio.life = audio.LIFE;
+    audio.SCALE = 7;
     
      // generate break particles
     for (var i = 0; i &lt; NUM_BREAK_PARTICLES; i++)

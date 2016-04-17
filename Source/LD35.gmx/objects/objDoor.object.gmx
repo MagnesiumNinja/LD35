@@ -138,9 +138,9 @@ else
 
 
 var audio = instance_create(x, y, objAudioSource);
-audio.life = 30;
-audio.image_xscale = 3;
-audio.image_yscale = 3;
+audio.LIFE = 30;
+audio.life = audio.LIFE;
+audio.SCALE = 3;
 </string>
           </argument>
         </arguments>
