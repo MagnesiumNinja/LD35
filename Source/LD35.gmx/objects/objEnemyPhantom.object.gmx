@@ -182,6 +182,7 @@ if (!dead)
             {
                 // Attack
                 var attack = instance_create(x, y, objPhantomStab);
+                attack.sprite_index = sprPhantomStab_Enemy;
                 attack.image_angle = image_angle;
                 attack.target = target;
                 attack.par = id;

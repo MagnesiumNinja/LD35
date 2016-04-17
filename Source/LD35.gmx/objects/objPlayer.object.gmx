@@ -52,6 +52,7 @@ MAX_SPEED = 5;
 ACCEL = 0.8;
 FRIC = 0.6;
 
+DEATH_WAIT = 60;
 CHANGE_SPEED = 12;
 NUM_CHANGE_PARTICLES = 4;
 NUM_DASH_PARTICLES = 15;
@@ -83,6 +84,7 @@ primaryAnim = 0;
 secondaryAnim = 0;
 
 footstep = false;
+deathWait = DEATH_WAIT;
 
 brainParasiteFrame = 0;
 
@@ -265,6 +267,23 @@ else if (!dead)
         with (changeTarget) instance_destroy();
     }
 }
+
+// DEATH //
+if (dead)
+{
+    hspd = approach(hspd, 0, FRIC);
+    vspd = approach(vspd, 0, FRIC);
+    
+    if (deathWait &gt; 0)
+        deathWait--;
+    else if (deathWait == 0)
+    {
+        deathWait--;
+       
+        var trans = instance_create(x, y, objScreenTransition);
+        trans.rm = room;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -390,8 +409,6 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
             <kind>1</kind>
             <string>// DEATH event
 
-var trans = instance_create(x, y, objScreenTransition);
-trans.rm = room;
 </string>
           </argument>
         </arguments>
