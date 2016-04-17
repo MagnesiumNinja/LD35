@@ -82,6 +82,8 @@ moveAnim = 0;
 primaryAnim = 0;
 secondaryAnim = 0;
 
+footstep = false;
+
 brainParasiteFrame = 0;
 
 aimAngle = 0;
@@ -305,6 +307,36 @@ audio_play_sound(choose(sndGross1, sndGross2, sndGross3), 7, false);
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="24">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// FOOTSTEP event
+
+if (type == EnemyType.GOLEM)
+{
+    var audio = instance_create(x, y, objAudioSource);
+    audio.life = true;
+    audio.SCALE = 3;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="13">
       <action>
         <libid>1</libid>
@@ -405,6 +437,23 @@ else
     {
         sprite_index = moveSprite;
         image_speed = moveSpeed;
+    }
+}
+
+if (sprite_index = moveSprite)
+{
+    if (image_index &gt;= 1 &amp;&amp; image_index &lt; 1.3 ||
+        image_index &gt;= 3 &amp;&amp; image_index &lt; 3.3)
+    {
+        if (!footstep)
+        {
+            footstep = true;
+            event_user(14);
+        }
+    }
+    else
+    {
+        footstep = false;
     }
 }
 

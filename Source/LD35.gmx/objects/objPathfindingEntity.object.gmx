@@ -34,13 +34,14 @@ findPath = false;
 followingPath = false;
 destX = -1;
 destY = -1;
+updateGrid = -1;
 
 
 // STARTING ACTIONS //
 
 // Create the grid
 pathGrid = mp_grid_create(0, 0, global.H_CELLS, global.V_CELLS, global.CELL_SIZE, global.CELL_SIZE);
-mp_grid_add_instances(pathGrid, objBlock, false);
+event_user(10);
 
 
 // Create the basic path
@@ -100,6 +101,39 @@ if (findPath)
     findPath = false;
     followingPath = false;
 }
+
+if (updateGrid &gt; 0)
+    updateGrid--;
+else
+{
+    updateGrid = -1;    
+    event_user(10);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="20">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset pathfinding grid
+mp_grid_clear_all(pathGrid);
+mp_grid_add_instances(pathGrid, objBlock, false);
 </string>
           </argument>
         </arguments>

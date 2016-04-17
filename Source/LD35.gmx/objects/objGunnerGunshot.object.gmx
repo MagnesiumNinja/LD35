@@ -38,7 +38,7 @@ NUM_DESTRUCT_PARTICLES = 20;
 target = noone;
 audioSource = instance_create(x, y, objAudioSource);
 audioSource.par = id;
-audioSource.SCALE = 5;
+audioSource.SCALE = 3;
 </string>
           </argument>
         </arguments>
