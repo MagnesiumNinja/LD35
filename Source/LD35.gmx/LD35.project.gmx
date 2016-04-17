@@ -199,6 +199,7 @@
       </objects>
       <objects name="Enemies">
         <object>objects\objEnemyPhantom</object>
+        <object>objects\objEnemyGolem</object>
         <object>objects\objEnemyGunner</object>
       </objects>
       <objects name="Interactables">
@@ -221,6 +222,7 @@
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>
+      <object>objects\objGolemPunch</object>
       <object>objects\objPlayerSlice</object>
       <object>objects\objGunnerGunshot</object>
     </objects>

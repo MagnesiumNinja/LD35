@@ -31,7 +31,8 @@ enum EnemyType
 {
     NORMAL,
     PHANTOM,
-    GUNNER
+    GUNNER,
+    GOLEM
 }
 
 enum AbilityType
@@ -40,7 +41,8 @@ enum AbilityType
     PLAYER_SLICE,
     PHANTOM_STAB,
     PHANTOM_DASH,
-    GUNNER_GUNSHOT
+    GUNNER_GUNSHOT,
+    GOLEM_PUNCH
 }
 
 
@@ -59,6 +61,8 @@ SECONDARY_COOLDOWN = 0;
 
 DASH_TIMER = 9;
 DASH_SPEED = 14;
+
+GOLEM_WAIT = 30;
 
 BRAIN_PARASITE_SPEED = 0.1;
 BRAIN_PARASITE_FRAMES = sprite_get_number(sprBrainParasite);
@@ -82,8 +86,8 @@ brainParasiteFrame = 0;
 
 aimAngle = 0;
 
-
 dashing = false;
+golemWait = false;
 dashTimer = DASH_TIMER;
 
 type = EnemyType.NORMAL;
@@ -119,25 +123,33 @@ event_user(15);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!changing &amp;&amp; !dead)
+            <string>event_inherited();
+
+if (!changing &amp;&amp; !dead)
 {
+    if (golemWait &gt; 0)
+        golemWait--;
+
     if (!dashing)
     {
         // MOVEMENT //
         
         var horComp = 0, vertComp = 0;
         
-        // Calculate movement angle
-        if (isDownMove(global.MOVE_LEFT))
-            horComp = -1;
-        else if (isDownMove(global.MOVE_RIGHT))
-            horComp = 1;
-            
-        if (isDownMove(global.MOVE_UP))
-            vertComp = -1;
-        else if (isDownMove(global.MOVE_DOWN))
-            vertComp = 1;
-            
+        if (golemWait == 0)
+        {
+            // Calculate movement angle
+            if (isDownMove(global.MOVE_LEFT))
+                horComp = -1;
+            else if (isDownMove(global.MOVE_RIGHT))
+                horComp = 1;
+                
+            if (isDownMove(global.MOVE_UP))
+                vertComp = -1;
+            else if (isDownMove(global.MOVE_DOWN))
+                vertComp = 1;
+        }
+        
         var angle = point_direction(0, 0, horComp, vertComp);
         
         // Apply movement acceleration and friction
@@ -344,7 +356,9 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var trans = instance_create(x, y, objScreenTransition);
+            <string>// DEATH event
+
+var trans = instance_create(x, y, objScreenTransition);
 trans.rm = room;
 </string>
           </argument>

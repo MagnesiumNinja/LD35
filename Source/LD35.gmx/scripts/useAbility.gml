@@ -54,4 +54,17 @@ switch(ability)
         
         break;
     }
+
+    case AbilityType.GOLEM_PUNCH:
+    {
+        var punch = instance_create(x, y, objGolemPunch);
+        punch.par = id;
+        punch.image_angle = aimAngle;
+        golemWait = GOLEM_WAIT;
+        
+        audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
+        
+        break;
+    }
+    
 }

@@ -67,4 +67,26 @@ switch(type)
         
         break;
     }
+    
+    case EnemyType.GOLEM:
+    {
+        MAX_SPEED = 2;
+        ACCEL = 0.9;
+        FRIC = 0.7;
+        
+        MAX_HP = 5;
+        hp = MAX_HP;
+        
+        idleSprite = sprIdle_Phantom;
+        moveSprite = sprMove_Phantom;
+        primarySprite = sprPrimary_Phantom;
+        secondarySprite = sprSecondary_Phantom;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.1;
+        primarySpeed = 0.02;
+        secondarySpeed = 0.3;
+        break;
+    }
+    
 }
