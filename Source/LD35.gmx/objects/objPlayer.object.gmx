@@ -294,7 +294,11 @@ setTypeAttributes(type);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (objHUD) event_user(0);
+            <string>/// HURT event
+
+instance_create(0, 0, objHurtOverlay);
+shakeScreen(3, 0.15);
+with (objHUD) event_user(0);
 </string>
           </argument>
         </arguments>

@@ -109,7 +109,8 @@ else
 
 if (e)
 {
-    e.hp -= DAMAGE;
+    e.prevHp = e.hp;
+    e.hp = max(0, e.hp - DAMAGE);
     e.hitX = xprevious;
     e.hitY = yprevious;
 

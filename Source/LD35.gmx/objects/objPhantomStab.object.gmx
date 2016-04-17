@@ -87,7 +87,7 @@ if (par != noone &amp;&amp; instance_exists(par))
         if (e &amp;&amp; !collision_line(par.x, par.y, e.x, e.y, objCollide, false, true))
         {
             e.prevHp = e.hp;
-            e.hp -= DAMAGE;
+            e.hp = max(0, e.hp - DAMAGE);
             e.hitX = x;
             e.hitY = y;
               
