@@ -192,7 +192,7 @@ event_user(15);
 else
 {
     // Moving towards the new body
-    if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 5)
+    if (point_distance(x, y, changeTarget.x, changeTarget.y) &gt; 10)
     {
         var angle = point_direction(x, y, changeTarget.x, changeTarget.y);
         
@@ -274,7 +274,8 @@ secondaryCooldown = SECONDARY_COOLDOWN;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, aimAngle, c_white, image_alpha);
+            <string>draw_sprite(sprPlayerShadow, 0, x, y);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, aimAngle, c_white, image_alpha);
 </string>
           </argument>
         </arguments>

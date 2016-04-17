@@ -44,10 +44,10 @@ MOVE_SPEED = 4;
 ROTATE_SPEED = 0.25;
 
 FRIC = 0.6;
-KNOCKBACK_SPEED = 10;
+KNOCKBACK_SPEED = 3;
 
 AGGRO_DIS = 650;
-VIEW_ANGLE = 45;
+VIEW_ANGLE = 30;
 ATTACK_DIS = 16;
 DODGE_DIS = 64;
 DODGE_SPEED = 15;
@@ -230,22 +230,11 @@ if (!dead)
 else
 {
     path_end();
-    
-    if (!(hspd == 0 &amp;&amp; vspd == 0))
-    {            
-        // Slow down
-        hspd = approach(hspd, 0, FRIC);
-        vspd = approach(vspd, 0, FRIC);
-    }
-    else
-    {
-        // We are stopped, notify the player
-        if (objPlayer.changing = false)
-        {
-            objPlayer.changing = true;
-            objPlayer.changeTarget = id;
-        }   
-    }
+       
+    // Slow down
+    hspd = approach(hspd, 0, FRIC);
+    vspd = approach(vspd, 0, FRIC);
+
 }
 </string>
           </argument>
@@ -272,6 +261,9 @@ else
             <string>/// DEAD event
 
 path_end();
+
+objPlayer.changing = true;
+objPlayer.changeTarget = id;
 
 if (!(hitX == 0 &amp;&amp; hitY == 0))
 {

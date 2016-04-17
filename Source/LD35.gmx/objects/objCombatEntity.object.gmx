@@ -66,6 +66,7 @@ hitY = 0;
 if (!dead &amp;&amp; hp &lt;= 0)
 {
     dead = true;
+    
     event_perform(ev_other, ev_user2);
 }
 </string>

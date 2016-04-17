@@ -14,6 +14,7 @@
         <sprite>sprites\sprPlayerSecondary_Normal</sprite>
       </sprites>
       <sprite>sprites\sprPlayerMask</sprite>
+      <sprite>sprites\sprPlayerShadow</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
@@ -54,6 +55,7 @@
     <background>background\tsEarlyExterior_Moss</background>
     <background>background\tsEarlyExterior_Stone</background>
     <background>background\tsEarlyInterior_Floor</background>
+    <background>background\tsEarlyInterior_Wall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -75,6 +77,7 @@
     </scripts>
     <scripts name="Drawing">
       <script>scripts\drawSpriteOutline.gml</script>
+      <script>scripts\activateKeyObjects.gml</script>
     </scripts>
     <scripts name="Combat">
       <script>scripts\useAbility.gml</script>
@@ -87,6 +90,9 @@
       <script>scripts\revealFOWs.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\sh_premultiply.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fntDebug</font>
   </fonts>
@@ -101,6 +107,7 @@
       <object>objects\objCamera</object>
       <object>objects\objHUD</object>
       <object>objects\objFOW</object>
+      <object>objects\objFramePause</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -124,6 +131,7 @@
       </objects>
     </objects>
     <objects name="Particles">
+      <object>objects\objParticle</object>
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
       <object>objects\objGunshotHitParticle</object>
