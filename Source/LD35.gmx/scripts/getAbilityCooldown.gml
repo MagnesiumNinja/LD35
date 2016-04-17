@@ -10,6 +10,6 @@ switch(ability)
     case AbilityType.PHANTOM_DASH: return 30;
     case AbilityType.GUNNER_GUNSHOT: return 30;
     case AbilityType.GOLEM_PUNCH: return 60;
-    case AbilityType.BRAIN_SHOT: return 10;
+    case AbilityType.BRAIN_SHOT: return 8;
     case AbilityType.BRAIN_FOCUS: return 100;
 }

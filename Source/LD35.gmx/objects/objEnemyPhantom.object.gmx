@@ -39,7 +39,7 @@ enum PhantomAIState
 // CONSTANTS //
 
 RECALCULATE_TIME = 4;
-MAX_HP = 1;
+MAX_HP = 1.5;
 MOVE_SPEED = 3;
 ROTATE_SPEED = 0.25;
 
