@@ -51,8 +51,8 @@ ALERT_TIME = 30;
 
 NUM_BLOOD_SPLATTERS = 4;
 
-MIN_MOVE_RANGE = 16;
-MAX_MOVE_RANGE = 160;
+MIN_MOVE_RANGE = -128;
+MAX_MOVE_RANGE = 128;
 
 FRIC = 0.4;
 KNOCKBACK_SPEED = 0;
@@ -152,7 +152,7 @@ if (!dead)
                             destY = target.y + random_range(MIN_MOVE_RANGE, MAX_MOVE_RANGE);
                             tries--;
                         }
-                        until(!collision_line(destX, destY, target.x, target.y, objCollide, false, true) || tries == 0);
+                        until(!collision_line(destX, destY, target.x, target.y, objCollide, false, true) &amp;&amp; !place_meeting(destX, destY, objCollide) || tries == 0);
                         
                         if (tries != 0)
                         {
