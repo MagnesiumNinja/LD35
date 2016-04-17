@@ -118,17 +118,37 @@ if (dead)
 
 draw_sprite_ext(sprFOWCentre, 0, x, y, image_xscale, image_yscale, 0, c_white, fogAlpha);
 
+var left = place_meeting(x - 1, y, objFOW);
+var right = place_meeting(x + 1, y, objFOW);
+var up = place_meeting(x, y - 1, objFOW);
+var down = place_meeting(x, y + 1, objFOW);
+    
 // Edges
-draw_sprite_ext(sprFOWEdge, 0, x, y, 1, image_xscale, 90, c_white, fogAlpha);
-draw_sprite_ext(sprFOWEdge, 0, x, y, -1, image_yscale, 0, c_white, fogAlpha);
-draw_sprite_ext(sprFOWEdge, 0, x + sprite_width, y + sprite_height, 1, image_xscale, 270, c_white, fogAlpha);
-draw_sprite_ext(sprFOWEdge, 0, x + sprite_width, y, 1, image_yscale, 0, c_white, fogAlpha);
+if (!up)
+    draw_sprite_ext(sprFOWEdge, 0, x, y, 1, image_xscale, 90, c_white, fogAlpha);
+
+if (!left)
+    draw_sprite_ext(sprFOWEdge, 0, x, y, -1, image_yscale, 0, c_white, fogAlpha);
+    
+if (!down)
+    draw_sprite_ext(sprFOWEdge, 0, x + sprite_width, y + sprite_height, 1, image_xscale, 270, c_white, fogAlpha);
+
+if (!right)
+    draw_sprite_ext(sprFOWEdge, 0, x + sprite_width, y, 1, image_yscale, 0, c_white, fogAlpha);
 
 // Corners
-draw_sprite_ext(sprFOWCorner, 0, x - 16, y, 1, 1, 90, c_white, fogAlpha);
-draw_sprite_ext(sprFOWCorner, 0, x, y + sprite_height + 16, 1, 1, 180, c_white, fogAlpha);
-draw_sprite_ext(sprFOWCorner, 0, x + sprite_width + 16, y + sprite_height, 1, 1, 270, c_white, fogAlpha);
-draw_sprite_ext(sprFOWCorner, 0, x + sprite_width, y - 16, 1, 1, 0, c_white, fogAlpha);
+if (!up &amp;&amp; !left)
+    draw_sprite_ext(sprFOWCorner, 0, x - 16, y, 1, 1, 90, c_white, fogAlpha);
+
+if (!left &amp;&amp; !down)
+    draw_sprite_ext(sprFOWCorner, 0, x, y + sprite_height + 16, 1, 1, 180, c_white, fogAlpha);
+
+if (!right &amp;&amp; !down)
+    draw_sprite_ext(sprFOWCorner, 0, x + sprite_width + 16, y + sprite_height, 1, 1, 270, c_white, fogAlpha);
+    
+if (!right &amp;&amp; !up)
+    draw_sprite_ext(sprFOWCorner, 0, x + sprite_width, y - 16, 1, 1, 0, c_white, fogAlpha);
+
 
 draw_set_alpha(1);
 </string>
