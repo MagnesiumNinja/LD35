@@ -127,11 +127,13 @@ if (open)
 
     image_speed = 0.1;
     mask_index = sprDoorMaskOpen;
+    audio_play_sound(sndDoorOpen, 5, false);
 }
 else
 {
     image_speed = -0.1;
     mask_index = sprDoorMaskClosed;
+    audio_play_sound(sndDoorClose, 5, false);
 }
 </string>
           </argument>

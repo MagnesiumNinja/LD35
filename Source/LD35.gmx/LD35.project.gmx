@@ -42,6 +42,10 @@
         <sound>sound\sndSplatter2</sound>
         <sound>sound\sndSplatter3</sound>
       </sounds>
+      <sounds name="Doors">
+        <sound>sound\sndDoorOpen</sound>
+        <sound>sound\sndDoorClose</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
