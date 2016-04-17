@@ -48,6 +48,7 @@
       <sprites name="Health">
         <sprite>sprites\sprHealthHeart</sprite>
         <sprite>sprites\sprHealthBreak</sprite>
+        <sprite>sprites\sprHurtOverlay</sprite>
       </sprites>
       <sprite>sprites\sprAlert</sprite>
     </sprites>
@@ -125,6 +126,7 @@
       <object>objects\objHUD</object>
       <object>objects\objFOW</object>
       <object>objects\objFramePause</object>
+      <object>objects\objHurtOverlay</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
