@@ -59,6 +59,7 @@
       <sprite>sprites\sprPlayerMask</sprite>
       <sprite>sprites\sprPlayerShadow</sprite>
       <sprite>sprites\sprBrainParasite</sprite>
+      <sprite>sprites\sprPlayerDead</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Gunner">
@@ -114,6 +115,7 @@
       <sprite>sprites\sprEOL</sprite>
     </sprites>
     <sprites name="Abilities">
+      <sprite>sprites\sprTentacleAttack</sprite>
       <sprite>sprites\sprPhantomStab</sprite>
       <sprite>sprites\sprPhantomStab_Enemy</sprite>
       <sprite>sprites\sprGunnerGunshot</sprite>
