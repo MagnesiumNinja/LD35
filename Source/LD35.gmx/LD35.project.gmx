@@ -16,6 +16,14 @@
       <sprite>sprites\sprPlayerMask</sprite>
       <sprite>sprites\sprPlayerShadow</sprite>
     </sprites>
+    <sprites name="Enemies">
+      <sprites name="Gunner">
+        <sprite>sprites\sprIdle_Gunner</sprite>
+        <sprite>sprites\sprMove_Gunner</sprite>
+        <sprite>sprites\sprPrimary_Gunner</sprite>
+        <sprite>sprites\sprSecondary_Gunner</sprite>
+      </sprites>
+    </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
     </sprites>
