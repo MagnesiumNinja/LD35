@@ -283,6 +283,9 @@ SECONDARY_COOLDOWN = getAbilityCooldown(secondaryAbility);
 secondaryCooldown = 0;
 
 setTypeAttributes(type);
+
+audio_play_sound(choose(sndBeat1, sndBeat2), 7, false);
+audio_play_sound(choose(sndGross1, sndGross2, sndGross3), 7, false);
 </string>
           </argument>
         </arguments>

@@ -265,7 +265,7 @@ if (hp &gt; 0)
           <argument>
             <kind>1</kind>
             <string>/// DEAD event
-
+event_inherited();
 path_end();
 
 objPlayer.changing = true;
@@ -283,6 +283,8 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
 {
     var dashPart = instance_create(x, y, objBloodSplatter);
 }
+
+instance_create(x, y, objSliceParticle);
 </string>
           </argument>
         </arguments>

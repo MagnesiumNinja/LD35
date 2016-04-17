@@ -33,6 +33,7 @@ FADE_RATE = 0.05;
 // VARIABLES //
 
 image_alpha = 0;
+
 </string>
           </argument>
         </arguments>

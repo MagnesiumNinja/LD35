@@ -27,6 +27,15 @@
         <sound>sound\sndDash3</sound>
       </sounds>
     </sounds>
+    <sounds name="Change">
+      <sound>sound\sndFade1</sound>
+      <sound>sound\sndFade2</sound>
+      <sound>sound\sndBeat1</sound>
+      <sound>sound\sndBeat2</sound>
+      <sound>sound\sndGross1</sound>
+      <sound>sound\sndGross2</sound>
+      <sound>sound\sndGross3</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
