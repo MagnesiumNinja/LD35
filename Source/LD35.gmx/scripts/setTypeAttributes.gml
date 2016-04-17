@@ -18,7 +18,7 @@ switch(type)
         secondarySprite = sprPlayerSecondary_Normal;
         
         idleSpeed = 0.3;
-        moveSpeed = 0.2;
+        moveSpeed = 0.15;
         primarySpeed = 0.3;
         secondarySpeed = 0.3;
     
@@ -77,14 +77,14 @@ switch(type)
         MAX_HP = 5;
         hp = MAX_HP;
         
-        idleSprite = sprIdle_Phantom;
-        moveSprite = sprMove_Phantom;
-        primarySprite = sprPrimary_Phantom;
-        secondarySprite = sprSecondary_Phantom;
+        idleSprite = sprIdle_Golem;
+        moveSprite = sprMove_Golem;
+        primarySprite = sprPrimary_Golem;
+        secondarySprite = sprSecondary_Golem;
         
         idleSpeed = 0.3;
-        moveSpeed = 0.1;
-        primarySpeed = 0.02;
+        moveSpeed = 0.05;
+        primarySpeed = 0.04;
         secondarySpeed = 0.3;
         break;
     }

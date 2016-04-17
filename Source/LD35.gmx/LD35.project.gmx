@@ -74,6 +74,12 @@
         <sprite>sprites\sprPrimary_Phantom</sprite>
         <sprite>sprites\sprSecondary_Phantom</sprite>
       </sprites>
+      <sprites name="Golem">
+        <sprite>sprites\sprIdle_Golem</sprite>
+        <sprite>sprites\sprMove_Golem</sprite>
+        <sprite>sprites\sprPrimary_Golem</sprite>
+        <sprite>sprites\sprSecondary_Golem</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>

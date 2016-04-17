@@ -186,6 +186,7 @@ if (!dead)
                     image_index = 0;
                     
                     var attack = instance_create(x, y, objGunnerGunshot);
+                    attack.sprite_index = sprGunnerGunshot_Enemy;
                     attack.angle = point_direction(x, y, target.x, target.y);
                     attack.target = target;
                     attack.par = id;

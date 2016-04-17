@@ -65,7 +65,7 @@ hitAngle = 90;
     
     var audio = instance_create(x, y, objAudioSource);
     audio.life = true;
-    audio.SCALE = 7;
+    audio.SCALE = 10;
     
     // Reveal nearby FOWs
     revealFOWs(x, y);
