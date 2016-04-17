@@ -260,6 +260,7 @@
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
+    <room>rooms\rmLevel4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
