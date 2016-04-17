@@ -90,7 +90,12 @@ if (par != noone &amp;&amp; instance_exists(par))
         if (e &amp;&amp; e.canBeHit &amp;&amp; !collision_line(par.x, par.y, e.x, e.y, objCollide, false, true))
         {
             e.prevHp = e.hp;
-            e.hp = max(0, e.hp - DAMAGE);
+            
+            if (e == objPlayer)
+                e.hp = max(0, e.hp - DAMAGE * 2);
+            else
+                e.hp = max(0, e.hp - DAMAGE);
+            
             e.hitX = x;
             e.hitY = y;
               

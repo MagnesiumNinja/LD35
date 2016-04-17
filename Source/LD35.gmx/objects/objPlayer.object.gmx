@@ -263,13 +263,16 @@ else if (!dead)
         x = changeTarget.x;
         y = changeTarget.y;
     
-        var obj = instance_nearest(x, y, objCollide);
-        var objAngle = point_direction(obj.x, obj.y, x, y);
-        
-        while (place_meeting(x, y, obj))
+        while (place_meeting(x, y, objCollide))
         {
-            x += lengthdir_x(1, objAngle);
-            y += lengthdir_y(1, objAngle);
+            var obj = instance_place(x, y, objCollide);
+            var objAngle = point_direction(obj.x, obj.y, x, y);
+            
+            while (place_meeting(x, y, obj))
+            {
+                x += lengthdir_x(1, objAngle);
+                y += lengthdir_y(1, objAngle);
+            }
         }
         
         changing = false;
@@ -363,7 +366,7 @@ if (type == EnemyType.GOLEM)
 {
     var audio = instance_create(x, y, objAudioSource);
     audio.life = true;
-    audio.SCALE = 3;
+    audio.SCALE = 5;
 }
 </string>
           </argument>
