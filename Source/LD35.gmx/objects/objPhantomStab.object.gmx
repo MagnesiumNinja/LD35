@@ -94,6 +94,8 @@ if (par != noone &amp;&amp; instance_exists(par))
             with (e) event_user(3);
             
             hit = true;
+            
+            audio_play_sound(choose(sndStab_Hit1, sndStab_Hit2, sndStab_Hit3), 10, false);
         }
     }
 }

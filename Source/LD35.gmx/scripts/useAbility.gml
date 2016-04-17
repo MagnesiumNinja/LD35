@@ -15,6 +15,8 @@ switch(ability)
         stab.par = id;
         stab.image_angle = aimAngle;
         
+        audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
+        
         break;
     }
     

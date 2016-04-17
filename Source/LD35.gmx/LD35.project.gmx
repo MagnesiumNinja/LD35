@@ -4,7 +4,18 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Abilities">
+      <sounds name="Stab">
+        <sound>sound\sndStab_Hit1</sound>
+        <sound>sound\sndStab_Hit2</sound>
+        <sound>sound\sndStab_Hit3</sound>
+        <sound>sound\sndStab_Swing1</sound>
+        <sound>sound\sndStab_Swing2</sound>
+        <sound>sound\sndStab_Swing3</sound>
+      </sounds>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player">
       <sprites name="Normal">
