@@ -82,7 +82,7 @@ aimAngle = 0;
 dashing = false;
 dashTimer = DASH_TIMER;
 
-type = EnemyType.GUNNER;
+type = EnemyType.PHANTOM;
 changing = false;
 changeTarget = noone;
 
@@ -172,17 +172,17 @@ event_user(15);
     // AIMING //
     
     aimAngle = point_direction(x, y, mouse_x, mouse_y);
-        
+
+    // ABILITIES //
+    
+    if (primaryCooldown &gt; 0)
+        primaryCooldown--;
+    
+    if (secondaryCooldown &gt; 0)
+        secondaryCooldown--;
+       
     if (!dashing)
-    {
-        // ABILITIES //
-        
-        if (primaryCooldown &gt; 0)
-            primaryCooldown--;
-        
-        if (secondaryCooldown &gt; 0)
-            secondaryCooldown--;
-        
+    { 
         if (mouse_check_button_pressed(global.PRIMARY_ABILITY) || gamepad_button_check_pressed(0, global.PRIMARY_ABILITY_GP))
         {
             if (primaryCooldown == 0)
@@ -320,7 +320,7 @@ else
 }
 
 
-draw_sprite(sprPlayerShadow, 0, x, y);
+draw_sprite_ext(sprite_index, image_index, x + 3, y + 3, image_xscale, image_yscale, aimAngle, c_black, 0.3);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, aimAngle, c_white, image_alpha);
 draw_sprite_ext(sprBrainParasite, floor(brainParasiteFrame), x, y, 1, 1, aimAngle, c_white, 1);
 brainParasiteFrame = (brainParasiteFrame + BRAIN_PARASITE_SPEED) % (BRAIN_PARASITE_FRAMES - 1);
