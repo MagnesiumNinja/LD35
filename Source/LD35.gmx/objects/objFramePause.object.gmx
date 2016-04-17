@@ -3,9 +3,9 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-9500</depth>
   <persistent>0</persistent>
-  <parentName>objParticle</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,33 +27,20 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-//transparency 
-MIN_ALPHA = 0.2;
-MAX_ALPHA = 0.9;
+FREEZE_DURATION = 5;
 
-//speed
-MIN_FADE_SPEED = 0.02;
-MAX_FADE_SPEED = 0.05;
 
-//radius
-MIN_RADIUS = 0.30;
-//remember the max radius equal to a block would be 8
-MAX_RADIUS = 8;
+// SCREEN FREEZE //
 
-//spread from initial location
-MIN_X_SPREAD = -12;
-MAX_X_SPREAD = 12;
-
-MIN_Y_SPREAD = -9;
-MAX_Y_SPREAD = 9;
+// The surface to draw the freeze frame to
+freezeSurface = surface_create(view_wview[0] * 2, view_hview[0] * 2);
 
 // VARIABLES //
-alpha = random_range(MIN_ALPHA, MAX_ALPHA);
-color = make_color_rgb(74, 108, 108);
-radius = random_range(MIN_RADIUS, MAX_RADIUS);
-fade = random_range(MIN_FADE_SPEED, MAX_FADE_SPEED);
-x_spread = random_range(MIN_X_SPREAD, MAX_X_SPREAD);
-y_spread = random_range (MIN_Y_SPREAD, MAX_Y_SPREAD);
+
+freezeDrawn = false;
+done = false;
+
+freezeLength = FREEZE_DURATION;
 </string>
           </argument>
         </arguments>
@@ -76,17 +63,25 @@ y_spread = random_range (MIN_Y_SPREAD, MAX_Y_SPREAD);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//every frame decrease alpha by the value and if alpha is less than or equal to 0 destroy it
-
-//decrement the alpha by the fade
-alpha -= fade;
-
-//check if it is beyond faded
-if (alpha &lt;= 0)
+            <string>// Freeze all objects once the overlay is drawn
+if (freezeDrawn &amp;&amp; !done)
 {
-    instance_destroy();    
+    instance_deactivate_all(true);
+    
+    // Reactivate key objects
+    activateKeyObjects();
+    
+    // Activate effects
+    instance_activate_object(objParticle);
+       
+    freezeLength--;
+    
+    if (freezeLength &lt;= 0)
+    {
+        instance_activate_all();
+        instance_destroy();
+    }
 }
-
 </string>
           </argument>
         </arguments>
@@ -109,13 +104,43 @@ if (alpha &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(alpha);
-draw_set_color(color);
-draw_circle(x + x_spread , y + y_spread, radius, false);
+            <string>// Draw the screen to the surface
 
-// reset drawing
-draw_set_alpha(1);
-draw_set_color(c_white);
+if (!freezeDrawn)
+{  
+    surface_set_target(freezeSurface);
+    
+    draw_clear_alpha(c_black, 0);
+    draw_set_blend_mode_ext(bm_one, bm_inv_src_alpha);
+    shader_set(sh_premultiply);
+    
+    draw_surface(application_surface, 0, 0);
+    
+    shader_reset();
+    draw_set_blend_mode(bm_normal);
+    surface_reset_target();
+    
+    freezeDrawn = true;
+    
+    depth = 0;
+    with (objParticle)
+    {
+        visible = true;
+    }
+}
+else
+{
+    if (view_current == 0)
+    {  
+        // Draw the surface
+        if (surface_exists(freezeSurface))
+        {
+            draw_set_blend_mode_ext(bm_one, bm_inv_src_alpha);
+            draw_surface_ext(freezeSurface, view_xview[0], view_yview[0], 0.5, 0.5, 0, c_white, 1);
+            draw_set_blend_mode(bm_normal);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

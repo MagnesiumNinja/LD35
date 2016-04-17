@@ -1,0 +1,4 @@
+instance_activate_object(objGameSettings);
+instance_activate_object(objController);
+instance_activate_object(objRoomController);
+instance_activate_object(objDebugController);
