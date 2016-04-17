@@ -35,6 +35,7 @@ camera.focus = objPlayer;
 
 // Create the HUD
 instance_create(0, 0, objHUD);
+instance_create(0, 0, objChangeOverlay);
 
 
 // Set up the path-finding grid

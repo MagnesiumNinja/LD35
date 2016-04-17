@@ -6,7 +6,7 @@
   <depth>50</depth>
   <persistent>0</persistent>
   <parentName>objEnemyEntity</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>sprPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -67,8 +67,7 @@ target = objPlayer;
 
 state = GunnerAIState.IDLE;
 chargeTime = CHARGE_TIME;
-alertTime = ALERT_TIME;
-alertAlpha = 0;
+alertTime = ALERT_TIME
 </string>
           </argument>
         </arguments>
@@ -151,7 +150,7 @@ if (!dead)
                             destY = target.y + random_range(MIN_MOVE_RANGE, MAX_MOVE_RANGE);
                             tries--;
                         }
-                        until(!collision_line(destX, destY, target.x, target.y, objCollide, false, true) || tries == 0);
+                        until(!collision_line(destX, destY, target.x, target.y, objCollide, false, true) &amp;&amp; !place_meeting(x, y, objCollide) || tries == 0);
                         
                         if (tries != 0)
                         {
@@ -326,18 +325,6 @@ else
 
 draw_sprite_ext(sprite_index, image_index, x + 3, y + 3, image_xscale, image_yscale, image_angle, c_black, 0.3 * fowAlpha);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
-
-if (alertTime != ALERT_TIME &amp;&amp; alertTime != 0)
-{
-    alertAlpha = 1;    
-}
-else
-{
-    if (alertAlpha &gt; 0)
-        alertAlpha -= ALERT_FADE_SPEED;
-}
-
-draw_sprite_ext(sprAlert, 0, x, y - 24, 1, 1, 0, c_white, alertAlpha);
 
 
 </string>

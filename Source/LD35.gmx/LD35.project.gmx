@@ -50,6 +50,7 @@
         <sprite>sprites\sprHealthBreak</sprite>
         <sprite>sprites\sprHurtOverlay</sprite>
       </sprites>
+      <sprite>sprites\sprChangeOverlay</sprite>
       <sprite>sprites\sprAlert</sprite>
     </sprites>
     <sprites name="Interactables">
@@ -127,6 +128,7 @@
       <object>objects\objFOW</object>
       <object>objects\objFramePause</object>
       <object>objects\objHurtOverlay</object>
+      <object>objects\objChangeOverlay</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
