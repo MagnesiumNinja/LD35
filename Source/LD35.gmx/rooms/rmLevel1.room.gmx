@@ -99,6 +99,7 @@
     <instance objName="objFOW" x="800" y="256" name="inst_BE462421" locked="0" code="" scaleX="26" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="800" y="48" name="inst_818CB4BF" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objEnemyPhantom" x="864" y="400" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBreakableWall" x="368" y="176" name="inst_936F4AB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyInterior_Floor" x="816" y="352" w="64" h="64" xo="16" yo="16" id="10000001" name="inst_66FE01F9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

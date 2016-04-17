@@ -76,6 +76,7 @@
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
+      <sprite>sprites\sprBreakableWall</sprite>
     </sprites>
     <sprites name="HUD">
       <sprites name="Abilities">
@@ -181,6 +182,7 @@
     <objects name="Blocks">
       <object>objects\objCollide</object>
       <object>objects\objBlock</object>
+      <object>objects\objBreakableWall</object>
     </objects>
     <objects name="Entities">
       <object>objects\objMoveEntity</object>
@@ -204,6 +206,7 @@
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
       <object>objects\objGunshotHitParticle</object>
+      <object>objects\objWallBreakParticle</object>
       <object>objects\objBloodParticle</object>
       <object>objects\objBloodSplatter</object>
       <object>objects\objBloodSplatterDelayed</object>
