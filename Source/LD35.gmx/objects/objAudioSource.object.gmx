@@ -28,9 +28,9 @@
             <string>// CONSTANTS //
 
 SCALE = 1;
-SPEED = 0.1;
-color = c_dkgray;
-alpha = 0.9;
+SPEED = 0.2;
+color = c_orange;
+alpha = 1;
 
 
 // VARIABLES //
@@ -101,11 +101,16 @@ else
           <argument>
             <kind>1</kind>
             <string>draw_set_color(color);
-draw_set_alpha(alpha * (1 - image_xscale / SCALE));
 
+if (life)
+    draw_set_alpha(alpha * (1 - image_xscale / SCALE));
+else
+    draw_set_alpha(1);
+    
 draw_circle(x, y, 8 * image_xscale, true);
 
 draw_set_alpha(1);
+draw_set_color(c_white);
 </string>
           </argument>
         </arguments>
