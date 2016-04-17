@@ -90,7 +90,6 @@
     <instance objName="objEnemyGunner" x="712" y="296" name="inst_A92E1AE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="300"/>
     <instance objName="objEnemyGunner" x="1088" y="88" name="inst_0AB19118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="200"/>
     <instance objName="objEnemyGunner" x="1152" y="616" name="inst_71832575" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="150"/>
-    <instance objName="objEnemyGunner" x="848" y="400" name="inst_9B0E12F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="340"/>
     <instance objName="objEnemyPhantom" x="1048" y="392" name="inst_CE0DF46F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="330"/>
     <instance objName="objEnemyPhantom" x="936" y="208" name="inst_D7C743EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
     <instance objName="objEnemyPhantom" x="1456" y="720" name="inst_01CF5E5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
@@ -99,6 +98,7 @@
     <instance objName="objFOW" x="1008" y="336" name="inst_529362EF" locked="0" code="" scaleX="13" scaleY="22" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="800" y="256" name="inst_BE462421" locked="0" code="" scaleX="26" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="800" y="48" name="inst_818CB4BF" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
+    <instance objName="objEnemyPhantom" x="864" y="400" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
