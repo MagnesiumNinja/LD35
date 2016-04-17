@@ -116,6 +116,8 @@ if (e)
 
     with (e) event_user(3);
     
+    audio_play_sound(choose(sndShot_Hit1, sndShot_Hit2), 10, false);
+    
     instance_destroy();
 }
 </string>

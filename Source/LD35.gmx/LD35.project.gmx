@@ -14,6 +14,12 @@
         <sound>sound\sndStab_Swing2</sound>
         <sound>sound\sndStab_Swing3</sound>
       </sounds>
+      <sounds name="Shot">
+        <sound>sound\sndShot_Fire1</sound>
+        <sound>sound\sndShot_Fire2</sound>
+        <sound>sound\sndShot_Hit1</sound>
+        <sound>sound\sndShot_Hit2</sound>
+      </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
