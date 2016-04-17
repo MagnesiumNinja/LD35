@@ -19,6 +19,7 @@
         <sound>sound\sndShot_Fire2</sound>
         <sound>sound\sndShot_Hit1</sound>
         <sound>sound\sndShot_Hit2</sound>
+        <sound>sound\sndShot_HitWall</sound>
       </sounds>
     </sounds>
   </sounds>

@@ -142,7 +142,9 @@ if (e)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>/// Destroy on hitting wall
+audio_play_sound(sndShot_HitWall, 8, false);
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -165,7 +167,9 @@ if (e)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>/// Destroy on hitting wall
+audio_play_sound(sndShot_HitWall, 8, false);
+instance_destroy();
 </string>
           </argument>
         </arguments>
