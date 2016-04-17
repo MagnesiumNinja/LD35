@@ -114,6 +114,7 @@
       <sprite>sprites\sprEOL</sprite>
     </sprites>
     <sprites name="Abilities">
+      <sprite>sprites\sprTentacleAttack</sprite>
       <sprite>sprites\sprPhantomStab</sprite>
       <sprite>sprites\sprPhantomStab_Enemy</sprite>
       <sprite>sprites\sprGunnerGunshot</sprite>
