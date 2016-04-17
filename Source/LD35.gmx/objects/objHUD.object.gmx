@@ -59,7 +59,7 @@ HUD_SCALE = 0.5;
             <string>// Draw the health
 for (i=0; i&lt;objPlayer.hp; i++)
 {
-    draw_sprite_ext(sprHealthHeart, 0, view_xview[0]+sprite_get_width(sprHealthHeart)*0.5+ICON_BUFFER + i*sprite_get_width(sprHealthHeart), view_yview[0]+sprite_get_height(sprHealthHeart)*0.5+ICON_BUFFER,
+    draw_sprite_ext(sprHealthHeart, 0, view_xview[0]+sprite_get_width(sprHealthHeart)*0.5+ICON_BUFFER + i*0.5*sprite_get_width(sprHealthHeart), view_yview[0]+sprite_get_height(sprHealthHeart)*0.5+ICON_BUFFER,
         HUD_SCALE, HUD_SCALE, 0, c_white, 1);
 }
 
