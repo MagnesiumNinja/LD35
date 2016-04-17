@@ -120,6 +120,8 @@
       <sprite>sprites\sprPhantomStab_Enemy</sprite>
       <sprite>sprites\sprGunnerGunshot</sprite>
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
+      <sprite>sprites\sprGolemPunch</sprite>
+      <sprite>sprites\sprGolemPunch_Enemy</sprite>
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
