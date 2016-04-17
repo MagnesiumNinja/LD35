@@ -41,9 +41,10 @@ enum PhantomAIState
 RECALCULATE_TIME = 10;
 MAX_HP = 1;
 MOVE_SPEED = 4;
+ROTATE_SPEED = 0.25;
 
 FRIC = 0.6;
-KNOCKBACK_SPEED = 6;
+KNOCKBACK_SPEED = 10;
 
 AGGRO_DIS = 650;
 VIEW_ANGLE = 45;
@@ -111,6 +112,11 @@ if (!dead)
     
         case PhantomAIState.MOVE:
         {
+            if (!collision_line(x, y, target.x, target.y, objCollide, false, true))
+            {
+                image_angle = smoothRotate(point_direction(x, y, target.x, target.y), ROTATE_SPEED, image_angle);
+            }
+        
             // Checking attack
             if (point_distance(x, y, target.x, target.y) &lt; ATTACK_DIS)
             {
@@ -133,7 +139,7 @@ if (!dead)
             }
             
             if (followingPath)
-            {
+            {            
                 if (path_index = -1)
                 {
                     followingPath = false;
@@ -141,7 +147,7 @@ if (!dead)
                 }
             }
             else
-            {
+            {            
                 if (hasPath)
                 {
                     path_start(path, MOVE_SPEED, path_action_stop, true);
@@ -223,10 +229,22 @@ if (!dead)
 else
 {
     path_end();
-                
-    // Slow down
-    hspd = approach(hspd, 0, FRIC);
-    vspd = approach(vspd, 0, FRIC);   
+    
+    if (!(hspd == 0 &amp;&amp; vspd == 0))
+    {            
+        // Slow down
+        hspd = approach(hspd, 0, FRIC);
+        vspd = approach(vspd, 0, FRIC);
+    }
+    else
+    {
+        // We are stopped, notify the player
+        if (objPlayer.changing = false)
+        {
+            objPlayer.changing = true;
+            objPlayer.changeTarget = id;
+        }   
+    }
 }
 </string>
           </argument>
@@ -253,9 +271,6 @@ else
             <string>/// DEAD event
 
 path_end();
-
-objPlayer.changing = true;
-objPlayer.changeTarget = id;
 
 if (!(hitX == 0 &amp;&amp; hitY == 0))
 {

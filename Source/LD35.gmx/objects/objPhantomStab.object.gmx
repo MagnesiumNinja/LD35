@@ -88,6 +88,8 @@ if (!hit)
     if (e)
     {
         e.hp -= DAMAGE;
+        e.hitX = x;
+        e.hitY = y;
         hit = true;
     }
 }

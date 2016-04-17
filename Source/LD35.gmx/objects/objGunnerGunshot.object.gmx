@@ -110,7 +110,8 @@ else
 if (e)
 {
     e.hp -= DAMAGE;
-    e.killer = id;
+    e.hitX = xprevious;
+    e.hitY = yprevious;
 
     instance_destroy();
 }
