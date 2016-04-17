@@ -52,7 +52,7 @@ switch(type)
         secondarySprite = sprSecondary_Gunner;
         
         idleSpeed = 0.3;
-        moveSpeed = 0.2;
+        moveSpeed = 0.1;
         primarySpeed = 0.08;
         secondarySpeed = 0.3;
         
