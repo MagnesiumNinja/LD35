@@ -6,7 +6,7 @@
   <depth>50</depth>
   <persistent>0</persistent>
   <parentName>objEnemyEntity</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>sprPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -48,10 +48,10 @@ KNOCKBACK_SPEED = 0;
 AGGRO_DIS = 400;
 NOTICE_DIS = 64;
 VIEW_ANGLE = 35;
-ATTACK_DIS = 32;
+ATTACK_DIS = 36;
 COOLDOWN_TIME = 80;
 CHARGE_TIME = 70;
-ATTACK_TIME = 40;
+ATTACK_TIME = 50;
 ALERT_TIME = 30;
 
 NUM_BLOOD_SPLATTERS = 4;
