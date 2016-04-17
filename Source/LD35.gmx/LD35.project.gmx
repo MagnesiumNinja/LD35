@@ -85,6 +85,7 @@
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
       <sprite>sprites\sprBreakableWall</sprite>
+      <sprite>sprites\sprBreakableWallDebris</sprite>
     </sprites>
     <sprites name="HUD">
       <sprites name="Abilities">
