@@ -59,6 +59,7 @@
       <sprite>sprites\sprPlayerMask</sprite>
       <sprite>sprites\sprPlayerShadow</sprite>
       <sprite>sprites\sprBrainParasite</sprite>
+      <sprite>sprites\sprPlayerDead</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Gunner">
