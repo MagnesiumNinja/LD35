@@ -87,6 +87,16 @@ else
 {
     fowAlpha = approach(fowAlpha, 0, FADE_RATE);
 }
+
+if (followingPath)
+{
+    var e = instance_place(x, y, objDoor);
+    
+    if (e &amp;&amp; !e.open)
+    {
+        with (e) event_user(2);
+    }
+}
 </string>
           </argument>
         </arguments>

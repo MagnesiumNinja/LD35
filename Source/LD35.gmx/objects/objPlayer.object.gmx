@@ -204,7 +204,18 @@ if (!changing &amp;&amp; !dead)
         
     // AIMING //
     
-    aimAngle = point_direction(x, y, mouse_x, mouse_y);
+    if (window_mouse_get_x() != global.MOUSE_XPREV || window_mouse_get_y() != global.MOUSE_YPREV)
+    {
+        aimAngle = point_direction(x, y, mouse_x, mouse_y);
+    }
+    else if (gamepad_is_connected(0) &amp;&amp; gamepad_axis_value(0, gp_axisrh) &lt; -0.3 || gamepad_axis_value(0, gp_axisrh) &gt; 0.3 ||
+        gamepad_axis_value(0, gp_axisrv) &lt; -0.3 || gamepad_axis_value(0, gp_axisrv) &gt; 0.3)
+    {
+        var axisH = gamepad_axis_value(0, gp_axisrh);
+        var axisV = gamepad_axis_value(0, gp_axisrv);
+        
+        aimAngle = point_direction(0, 0, axisH, axisV);
+    }
 
     // ABILITIES //
     

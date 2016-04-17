@@ -37,11 +37,14 @@ SCALE_SHRINK = 0.005;
 SCALE_GROW = 0.01;
 
 CAMERA_DIVISOR = 4;
+CONTROLLER_DIS = 240;
 
 // VARIABLES //
 
 xOff = 0;
 yOff = 0;
+dis = 0;
+angle = 0;
 
 // INITIALIZE VIEWS //
 
@@ -80,12 +83,23 @@ global.CAMERA_OBJECT = id;
 
 if (instance_exists(objPlayer))
 {   
-    //x += smoothChange(x, focus.x + xOff, CAMERA_SPEED);
-    //x += smoothChange(x, focus.x + xOff, CAMERA_SPEED);
+    if (window_mouse_get_x() != global.MOUSE_XPREV || window_mouse_get_y() != global.MOUSE_YPREV)
+    {
+        angle = point_direction(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
+        dis = point_distance(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
+    }
+    else if (gamepad_is_connected(0) &amp;&amp; gamepad_axis_value(0, gp_axisrh) &lt; -0.3 || gamepad_axis_value(0, gp_axisrh) &gt; 0.3 ||
+        gamepad_axis_value(0, gp_axisrv) &lt; -0.3 || gamepad_axis_value(0, gp_axisrv) &gt; 0.3)
+    {
+        var axisH = gamepad_axis_value(0, gp_axisrh);
+        var axisV = gamepad_axis_value(0, gp_axisrv);
+        var length = sqrt(sqr(axisH) + sqr(axisV)) / sqrt(2);
+        
+        angle = point_direction(0, 0, axisH, axisV);
+        dis = CONTROLLER_DIS * length;
+    }
     
-    var angle = point_direction(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
-    var dis = point_distance(objPlayer.x, objPlayer.y, mouse_x, mouse_y);
-    
+        
     x = objPlayer.x + lengthdir_x(dis / CAMERA_DIVISOR, angle);
     y = objPlayer.y + lengthdir_y(dis / CAMERA_DIVISOR, angle);
 }
