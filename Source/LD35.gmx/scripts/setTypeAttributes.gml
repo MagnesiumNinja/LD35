@@ -5,19 +5,29 @@ switch(type)
 {
     case EnemyType.NORMAL:
     {
-        MAX_SPEED = 5;
+        MAX_SPEED = 3;
         ACCEL = 0.8;
         FRIC = 0.6;
         
         MAX_HP = 3;
         hp = MAX_HP;
+        
+        idleSprite = sprPlayerIdle_Normal;
+        moveSprite = sprPlayerMove_Normal;
+        primarySprite = sprPlayerPrimary_Normal;
+        secondarySprite = sprPlayerSecondary_Normal;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.3;
+        primarySpeed = 0.3;
+        secondarySpeed = 0.3;
     
         break;
     }
     
     case EnemyType.PHANTOM:
     {
-        MAX_SPEED = 7;
+        MAX_SPEED = 4.5;
         ACCEL = 0.9;
         FRIC = 0.3;
         
@@ -35,6 +45,16 @@ switch(type)
         
         MAX_HP = 3;
         hp = MAX_HP;
+        
+        idleSprite = sprIdle_Gunner;
+        moveSprite = sprMove_Gunner;
+        primarySprite = sprPrimary_Gunner;
+        secondarySprite = sprSecondary_Gunner;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.2;
+        primarySpeed = 0.08;
+        secondarySpeed = 0.3;
         
         break;
     }

@@ -66,7 +66,10 @@ hitY = 0;
 if (!dead &amp;&amp; hp &lt;= 0)
 {
     dead = true;
-    
+
+    for (var i = 0; i &lt; 20; i++)
+        instance_create(x, y, objBloodParticle);
+
     event_perform(ev_other, ev_user2);
 }
 </string>
