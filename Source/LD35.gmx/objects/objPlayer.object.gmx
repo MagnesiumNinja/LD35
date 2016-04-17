@@ -62,6 +62,8 @@ DASH_SPEED = 14;
 BRAIN_PARASITE_SPEED = 0.1;
 BRAIN_PARASITE_FRAMES = sprite_get_number(sprBrainParasite);
 
+NUM_BLOOD_SPLATTERS = 2;
+
 // VARIABLES //
 
 // Sprites
@@ -299,6 +301,13 @@ setTypeAttributes(type);
 instance_create(0, 0, objHurtOverlay);
 shakeScreen(3, 0.15);
 with (objHUD) event_user(0);
+
+// generate blood splatters
+for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
+{
+    var dashPart = instance_create(x, y, objBloodSplatter);
+}
+
 </string>
           </argument>
         </arguments>
