@@ -58,6 +58,10 @@ FRIC = 0.4;
 KNOCKBACK_SPEED = 0;
 ALERT_FADE_SPEED = 0.05;
 
+PATROL_RANGE = 30;
+PATROL_WAIT = 80;
+PATROL_SPEED = 0.5;
+
 
 // VARIABLES //
 
@@ -65,6 +69,13 @@ hp = MAX_HP;
 recalcTime = RECALCULATE_TIME;
 type = EnemyType.BRAIN;
 target = objPlayer;
+
+patrolOff = 0;
+patrolRight = true;
+patrolWait = PATROL_WAIT;
+
+baseAngle = 0;
+baseAngleSet = false;
 
 state = BrainAIState.IDLE;
 chargeTime = CHARGE_TIME;
@@ -99,6 +110,41 @@ if (!dead)
     {
         case BrainAIState.IDLE:
         {
+            if (!baseAngleSet)
+            {
+                baseAngleSet = true;
+                baseAngle = image_angle;
+            }
+            
+            // Patrolling    
+            if (patrolWait &gt; 0)
+                patrolWait--;
+            else
+            {
+                if (patrolRight)
+                {
+                    if (patrolOff &lt; PATROL_RANGE)
+                        patrolOff = approach(patrolOff, PATROL_RANGE, PATROL_SPEED);
+                    else
+                    {
+                        patrolRight = false;
+                        patrolWait = PATROL_WAIT;
+                    }
+                }
+                else
+                {
+                    if (patrolOff &gt; -PATROL_RANGE)
+                        patrolOff = approach(patrolOff, -PATROL_RANGE, PATROL_SPEED);
+                    else
+                    {
+                        patrolRight = true;
+                        patrolWait = PATROL_WAIT;
+                    }
+                }
+            }
+            
+            image_angle = baseAngle + patrolOff;
+        
             var tarAngle = point_direction(x, y, target.x, target.y);
             
             if (place_meeting(x, y, objAudioSource) ||
