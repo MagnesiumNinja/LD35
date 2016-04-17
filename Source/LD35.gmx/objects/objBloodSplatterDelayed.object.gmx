@@ -26,20 +26,23 @@
           <argument>
             <kind>1</kind>
             <string>// CONSTANTS //
-MIN_ROTATION = -30;
-MAX_ROTATION = 30;
+MIN_ROTATION = -90;
+MAX_ROTATION = 90;
 
 MIN_SCALE = 0.25;
-MAX_SCALE = 1;
+MAX_SCALE = 0.5;
 
-MIN_SPREAD_SPEED = 0.15;
-MAX_SPREAD_SPEED = 0.30;
+MIN_SPREAD_SPEED = 0.1;
+MAX_SPREAD_SPEED = 0.2;
 
-MIN_X_OFFSET = -10;
-MAX_X_OFFSET = 10;
+MIN_X_OFFSET = -30;
+MAX_X_OFFSET = 30;
 
-MIN_Y_OFFSET = -10;
-MAX_Y_OFFSET = 10;
+MIN_Y_OFFSET = -30;
+MAX_Y_OFFSET = 30;
+
+MIN_DELAY = 5;
+MAX_DELAY = 20;
 
 //choose a random blood splatter
 image_single = irandom(image_number);
@@ -48,15 +51,14 @@ image_single = irandom(image_number);
 rotation = random_range(MIN_ROTATION, MAX_ROTATION);
 scale = random_range(MIN_SCALE, MAX_SCALE);
 spreadSpeed = random_range(MIN_SPREAD_SPEED, MAX_SPREAD_SPEED);
+delay = random_range(MIN_DELAY, MAX_DELAY);
 
 //get offsets
 xOffset = random_range(MIN_X_OFFSET, MAX_X_OFFSET);
 yOffset = random_range(MIN_Y_OFFSET, MAX_Y_OFFSET);
 
-image_xscale = random_range(0, 0.5);
+image_xscale = random_range(0, 0.2);
 image_yscale = image_xscale;
-
-secondary_splatter = false;
 </string>
           </argument>
         </arguments>
@@ -79,14 +81,16 @@ secondary_splatter = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = approach(image_xscale, scale, spreadSpeed);
-image_yscale = approach(image_yscale, scale, spreadSpeed);
-// Chance to create secondary splatter
-if (random(2) &gt; 1 &amp;&amp; !secondary_splatter)
+            <string>if (delay &gt; 0)
 {
-    instance_create(x, y, objBloodSplatterDelayed);
+    delay--;
 }
-secondary_splatter = true;
+else
+{
+    image_xscale = approach(image_xscale, scale, spreadSpeed);
+    image_yscale = approach(image_yscale, scale, spreadSpeed);
+}
+pDebug(image_xscale);
 </string>
           </argument>
         </arguments>
