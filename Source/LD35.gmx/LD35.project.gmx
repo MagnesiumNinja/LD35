@@ -100,6 +100,7 @@
       <script>scripts\getPrimaryAbility.gml</script>
       <script>scripts\getSecondaryAbility.gml</script>
       <script>scripts\setTypeAttributes.gml</script>
+      <script>scripts\shakeScreen.gml</script>
     </scripts>
     <scripts name="HUD">
       <script>scripts\revealFOWs.gml</script>

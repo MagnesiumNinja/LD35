@@ -264,6 +264,8 @@ else
                          
 if (hp &gt; 0)
 {
+    shakeScreen(1, 0.05);
+    
     for (var i = 0; i &lt; 10; i++)
         instance_create(x, y, objBloodParticle);
 

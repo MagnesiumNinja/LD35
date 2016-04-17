@@ -42,6 +42,13 @@ global.SECONDARY_ABILITY_GP = gp_shoulderr;
 global.GAMEPAD_AXIS_THRESHOLD = 0.7;
 
 
+// SCREEN SHAKE //
+
+global.SHAKE_INTENSITY_ENEMY_HIT = 4;
+global.SHAKE_DURATION_ENEMY_HIT = 0.2;
+global.SHAKE_PERCENT = 1;
+
+
 // PATH-FINDING //
 
 global.CELL_SIZE = 16;
