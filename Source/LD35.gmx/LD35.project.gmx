@@ -23,20 +23,26 @@
         <sprite>sprites\sprPrimary_Gunner</sprite>
         <sprite>sprites\sprSecondary_Gunner</sprite>
       </sprites>
+      <sprites name="Phantom">
+        <sprite>sprites\sprIdle_Phantom</sprite>
+        <sprite>sprites\sprMove_Phantom</sprite>
+        <sprite>sprites\sprPrimary_Phantom</sprite>
+        <sprite>sprites\sprSecondary_Phantom</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
     </sprites>
     <sprites name="HUD">
+      <sprites name="Abilities">
+        <sprite>sprites\sprAbilityBase</sprite>
+        <sprite>sprites\sprAbilityIcon</sprite>
+      </sprites>
       <sprites name="FOW">
         <sprite>sprites\sprFOW</sprite>
         <sprite>sprites\sprFOWCentre</sprite>
         <sprite>sprites\sprFOWEdge</sprite>
         <sprite>sprites\sprFOWCorner</sprite>
-      </sprites>
-      <sprites name="Abilities">
-        <sprite>sprites\sprAbilityBase</sprite>
-        <sprite>sprites\sprAbilityIcon</sprite>
       </sprites>
       <sprites name="Health">
         <sprite>sprites\sprHealthHeart</sprite>
