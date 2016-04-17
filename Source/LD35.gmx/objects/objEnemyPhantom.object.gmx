@@ -47,7 +47,7 @@ FRIC = 0.6;
 KNOCKBACK_SPEED = 3;
 
 AGGRO_DIS = 650;
-VIEW_ANGLE = 30;
+VIEW_ANGLE = 25;
 ATTACK_DIS = 16;
 DODGE_DIS = 64;
 DODGE_SPEED = 15;
@@ -299,17 +299,10 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
+            <string>event_inherited();
 
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
 
-draw_set_alpha(fowAlpha);
-draw_set_color(c_red);
-
-draw_line(x, y, x + lengthdir_x(128, image_angle - VIEW_ANGLE), y + lengthdir_y(128, image_angle - VIEW_ANGLE));
-draw_line(x, y, x + lengthdir_x(128, image_angle + VIEW_ANGLE), y + lengthdir_y(128, image_angle + VIEW_ANGLE));
-
-draw_set_alpha(1);
-draw_set_color(c_white);
 </string>
           </argument>
         </arguments>

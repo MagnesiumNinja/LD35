@@ -42,7 +42,7 @@ MAX_HP = 3;
 MOVE_SPEED = 2;
 
 AGGRO_DIS = 750;
-VIEW_ANGLE = 45;
+VIEW_ANGLE = 30;
 CHARGE_TIME = 60;
 ATTACK_TIME = 30;
 
@@ -234,16 +234,9 @@ if (!(hitX == 0 &amp;&amp; hitY == 0))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
+            <string>event_inherited();
 
-draw_set_alpha(fowAlpha);
-draw_set_color(c_red);
-
-draw_line(x, y, x + lengthdir_x(128, image_angle - VIEW_ANGLE), y + lengthdir_y(128, image_angle - VIEW_ANGLE));
-draw_line(x, y, x + lengthdir_x(128, image_angle + VIEW_ANGLE), y + lengthdir_y(128, image_angle + VIEW_ANGLE));
-
-draw_set_alpha(1);
-draw_set_color(c_white);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, fowAlpha);
 </string>
           </argument>
         </arguments>
