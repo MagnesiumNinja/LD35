@@ -47,6 +47,7 @@
       <sprite>sprites\sprGunnerGunshot</sprite>
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
     </sprites>
+    <sprite>sprites\bloodSplatters</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
@@ -125,6 +126,7 @@
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
       <object>objects\objGunshotHitParticle</object>
+      <object>objects\objBloodSplatter</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>
