@@ -84,7 +84,7 @@ if (par != noone &amp;&amp; instance_exists(par))
             e = instance_place(x, y, target);
         }
         
-        if (e &amp;&amp; !collision_line(par.x, par.y, e.x, e.y, objCollide, false, true))
+        if (e &amp;&amp; e.canBeHit &amp;&amp; !collision_line(par.x, par.y, e.x, e.y, objCollide, false, true))
         {
             e.prevHp = e.hp;
             e.hp = max(0, e.hp - DAMAGE);

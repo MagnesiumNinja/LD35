@@ -66,6 +66,7 @@
         <sprite>sprites\sprMove_Gunner</sprite>
         <sprite>sprites\sprPrimary_Gunner</sprite>
         <sprite>sprites\sprSecondary_Gunner</sprite>
+        <sprite>sprites\sprGunnerMask</sprite>
       </sprites>
       <sprites name="Phantom">
         <sprite>sprites\sprIdle_Phantom</sprite>
@@ -116,6 +117,7 @@
       <sprite>sprites\sprLightPlayer</sprite>
       <sprite>sprites\sprLightEnemy</sprite>
     </sprites>
+    <sprite>sprites\sprAudioSource</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
@@ -200,6 +202,7 @@
       <objects name="Interactables">
         <object>objects\objDoor</object>
       </objects>
+      <object>objects\objAudioSource</object>
     </objects>
     <objects name="Particles">
       <object>objects\objParticle</object>
@@ -215,6 +218,7 @@
     </objects>
     <objects name="Abilities">
       <object>objects\objPhantomStab</object>
+      <object>objects\objPlayerSlice</object>
       <object>objects\objGunnerGunshot</object>
     </objects>
   </objects>

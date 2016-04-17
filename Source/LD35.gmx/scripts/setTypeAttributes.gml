@@ -9,7 +9,7 @@ switch(type)
         ACCEL = 0.8;
         FRIC = 0.6;
         
-        MAX_HP = 3;
+        MAX_HP = 1;
         hp = MAX_HP;
         
         idleSprite = sprPlayerIdle_Normal;
@@ -18,7 +18,7 @@ switch(type)
         secondarySprite = sprPlayerSecondary_Normal;
         
         idleSpeed = 0.3;
-        moveSpeed = 0.3;
+        moveSpeed = 0.2;
         primarySpeed = 0.3;
         secondarySpeed = 0.3;
     

@@ -36,6 +36,10 @@ NUM_DESTRUCT_PARTICLES = 20;
 // VARIABLES //
 
 target = noone;
+audioSource = instance_create(x, y, objAudioSource);
+audioSource.par = id;
+audioSource.image_xscale = 5;
+audioSource.image_yscale = 5;
 </string>
           </argument>
         </arguments>
@@ -65,6 +69,7 @@ for (var i = 0; i &lt; NUM_DESTRUCT_PARTICLES; i++)
     destructPart.angle = angle - 180;
 }
 
+with (audioSource) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -107,7 +112,7 @@ else
     e = collision_line(x, y, xprevious, yprevious, objPlayer, false, true);
 }
 
-if (e)
+if (e &amp;&amp; e.canBeHit)
 {
     e.prevHp = e.hp;
     e.hp = max(0, e.hp - DAMAGE);

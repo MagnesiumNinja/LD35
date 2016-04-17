@@ -37,6 +37,7 @@ enum EnemyType
 enum AbilityType
 {
     NOTHING,
+    PLAYER_SLICE,
     PHANTOM_STAB,
     PHANTOM_DASH,
     GUNNER_GUNSHOT
@@ -85,7 +86,7 @@ aimAngle = 0;
 dashing = false;
 dashTimer = DASH_TIMER;
 
-type = EnemyType.PHANTOM;
+type = EnemyType.NORMAL;
 changing = false;
 changeTarget = noone;
 
@@ -165,6 +166,7 @@ event_user(15);
         else
         {
             dashing = false;
+            canBeHit = true;
             dashTimer = DASH_TIMER;
             hspd /= 4;
             vspd /= 4;
