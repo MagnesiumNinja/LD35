@@ -334,6 +334,7 @@
     <room>rooms\rmLevel5</room>
     <room>rooms\rmLevel6</room>
     <room>rooms\rmLevel7</room>
+    <room>rooms\rmLevel8</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
