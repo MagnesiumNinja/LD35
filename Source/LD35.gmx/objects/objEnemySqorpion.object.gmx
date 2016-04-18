@@ -27,23 +27,25 @@
             <kind>1</kind>
             <string>event_inherited();
 
-enum BrainAIState
+enum SqorpionAIState
 {
     IDLE,
     MOVE,
     ALERT,
-    ATTACK
+    ATTACK,
+    WRAP
 }
 
 
 // CONSTANTS //
 
 RECALCULATE_TIME = 10;
-MAX_HP = 2;
-MOVE_SPEED = 3;
+MAX_HP = 4;
+MOVE_SPEED = 4;
 
-AGGRO_DIS = 750;
-NOTICE_DIS = 128;
+AGGRO_DIS = 350;
+NOTICE_DIS = 32;
+WRAP_DIS = 32;
 VIEW_ANGLE = 45;
 CHARGE_TIME = 20;
 ATTACK_TIME = 10;
@@ -62,12 +64,17 @@ PATROL_RANGE = 30;
 PATROL_WAIT = 80;
 PATROL_SPEED = 0.5;
 
+WRAP_MOVE_SPEED = 4;
+WRAP_TIME = 50;
+WRAP_DAMAGE = 3;
+WRAP_COOLDOWN = 80;
+
 
 // VARIABLES //
 
 hp = MAX_HP;
 recalcTime = RECALCULATE_TIME;
-type = EnemyType.BRAIN;
+type = EnemyType.SQORPION;
 target = objPlayer;
 
 patrolOff = 0;
@@ -77,7 +84,11 @@ patrolWait = PATROL_WAIT;
 baseAngle = 0;
 baseAngleSet = false;
 
-state = BrainAIState.IDLE;
+wrapTime = WRAP_TIME;
+wrapCooldown = 0;
+wrapObj = noone;
+
+state = SqorpionAIState.IDLE;
 chargeTime = CHARGE_TIME;
 alertTime = ALERT_TIME
 </string>
@@ -108,7 +119,7 @@ if (!frozen &amp;&amp; !dead)
 {
     switch(state)
     {
-        case BrainAIState.IDLE:
+        case SqorpionAIState.IDLE:
         {
             if (!baseAngleSet)
             {
@@ -152,19 +163,30 @@ if (!frozen &amp;&amp; !dead)
                 distance_to_object(target) &lt; AGGRO_DIS &amp;&amp; isAngleBetween(tarAngle, image_angle - VIEW_ANGLE, image_angle + VIEW_ANGLE) &amp;&amp; !collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
                 // Line of sight
-                state = BrainAIState.MOVE;
+                state = SqorpionAIState.MOVE;
             }
         
             break;    
         }
     
     
-        case BrainAIState.MOVE:
-        {
+        case SqorpionAIState.MOVE:
+        {        
             if (alertTime &gt; 0)
                 alertTime--;
             else
             {
+                // Wrapping
+                if (wrapCooldown &gt; 0)
+                    wrapCooldown--;
+                else
+                {
+                    if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; WRAP_DIS)
+                    {
+                        state = SqorpionAIState.WRAP;
+                    }
+                }
+            
                 if (!collision_line(x, y, target.x, target.y, objCollide, false, true))
                 {
                     image_angle = point_direction(x, y, target.x, target.y);
@@ -177,7 +199,7 @@ if (!frozen &amp;&amp; !dead)
                         followingPath = false;
                         hasPath = false;
                         
-                        state = BrainAIState.ATTACK;
+                        state = SqorpionAIState.ATTACK;
                     }
                 }
                 else
@@ -211,13 +233,44 @@ if (!frozen &amp;&amp; !dead)
             break;
         }
         
-        case BrainAIState.ATTACK:
+        case SqorpionAIState.WRAP:
+        {
+            objPlayer.frozen = true;
+            
+            if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; 6)
+            {
+                var pointDir = point_direction(x, y, objPlayer.x, objPlayer.y);
+                x += lengthdir_x(WRAP_MOVE_SPEED, pointDir);
+                y += lengthdir_y(WRAP_MOVE_SPEED, pointDir);
+            }
+            
+            if (wrapTime &gt; 0)
+                wrapTime--;
+            else
+            {
+                wrapTime = WRAP_TIME;
+                objPlayer.hp = max(0, objPlayer.hp - WRAP_DAMAGE);
+                objPlayer.frozen = false;
+                
+                objPlayer.hitX = x;
+                objPlayer.hitY = y;
+                  
+                with (objPlayer) event_user(3);
+                
+                state = SqorpionAIState.MOVE;
+                wrapCooldown = WRAP_COOLDOWN;
+            }
+        
+            break;
+        }
+        
+        case SqorpionAIState.ATTACK:
         {   
             path_end();
             
             if (collision_line(x, y, target.x, target.y, objCollide, false, true))
             {
-                state = BrainAIState.MOVE;
+                state = SqorpionAIState.MOVE;
             }
             else
             {
@@ -231,16 +284,17 @@ if (!frozen &amp;&amp; !dead)
                     // Attack
                     image_index = 0;
                     
-                    var attack = instance_create(x, y, objGunnerGunshot);
-                    attack.sprite_index = sprGunnerGunshot_Enemy;
+                    var attack = instance_create(x, y, objSqorpionPull);
                     attack.angle = point_direction(x, y, target.x, target.y);
                     attack.target = target;
                     attack.par = id;
+                    
+                    wrapObj = attack;
                 }
-                else if (chargeTime == 0)
+                else if (chargeTime == 0 &amp;&amp; !instance_exists(wrapObj))
                 {
                     chargeTime = CHARGE_TIME;
-                    state = BrainAIState.MOVE;
+                    state = SqorpionAIState.MOVE;
                 }
             }
             break;
@@ -288,8 +342,8 @@ if (hp &gt; 0)
 
     instance_create(x, y, objSliceParticle);
     
-    if (state == BrainAIState.IDLE)
-        state = BrainAIState.MOVE;
+    if (state == SqorpionAIState.IDLE)
+        state = SqorpionAIState.MOVE;
 }
 </string>
           </argument>

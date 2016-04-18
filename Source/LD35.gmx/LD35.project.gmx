@@ -124,6 +124,7 @@
       <sprite>sprites\sprGolemPunch</sprite>
       <sprite>sprites\sprGolemPunch_Enemy</sprite>
       <sprite>sprites\sprBrainFocus</sprite>
+      <sprite>sprites\sprSqorpionPull</sprite>
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
@@ -242,6 +243,7 @@
         <object>objects\objEnemyGolem</object>
         <object>objects\objEnemyGunner</object>
         <object>objects\objEnemyBrain</object>
+        <object>objects\objEnemySqorpion</object>
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>
@@ -273,6 +275,7 @@
       <object>objects\objGunnerGunshot</object>
       <object>objects\objBrainShot</object>
       <object>objects\objBrainFocus</object>
+      <object>objects\objSqorpionPull</object>
     </objects>
   </objects>
   <rooms name="rooms">

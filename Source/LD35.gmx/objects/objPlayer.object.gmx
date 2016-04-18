@@ -33,7 +33,8 @@ enum EnemyType
     PHANTOM,
     GUNNER,
     GOLEM,
-    BRAIN
+    BRAIN,
+    SQORPION
 }
 
 enum AbilityType
@@ -45,7 +46,9 @@ enum AbilityType
     GUNNER_GUNSHOT,
     GOLEM_PUNCH,
     BRAIN_SHOT,
-    BRAIN_FOCUS
+    BRAIN_FOCUS,
+    SQORPION_STRANGLE,
+    SQORPION_PULL
 }
 
 
@@ -70,6 +73,7 @@ DASH_TIMER = 9;
 DASH_SPEED = 14;
 
 GOLEM_WAIT = 30;
+STRANGLE_TIMER = 30;
 
 BRAIN_PARASITE_SPEED = 0.1;
 BRAIN_PARASITE_FRAMES = sprite_get_number(sprBrainParasite);
@@ -98,10 +102,12 @@ aimAngle = 0;
 dashing = false;
 golemWait = false;
 dashTimer = DASH_TIMER;
+wrapObj = noone;
+strangleObj = noone;
+strangleTimer = 0;
 
-type = EnemyType.NORMAL;
+type = EnemyType.SQORPION;
 changing = false;
-frozen = false;
 changeTarget = noone;
 
 primaryAbility = AbilityType.NOTHING;
@@ -144,7 +150,7 @@ if (!instance_exists(objScreenTransition))
     }
 }
 
-if (!frozen &amp;&amp; !changing &amp;&amp; !dead)
+if (!instance_exists(wrapObj) &amp;&amp; strangleTimer == 0 &amp;&amp; !frozen &amp;&amp; !changing &amp;&amp; !dead)
 {
     if (golemWait &gt; 0)
         golemWait--;
@@ -252,7 +258,7 @@ if (!frozen &amp;&amp; !changing &amp;&amp; !dead)
     }
 }
 // CHANGING //
-else if (!frozen &amp;&amp; !dead)
+else if (!instance_exists(wrapObj) &amp;&amp; strangleTimer == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 {
     canBeHit = false;
     
@@ -299,8 +305,26 @@ else if (!frozen &amp;&amp; !dead)
     }
 }
 
+// STRANGLE //
+if (strangleTimer &gt; 0)
+{
+    strangleTimer--;
+}
+else if (instance_exists(strangleObj))
+{
+    strangleObj.hp = 0;
+    
+    strangleObj.hitX = x;
+    strangleObj.hitY = y;
+    with (strangleObj) event_user(3);
+    
+    strangleObj = noone;
+    
+}
+
+
 // FROZEN //
-if (frozen)
+if (frozen || instance_exists(wrapObj))
 {
     hspd = approach(hspd, 0, FRIC);
     vspd = approach(vspd, 0, FRIC);
