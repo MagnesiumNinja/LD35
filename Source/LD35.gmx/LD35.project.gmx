@@ -129,6 +129,8 @@
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
       <sprite>sprites\sprGolemPunch</sprite>
       <sprite>sprites\sprGolemPunch_Enemy</sprite>
+      <sprite>sprites\sprBrainshot</sprite>
+      <sprite>sprites\sprBrainshot_Enemy</sprite>
       <sprite>sprites\sprBrainFocus</sprite>
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
@@ -283,11 +285,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
+    <room>rooms\rmLevel5</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
-    <room>rooms\rmLevel5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
