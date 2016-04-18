@@ -26,6 +26,13 @@
         <sound>sound\sndDash2</sound>
         <sound>sound\sndDash3</sound>
       </sounds>
+      <sounds name="Brainshot">
+        <sound>sound\sndBrainshot_Fire1</sound>
+        <sound>sound\sndBrainshot_Fire2</sound>
+        <sound>sound\sndBrainshot_Hit1</sound>
+        <sound>sound\sndBrainshot_Hit2</sound>
+        <sound>sound\sndBrainshot_HitWall</sound>
+      </sounds>
     </sounds>
     <sounds name="Change">
       <sound>sound\sndFade1</sound>
@@ -283,9 +290,9 @@
       <object>objects\objHeartBreakParticle</object>
     </objects>
     <objects name="Abilities">
+      <object>objects\objPlayerSlice</object>
       <object>objects\objPhantomStab</object>
       <object>objects\objGolemPunch</object>
-      <object>objects\objPlayerSlice</object>
       <object>objects\objGunnerGunshot</object>
       <object>objects\objBrainShot</object>
       <object>objects\objBrainFocus</object>
