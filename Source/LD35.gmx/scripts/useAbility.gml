@@ -62,6 +62,7 @@ switch(ability)
     {
         var gunshot = instance_create(x, y, objBrainShot);
         gunshot.angle = aimAngle;
+        gunshot.image_angle = aimAngle;
 
         break;
     }

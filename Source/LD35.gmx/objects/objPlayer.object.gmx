@@ -3,7 +3,7 @@
   <spriteName>sprPlayerIdle_Normal</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>51</depth>
   <persistent>0</persistent>
   <parentName>objCombatEntity</parentName>
   <maskName>sprPlayerMask</maskName>
