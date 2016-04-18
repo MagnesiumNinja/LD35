@@ -469,7 +469,7 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// DEATH event
+            <string>/// DEATH event
 
 // create blood splatter
 for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
@@ -485,6 +485,7 @@ for (var i = 0; i &lt; NUM_DEATH_PARTICLES; i++)
     destructPart.angle = random(360);
 }
 
+audio_play_sound(sndPlayerDeath, 10, false);
 </string>
           </argument>
         </arguments>

@@ -67,6 +67,7 @@
         <sound>sound\sndDoorClose</sound>
       </sounds>
     </sounds>
+    <sound>sound\sndPlayerDeath</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
