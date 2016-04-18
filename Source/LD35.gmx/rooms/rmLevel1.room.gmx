@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>2</page>
-    <xoffset>858</xoffset>
-    <yoffset>24</yoffset>
+    <xoffset>-154</xoffset>
+    <yoffset>-201</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,8 +52,7 @@
   </views>
   <instances>
     <instance objName="objRoomController" x="0" y="0" name="inst_9FD374DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="784" y="176" name="inst_C123633B" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
-    <instance objName="objBlock" x="784" y="32" name="inst_E7A4F534" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="784" y="32" name="inst_C123633B" locked="0" code="" scaleX="1" scaleY="20" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="800" y="32" name="inst_27992E53" locked="0" code="" scaleX="27" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="800" y="240" name="inst_E589C01D" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="912" y="240" name="inst_0CBCF850" locked="0" code="" scaleX="19" scaleY="1" colour="4294967295" rotation="0"/>
@@ -106,6 +105,7 @@
     <instance objName="objBlockTall" x="1232" y="32" name="inst_67AC9EA5" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="352" y="48" name="inst_294107E6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="112" y="192" name="inst_39B028FF" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objBlockTall" x="768" y="0" name="inst_A2672CE0" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyInterior_Floor" x="816" y="352" w="64" h="64" xo="16" yo="16" id="10000001" name="inst_66FE01F9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
