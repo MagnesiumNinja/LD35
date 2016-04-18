@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>2</page>
-    <xoffset>19</xoffset>
-    <yoffset>168</yoffset>
+    <page>0</page>
+    <xoffset>1473</xoffset>
+    <yoffset>565</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -128,6 +128,7 @@
     <instance objName="objFOW" x="352" y="864" name="inst_B98956C7" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="1584" y="1104" name="inst_7CACAC03" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;I've found plenty of grunts, but where's their leader?&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I'll bet the leader has a nice strong body for me to settle down in.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="1584" y="1136" name="inst_790B38D9" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
+    <instance objName="objTitleCardBlock" x="1584" y="656" name="inst_6D0FD82C" locked="0" code="text = &quot;The Eldritch Slums&quot;;&#xA;area = 0;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyExterior_Stone" x="1600" y="976" w="64" h="64" xo="16" yo="16" id="10000534" name="inst_3EC7D951" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
