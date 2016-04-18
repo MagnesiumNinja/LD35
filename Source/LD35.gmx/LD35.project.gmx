@@ -204,6 +204,7 @@
     </sprites>
     <sprite>sprites\sprLaserHit</sprite>
     <sprite>sprites\sprLaserHitEnem</sprite>
+    <sprite>sprites\sprMenuDiamond</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTitle</background>
@@ -349,6 +350,7 @@
       <object>objects\objBloodSplatterDelayed</object>
       <object>objects\objSliceParticle</object>
       <object>objects\objHeartBreakParticle</object>
+      <object>objects\objMenuDiamond</object>
     </objects>
     <objects name="Abilities">
       <object>objects\objPlayerSlice</object>
