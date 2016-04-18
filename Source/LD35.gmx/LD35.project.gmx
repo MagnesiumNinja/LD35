@@ -112,6 +112,7 @@
       </sprites>
       <sprite>sprites\sprChangeOverlay</sprite>
       <sprite>sprites\sprAlert</sprite>
+      <sprite>sprites\sprLastEnemyArrow</sprite>
     </sprites>
     <sprites name="Interactables">
       <sprites name="Door">
@@ -132,6 +133,7 @@
       <sprite>sprites\sprBrainshot</sprite>
       <sprite>sprites\sprBrainshot_Enemy</sprite>
       <sprite>sprites\sprBrainFocus</sprite>
+      <sprite>sprites\sprSqorpionPull</sprite>
     </sprites>
     <sprite>sprites\sprBloodSplatters</sprite>
     <sprite>sprites\sprSliceParticle</sprite>
@@ -231,6 +233,7 @@
       <object>objects\objAreaTitleCard</object>
       <object>objects\objTextbox</object>
       <object>objects\objTextboxBars</object>
+      <object>objects\objLastEnemyArrow</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -251,6 +254,7 @@
         <object>objects\objEnemyGolem</object>
         <object>objects\objEnemyGunner</object>
         <object>objects\objEnemyBrain</object>
+        <object>objects\objEnemySqorpion</object>
       </objects>
       <objects name="Interactables">
         <object>objects\objDoor</object>
@@ -283,6 +287,7 @@
       <object>objects\objGunnerGunshot</object>
       <object>objects\objBrainShot</object>
       <object>objects\objBrainFocus</object>
+      <object>objects\objSqorpionPull</object>
     </objects>
   </objects>
   <rooms name="rooms">
