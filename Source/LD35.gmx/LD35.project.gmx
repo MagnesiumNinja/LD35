@@ -80,6 +80,7 @@
     </sounds>
     <sound>sound\sndPlayerDeath</sound>
     <sound>sound\sndNextLevel</sound>
+    <sound>sound\sndClick</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
