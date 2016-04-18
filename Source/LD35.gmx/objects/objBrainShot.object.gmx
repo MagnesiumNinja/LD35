@@ -64,7 +64,7 @@ audioSource.SCALE = 2;
             <string>/// Destruction particles
 for (var i = 0; i &lt; NUM_DESTRUCT_PARTICLES; i++)
 {
-    var destructPart = instance_create(x, y, objGunshotHitParticle);
+    var destructPart = instance_create(x, y, objLaserHitParticle);
     destructPart.angle = angle - 180;
 }
 
