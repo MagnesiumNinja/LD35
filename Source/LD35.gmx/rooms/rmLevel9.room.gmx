@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1616</w>
-    <h>876</h>
+    <w>1016</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>1125</xoffset>
-    <yoffset>600</yoffset>
+    <xoffset>2219</xoffset>
+    <yoffset>999</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -151,6 +151,8 @@
     <instance objName="objFOW" x="1664" y="864" name="inst_1A81F318" locked="0" code="" scaleX="10" scaleY="18" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1488" y="864" name="inst_E7A56913" locked="0" code="" scaleX="10" scaleY="29" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1648" y="1168" name="inst_426D778A" locked="0" code="" scaleX="11" scaleY="10" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="2112" y="1008" name="inst_E031AADB" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;I must be getting close. The monsters are gathering in large numbers.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;Time to get to the heart of this gang and take command!&quot;, true, c_white);&#xA;" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="2112" y="1008" name="inst_DDC03E93" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
