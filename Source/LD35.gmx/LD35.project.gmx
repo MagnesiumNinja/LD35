@@ -39,6 +39,9 @@
         <sound>sound\sndBrainshot_Hit2</sound>
         <sound>sound\sndBrainshot_HitWall</sound>
       </sounds>
+      <sounds name="Scan">
+        <sound>sound\sndBrainScan</sound>
+      </sounds>
     </sounds>
     <sounds name="Change">
       <sound>sound\sndFade1</sound>
@@ -307,12 +310,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
-    <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel6</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
     <room>rooms\rmLevel5</room>
-    <room>rooms\rmLevel6</room>
     <room>rooms\rmLevel7</room>
   </rooms>
   <help>

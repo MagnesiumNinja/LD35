@@ -71,6 +71,8 @@ switch(ability)
         with (objEnemyEntity)
             instance_create(x, y, objBrainFocus);
     
+        audio_play_sound(sndBrainScan, 7, false);
+        
         break;
     }
     
