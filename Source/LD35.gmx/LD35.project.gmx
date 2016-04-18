@@ -87,12 +87,14 @@
         <sprite>sprites\sprMove_Phantom</sprite>
         <sprite>sprites\sprPrimary_Phantom</sprite>
         <sprite>sprites\sprSecondary_Phantom</sprite>
+        <sprite>sprites\sprPhantomMask</sprite>
       </sprites>
       <sprites name="Golem">
         <sprite>sprites\sprIdle_Golem</sprite>
         <sprite>sprites\sprMove_Golem</sprite>
         <sprite>sprites\sprPrimary_Golem</sprite>
         <sprite>sprites\sprSecondary_Golem</sprite>
+        <sprite>sprites\sprGolemMask</sprite>
       </sprites>
       <sprites name="BrainMachine">
         <sprite>sprites\sprIdle_Brain</sprite>
