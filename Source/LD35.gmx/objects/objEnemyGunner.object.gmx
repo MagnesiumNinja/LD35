@@ -93,7 +93,7 @@ alertTime = ALERT_TIME
             <kind>1</kind>
             <string>event_inherited();
 
-if (!frozen &amp;&amp; !dead)
+if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 {
     switch(state)
     {

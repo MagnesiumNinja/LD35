@@ -106,7 +106,7 @@ wrapObj = noone;
 strangleObj = noone;
 strangleTimer = 0;
 
-type = EnemyType.SQORPION;
+type = EnemyType.NORMAL;
 changing = false;
 changeTarget = noone;
 

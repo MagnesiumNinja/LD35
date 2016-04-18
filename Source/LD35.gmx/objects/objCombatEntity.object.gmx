@@ -30,6 +30,7 @@
 // CONSTANTS //
 
 MAX_HP = 1;
+PULL_FROZEN_TIME = 60;
 
 
 // VARIABLES //
@@ -39,6 +40,7 @@ hp = MAX_HP;
 dead = false;
 frozen = false;
 target = noone;
+pullFrozenTime = 0;
 
 hitX = 0;
 hitY = 0;
@@ -83,6 +85,9 @@ if (!dead &amp;&amp; hp &lt;= 0)
     
     shakeScreen(2, 0.2);
 }
+
+if (pullFrozenTime &gt; 0)
+    pullFrozenTime--;
 </string>
           </argument>
         </arguments>

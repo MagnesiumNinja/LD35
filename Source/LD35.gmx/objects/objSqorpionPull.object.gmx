@@ -113,6 +113,9 @@ else
         image_xscale -= MOVE_SPEED;
     else
     {
+        if (held != noone)
+            held.pullFrozenTime = held.PULL_FROZEN_TIME;
+    
         instance_destroy();
     }
 }

@@ -104,7 +104,7 @@ alertTime = ALERT_TIME
             <kind>1</kind>
             <string>event_inherited();
 
-if (!frozen &amp;&amp; !dead)
+if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 {
     switch(state)
     {
@@ -231,7 +231,7 @@ if (!frozen &amp;&amp; !dead)
                     // Attack
                     image_index = 0;
                     
-                    var attack = instance_create(x, y, objGunnerGunshot);
+                    var attack = instance_create(x, y, objBrainShot);
                     attack.sprite_index = sprGunnerGunshot_Enemy;
                     attack.angle = point_direction(x, y, target.x, target.y);
                     attack.target = target;
