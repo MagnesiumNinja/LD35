@@ -363,6 +363,11 @@ instance_create(x, y, objSliceParticle);
             <kind>1</kind>
             <string>event_inherited();
 
+if (frozen || pullFrozenTime != 0)
+{
+    sprite_index = sprIdle_Brain;
+    image_speed = 0.3;
+}
 if (chargeTime &lt; ATTACK_TIME &amp;&amp; chargeTime &gt; 0)
 {
     sprite_index = sprPrimary_Brain;

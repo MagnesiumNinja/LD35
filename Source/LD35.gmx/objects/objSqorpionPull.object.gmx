@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-MOVE_SPEED = 0.75;
+MOVE_SPEED = 0.9;
 MAX_LENGTH = 320;
 
 
@@ -67,7 +67,12 @@ image_xscale = 0;
 image_angle = angle;
 
 if (par.dead || !instance_exists(par))
+{
+    if (instance_exists(held))
+        held.frozen = false;
+
     instance_destroy();
+}
 else
 {
     x = par.x;

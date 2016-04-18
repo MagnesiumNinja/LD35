@@ -86,8 +86,13 @@ if (!dead &amp;&amp; hp &lt;= 0)
     shakeScreen(2, 0.2);
 }
 
-if (pullFrozenTime &gt; 0)
+if (pullFrozenTime &gt; 1)
     pullFrozenTime--;
+else if (pullFrozenTime == 1)
+{
+    pullFrozenTime--;
+    event_perform(ev_other, 9);
+}
 </string>
           </argument>
         </arguments>

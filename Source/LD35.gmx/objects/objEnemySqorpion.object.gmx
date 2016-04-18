@@ -235,6 +235,10 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
         
         case SqorpionAIState.WRAP:
         {
+            path_end();
+            followingPath = false;
+            hasPath = false;
+        
             objPlayer.frozen = true;
             
             if (point_distance(x, y, objPlayer.x, objPlayer.y) &gt; 6)
@@ -269,36 +273,30 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
         case SqorpionAIState.ATTACK:
         {   
             path_end();
+
+            image_angle = point_direction(x, y, target.x, target.y);
+        
+            if (chargeTime &gt; 0)
+                chargeTime--;
             
-            if (collision_line(x, y, target.x, target.y, objCollide, false, true))
+            if (chargeTime == ATTACK_TIME)
             {
+                // Attack
+                image_index = 0;
+                
+                var attack = instance_create(x, y, objSqorpionPull);
+                attack.angle = point_direction(x, y, target.x, target.y);
+                attack.target = target;
+                attack.par = id;
+                
+                wrapObj = attack;
+            }
+            else if (chargeTime == 0 &amp;&amp; !instance_exists(wrapObj))
+            {
+                chargeTime = CHARGE_TIME;
                 state = SqorpionAIState.MOVE;
             }
-            else
-            {
-                image_angle = point_direction(x, y, target.x, target.y);
             
-                if (chargeTime &gt; 0)
-                    chargeTime--;
-                
-                if (chargeTime == ATTACK_TIME)
-                {
-                    // Attack
-                    image_index = 0;
-                    
-                    var attack = instance_create(x, y, objSqorpionPull);
-                    attack.angle = point_direction(x, y, target.x, target.y);
-                    attack.target = target;
-                    attack.par = id;
-                    
-                    wrapObj = attack;
-                }
-                else if (chargeTime == 0 &amp;&amp; !instance_exists(wrapObj))
-                {
-                    chargeTime = CHARGE_TIME;
-                    state = SqorpionAIState.MOVE;
-                }
-            }
             break;
         }
     }
@@ -419,6 +417,11 @@ instance_create(x, y, objSliceParticle);
             <kind>1</kind>
             <string>event_inherited();
 
+if (frozen || pullFrozenTime != 0)
+{
+    sprite_index = sprIdle_Gunner;
+    image_speed = 0.3;
+}
 if (chargeTime &lt; ATTACK_TIME &amp;&amp; chargeTime &gt; 0)
 {
     sprite_index = sprPrimary_Gunner;
