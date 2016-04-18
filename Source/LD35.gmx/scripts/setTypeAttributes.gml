@@ -112,9 +112,9 @@ switch(type)
     
     case EnemyType.SQORPION:
     {
-        MAX_SPEED = 4.5;
-        ACCEL = 0.4;
-        FRIC = 0.2;
+        MAX_SPEED = 4;
+        ACCEL = 0.7;
+        FRIC = 0.5;
         
         MAX_HP = 4;
         hp = MAX_HP;

@@ -91,6 +91,7 @@ if (out)
     if (e)
     {
         held = e;
+        e.frozen = true;
         out = false;
     }
     
@@ -114,8 +115,11 @@ else
     else
     {
         if (held != noone)
+        {
+            held.frozen = false;
             held.pullFrozenTime = held.PULL_FROZEN_TIME;
-    
+        }
+        
         instance_destroy();
     }
 }

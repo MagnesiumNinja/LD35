@@ -242,7 +242,7 @@ else
 {
     path_end();
               
-    if (!objPlayer.changing)
+    if (dead &amp;&amp; !objPlayer.changing)
     {
         objPlayer.changing = true;
         objPlayer.changeTarget = id;

@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-OVERLAY_ALPHA = 0.7;
+OVERLAY_ALPHA = 0.8;
 OVERLAY_COLOUR = c_black;
 
-TINT_COLD_ALPHA = 0.2;
+TINT_COLD_ALPHA = 0.3;
 TINT_WARM_ALPHA = 0;
 TINT_COLD_COLOUR = make_color_rgb(0, 0, 50);
 TINT_WARM_COLOUR = c_orange;

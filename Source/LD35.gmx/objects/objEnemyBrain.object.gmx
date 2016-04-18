@@ -249,9 +249,9 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 }
 else
 {
-    path_end();            
-           
-    if (!objPlayer.changing)
+    path_end();         
+              
+    if (dead &amp;&amp; !objPlayer.changing)
     {
         objPlayer.changing = true;
         objPlayer.changeTarget = id;

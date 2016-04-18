@@ -324,10 +324,10 @@ else if (instance_exists(strangleObj))
 
 
 // FROZEN //
-if (frozen || instance_exists(wrapObj))
+if (frozen || instance_exists(wrapObj) || instance_exists(strangleObj))
 {
-    hspd = approach(hspd, 0, FRIC);
-    vspd = approach(vspd, 0, FRIC);
+    hspd = 0;
+    vspd = 0;
 }
 
 // DEATH //
