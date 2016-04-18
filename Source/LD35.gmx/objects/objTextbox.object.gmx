@@ -102,7 +102,7 @@ typeFreq = TYPE_FREQ;
 
     if (dieEarly || string_length(partText) == string_length(text))
     {
-        if (objPlayer.frozen &amp;&amp; mouse_check_button_pressed(global.PRIMARY_ABILITY))
+        if ((!instance_exists(objPlayer) || objPlayer.frozen) &amp;&amp; mouse_check_button_pressed(global.PRIMARY_ABILITY))
         {
             waitTime = 0;
         }
@@ -129,7 +129,7 @@ typeFreq = TYPE_FREQ;
     }
     else
     {
-        if (objPlayer.frozen &amp;&amp; mouse_check_button_pressed(global.PRIMARY_ABILITY))
+        if ((!instance_exists(objPlayer) || objPlayer.frozen) &amp;&amp; mouse_check_button_pressed(global.PRIMARY_ABILITY))
         {
             pos = string_length(text);
             nameAlpha = 1;
