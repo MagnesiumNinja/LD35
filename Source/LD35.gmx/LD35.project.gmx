@@ -156,10 +156,10 @@
       <sprites name="Health">
         <sprite>sprites\sprHealthHeart</sprite>
         <sprite>sprites\sprHealthBreak</sprite>
-        <sprite>sprites\sprHurtOverlay</sprite>
+        <sprite>sprites\sprMenuButton</sprite>
       </sprites>
-      <sprite>sprites\sprChangeOverlay</sprite>
-      <sprite>sprites\sprAlert</sprite>
+      <sprite>sprites\sprMenuCheckbox</sprite>
+      <sprite>sprites\sprMenuCheckMark</sprite>
       <sprite>sprites\sprLastEnemyArrow</sprite>
       <sprites name="Menu">
         <sprite>sprites\sprMenuButton</sprite>
@@ -212,6 +212,9 @@
     <background>background\tsEarlyInterior_Floor</background>
     <background>background\tsEarlyInterior_Floor2</background>
     <background>background\tsEarlyInterior_Wall</background>
+    <background>background\tsLateInterior_Floor</background>
+    <background>background\tsLateInteriorFloor2</background>
+    <background>background\tsLateInterior_Wall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
