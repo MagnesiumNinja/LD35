@@ -234,6 +234,7 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
                     var attack = instance_create(x, y, objBrainShot);
                     attack.sprite_index = sprBrainshot_Enemy;
                     attack.angle = point_direction(x, y, target.x, target.y);
+                    attack.image_angle = attack.angle;
                     attack.target = target;
                     attack.par = id;
                 }
