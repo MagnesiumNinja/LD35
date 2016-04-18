@@ -273,6 +273,7 @@
     <font>fonts\fntName</font>
     <font>fonts\fntCreditsTitle</font>
     <font>fonts\fntText</font>
+    <font>fonts\fntTextMenu</font>
     <font>fonts\fntCreditsContent</font>
   </fonts>
   <objects name="objects">
