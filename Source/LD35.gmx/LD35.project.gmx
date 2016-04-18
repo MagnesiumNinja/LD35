@@ -26,6 +26,12 @@
         <sound>sound\sndDash2</sound>
         <sound>sound\sndDash3</sound>
       </sounds>
+      <sounds name="Punch">
+        <sound>sound\sndPunch_Swing1</sound>
+        <sound>sound\sndPunch_Swing2</sound>
+        <sound>sound\sndPunch_Hit1</sound>
+        <sound>sound\sndPunch_Hit2</sound>
+      </sounds>
       <sounds name="Brainshot">
         <sound>sound\sndBrainshot_Fire1</sound>
         <sound>sound\sndBrainshot_Fire2</sound>
@@ -299,11 +305,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
-    <room>rooms\rmLevel5</room>
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
+    <room>rooms\rmLevel5</room>
     <room>rooms\rmLevel6</room>
     <room>rooms\rmLevel7</room>
   </rooms>
