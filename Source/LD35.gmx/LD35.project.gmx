@@ -6,6 +6,10 @@
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="Abilities">
+      <sounds name="Tentacle">
+        <sound>sound\sndTentacle_Swing</sound>
+        <sound>sound\sndTentacle_Hit</sound>
+      </sounds>
       <sounds name="Stab">
         <sound>sound\sndStab_Hit1</sound>
         <sound>sound\sndStab_Hit2</sound>

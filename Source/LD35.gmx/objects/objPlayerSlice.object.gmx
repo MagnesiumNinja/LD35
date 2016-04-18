@@ -37,7 +37,7 @@ par = noone;
 target = noone;
 image_speed = 0.18;
 
-audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
+audio_play_sound(sndTentacle_Swing, 9, false);
 </string>
           </argument>
         </arguments>
@@ -100,7 +100,7 @@ if (par != noone &amp;&amp; instance_exists(par))
             
             hit = true;
             
-            audio_play_sound(choose(sndStab_Hit1, sndStab_Hit2, sndStab_Hit3), 10, false);
+            audio_play_sound(sndTentacle_Hit, 10, false);
         }
     }
 }
