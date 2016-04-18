@@ -72,7 +72,7 @@ switch(ability)
         var gunshot = instance_create(x, y, objBrainShot);
         gunshot.angle = aimAngle;
     
-        audio_play_sound(choose(sndShot_Fire1, sndShot_Fire2), 9, false);
+        audio_play_sound(choose(sndBrainshot_Fire1, sndBrainshot_Fire2), 9, false);
         
         break;
     }

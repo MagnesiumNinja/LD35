@@ -125,7 +125,7 @@ if (e &amp;&amp; e.canBeHit)
 
     with (e) event_user(3);
     
-    audio_play_sound(choose(sndShot_Hit1, sndShot_Hit2), 10, false);
+    audio_play_sound(choose(sndBrainshot_Hit1, sndBrainshot_Hit2), 10, false);
     
     instance_destroy();
 }
@@ -152,7 +152,7 @@ if (e &amp;&amp; e.canBeHit)
           <argument>
             <kind>1</kind>
             <string>/// Destroy on hitting wall
-audio_play_sound(sndShot_HitWall, 8, false);
+audio_play_sound(sndBrainshot_HitWall, 8, false);
 instance_destroy();
 </string>
           </argument>
@@ -177,7 +177,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// Destroy on hitting wall
-audio_play_sound(sndShot_HitWall, 8, false);
+audio_play_sound(sndBrainshot_HitWall, 8, false);
 instance_destroy();
 </string>
           </argument>
