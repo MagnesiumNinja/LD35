@@ -35,6 +35,8 @@ MENU_BOX_X_OFFSET = 64;
 MENU_BOX_Y_OFFSET = 32;
 CHECKBOX_Y_OFF = 48;
 
+DIAMONDS_PER_FRAME = 4;
+
 
 // VARIABLES //
 
@@ -77,6 +79,32 @@ for (i = 1; i &lt; numBoxes; i++)
             break;
         }
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (var i = 0; i &lt; DIAMONDS_PER_FRAME; i++)
+{
+    instance_create(random_range(-16, view_wview[0] + 16), view_hview[0] + 32, objMenuDiamond);
 }
 </string>
           </argument>
