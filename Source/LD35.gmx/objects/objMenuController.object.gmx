@@ -78,6 +78,8 @@ for (i = 1; i &lt; numBoxes; i++)
         }
     }
 }
+
+audio_play_sound(sndAmbience, 100, true);
 </string>
           </argument>
         </arguments>
