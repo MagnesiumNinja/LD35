@@ -160,7 +160,7 @@ typeFreq = TYPE_FREQ;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (num == 0)
+            <string>if (num == 0 &amp;&amp; !instance_exists(objScreenTransition))
 {
     // Typewriter effect
     partText = string_copy(text, 1, pos);

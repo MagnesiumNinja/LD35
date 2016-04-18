@@ -469,7 +469,12 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
             <kind>1</kind>
             <string>// Set the sprite index
 
-if (primaryCooldown != PRIMARY_COOLDOWN &amp;&amp; primaryCooldown != 0)
+if (dead)
+{
+    sprite_index = sprPlayerDead;
+    image_speed = 0;
+}
+else if (primaryCooldown != PRIMARY_COOLDOWN &amp;&amp; primaryCooldown != 0)
 {
     sprite_index = primarySprite;
     image_speed = primarySpeed;

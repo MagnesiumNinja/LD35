@@ -3,7 +3,7 @@
   <spriteName>sprDialogueFreeze</spriteName>
   <solid>0</solid>
   <visible>0</visible>
-  <depth>-10</depth>
+  <depth>9</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -39,6 +39,12 @@ DELAY = 30;
 
 triggered = false;
 delay = DELAY;
+
+for (var i = 0; i &lt; global.NUM_VIEWED_TEXTBOXES; i++)
+{
+    if (global.VIEWED_TEXTBOXES[i] == id)
+        instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -88,6 +94,9 @@ else
             {
                 die = true;
             }
+            
+            global.VIEWED_TEXTBOXES[global.NUM_VIEWED_TEXTBOXES] = id;
+            global.NUM_VIEWED_TEXTBOXES++;
             
             instance_destroy();
         }
