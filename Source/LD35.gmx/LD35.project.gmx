@@ -125,6 +125,7 @@
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
+      <sprite>sprites\sprBlockTall</sprite>
       <sprite>sprites\sprBreakableWall</sprite>
       <sprite>sprites\sprBreakableWallDebris</sprite>
     </sprites>
@@ -285,6 +286,7 @@
     <objects name="Blocks">
       <object>objects\objCollide</object>
       <object>objects\objBlock</object>
+      <object>objects\objBlockTall</object>
       <object>objects\objBreakableWall</object>
     </objects>
     <objects name="Entities">
