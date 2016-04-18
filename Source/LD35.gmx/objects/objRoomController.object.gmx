@@ -99,6 +99,11 @@ instance_create(0, 0, objLightController);
 if (instance_number(objEnemyEntity) == 1 &amp;&amp; !instance_exists(objLastEnemyArrow))
     instance_create(0, 0, objLastEnemyArrow);
 
+if (!objPlayer.frozen &amp;&amp; keyboard_check_pressed(vk_escape) &amp;&amp; !instance_exists(objPause) &amp;&amp; !instance_exists(objScreenTransition))
+{
+    instance_create(x, y, objPause);
+}
+
 
 // SHAKE //
 

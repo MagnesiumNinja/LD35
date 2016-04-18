@@ -148,6 +148,12 @@
       <sprite>sprites\sprChangeOverlay</sprite>
       <sprite>sprites\sprAlert</sprite>
       <sprite>sprites\sprLastEnemyArrow</sprite>
+      <sprites name="Menu">
+        <sprite>sprites\sprMenuButton</sprite>
+        <sprite>sprites\sprMenuCheckbox</sprite>
+        <sprite>sprites\sprMenuCheckMark</sprite>
+      </sprites>
+      <sprite>sprites\sprCursor</sprite>
     </sprites>
     <sprites name="Interactables">
       <sprites name="Door">
@@ -256,6 +262,7 @@
       <object>objects\objRoomController</object>
       <object>objects\objDebugController</object>
       <object>objects\objLightController</object>
+      <object>objects\objMenuController</object>
     </objects>
     <objects name="HUD">
       <object>objects\objCamera</object>
@@ -269,6 +276,10 @@
       <object>objects\objTextbox</object>
       <object>objects\objTextboxBars</object>
       <object>objects\objLastEnemyArrow</object>
+      <object>objects\objMenuButton</object>
+      <object>objects\objMenuCheckbox</object>
+      <object>objects\objCursor</object>
+      <object>objects\objPause</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>

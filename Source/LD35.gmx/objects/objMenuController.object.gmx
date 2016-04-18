@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-9999</depth>
-  <persistent>-1</persistent>
+  <depth>0</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,27 +25,65 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// CAMERA //
+            <string>// CONSTANTS //
 
-global.CAMERA_OBJECT = noone;
+MENU_START_X = view_wview[0] - 64;
+MENU_START_Y = view_hview[0] / 2;
+MENU_OFFSET = 48;
 
-// LEVEL //
-
-global.LAST_PLAYED_LEVEL = -1;
-global.VIEWED_TEXTBOXES[0] = -1;
-global.NUM_VIEWED_TEXTBOXES = 0;
+MENU_BOX_X_OFFSET = 64;
+MENU_BOX_Y_OFFSET = 32;
+CHECKBOX_Y_OFF = 48;
 
 
-// PATH-FINDING //
+// VARIABLES //
 
-global.PATH_GRID = -1;
+display_set_gui_size(1280, 720);
 
+buttons[0] = "Load Game";
+buttons[1] = "New Game";
+buttons[2] = "Quit";
+
+numButtons = 3;
+
+boxes[0] = "Fullscreen";
+boxes[1] = "Speedrun";
+
+numBoxes = 2;
+
+selected = false;
+
+
+var i;
+for (i = 0; i &lt; numButtons; i++)
+{
+    var b = instance_create(MENU_START_X, MENU_START_Y + MENU_OFFSET * i, objMenuButton);
+    b.text = buttons[i];
+    b.selection = i;
+}
+
+for (i = 1; i &lt; numBoxes; i++)
+{
+    var b = instance_create(view_wview[0] - MENU_BOX_X_OFFSET, MENU_BOX_Y_OFFSET + CHECKBOX_Y_OFF * (i - 1), objMenuCheckbox);
+    b.text = boxes[i];
+    b.box = i;
+    
+    switch(i)
+    {       
+        case 1: // SPEEDRUN
+        {
+            b.checked = global.SPEEDRUN;
+        
+            break;
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="3">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -62,7 +100,40 @@ global.PATH_GRID = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>saveGame(0);
+            <string>selected = false;
+global.LAST_PLAYED_LEVEL = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(fntText);
+draw_set_valign(fa_bottom);
+
+draw_set_color(c_black);
+draw_text(0 + 18, view_hport[0] - 14, "magnesiumninja.com");
+
+draw_set_color(c_white);
+draw_text(0 + 16, view_hport[0] - 16, "magnesiumninja.com");
+
+draw_set_valign(fa_top);
 </string>
           </argument>
         </arguments>

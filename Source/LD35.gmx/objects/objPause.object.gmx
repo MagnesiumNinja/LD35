@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-9999</depth>
-  <persistent>-1</persistent>
+  <depth>-9989</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -27,17 +27,23 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-CIRCLE_SPEED = 14;
-WAIT_TIME = 30;
+OVERLAY_ALPHA = 0.8;
+TEXT_X = 64;
+TEXT_Y = view_hport[0] / 2 + 128;
+TEXT_OFF = 48;
+PAUSE_Y = 128;
 
 
 // VARIABLES //
 
-radius = view_wport[0] / 2;
-state = 0;
-wait = WAIT_TIME;
-rm = -1;
-surface = surface_create(view_wport[0], view_hport[0]);
+freezeDrawn = false;
+deactivated = false;
+
+// The surface to draw the freeze frame to
+freezeSurface = surface_create(view_wview[0] * 2, view_hview[0] * 2);
+
+
+//audio_play_sound(sndHudClick, 50, false);
 </string>
           </argument>
         </arguments>
@@ -60,56 +66,30 @@ surface = surface_create(view_wport[0], view_hport[0]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Surface drawing
-if (!surface_exists(surface))
-    surface = surface_create(view_wport[0], view_hport[0]);
-
-surface_set_target(surface);
-
-draw_clear(c_black);
-
-draw_set_blend_mode(bm_subtract);
-
-draw_set_color(c_white);
-draw_circle(view_wport[0] / 2, view_hport[0] / 2, radius, false);
-
-draw_set_blend_mode(bm_normal);
-
-surface_reset_target();
-
-
-// State changing
-switch(state)
+            <string>if (freezeDrawn)
 {
-    case 0:
+    if (!deactivated)
     {
-        if (radius &gt; 0)
-            radius = approach(radius, 0, CIRCLE_SPEED);
-        else
-        {
-            room_goto(rm);
-            state++;
-        }
+        deactivated = true;
         
-        break;
+        instance_deactivate_all(true);
+        instance_activate_object(objCursor);
     }
     
-    case 1:
+    if (keyboard_check_pressed(vk_escape) &amp;&amp; !instance_exists(objScreenTransition))
     {
-        if (wait &gt; 0)
-            wait--;
-        else
-            state++;
-        break;
+        instance_activate_all();
+        //audio_play_sound(sndHudClick, 50, false);
+        instance_destroy();
     }
     
-    case 2:
+    if (keyboard_check_pressed(vk_backspace) &amp;&amp; !instance_exists(objScreenTransition))
     {
-        if (radius &lt; view_wport[0] / 2)
-            radius = approach(radius, view_wport[0] / 2, CIRCLE_SPEED);
-        else
-            instance_destroy();
-        break;
+        //audio_play_sound(sndHudClick, 50, false);
+        var st = instance_create(x, y, objScreenTransition);
+        st.rm = rmMenu;
+        
+        loadGame(0);
     }
 }
 </string>
@@ -134,7 +114,71 @@ switch(state)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_surface(surface, 0, 0);
+            <string>// Draw text
+draw_set_valign(fa_center);
+draw_set_halign(fa_center);
+draw_set_font(fntTitleCard);
+
+draw_text(view_wport[0] / 2, 0 + PAUSE_Y, "Paused");
+
+draw_set_valign(fa_top);
+
+draw_set_font(fntText);
+
+draw_text(view_wport[0] / 2, 0 + TEXT_Y, "Press ESCAPE to return to the game");
+draw_text(view_wport[0] / 2, 0 + TEXT_Y + TEXT_OFF, "Press BACKSPACE to quit to the menu");
+
+draw_set_halign(fa_left);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Draw the screen to the surface
+if (!freezeDrawn)
+{   
+    surface_set_target(freezeSurface);
+    
+    draw_surface(application_surface, 0, 0);
+    
+    surface_reset_target();
+  
+    freezeDrawn = true;
+}
+else
+{
+    // Draw the surface
+    if (surface_exists(freezeSurface))
+    {
+        draw_surface_ext(freezeSurface, view_xview[0], view_yview[0], 0.5, 0.5, 0, c_white, 1);
+    }
+    
+    // Draw the overlay
+    draw_set_color(c_black);
+    draw_set_alpha(OVERLAY_ALPHA);
+    
+    draw_rectangle(view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0], false);
+    
+    draw_set_alpha(1);
+    draw_set_color(c_white);
+}
 </string>
           </argument>
         </arguments>

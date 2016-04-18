@@ -40,10 +40,6 @@ if (version != global.SAVEFILE_VERSION)
     return false;
 }
 
-// Read the player's room
-global.SAVED_TO = file_text_read_real(file);
-file_text_readln(file);
-
 // Check if this is a full save
 if (file_text_read_real(file) == 1)
 {    
