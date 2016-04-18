@@ -3,7 +3,7 @@
   <caption></caption>
   <width>3000</width>
   <height>3000</height>
-  <vsnap>16</vsnap>
+  <vsnap>8</vsnap>
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1604</w>
-    <h>873</h>
+    <w>1596</w>
+    <h>870</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-125</xoffset>
-    <yoffset>-73</yoffset>
+    <xoffset>2061</xoffset>
+    <yoffset>2497</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tsEarlyExterior_Moss" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -119,7 +119,6 @@
     <instance objName="objBlock" x="1024" y="1968" name="inst_458B879B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1024" y="1984" name="inst_3E67FA37" locked="0" code="" scaleX="40" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1664" y="1984" name="inst_83BB66C1" locked="0" code="" scaleX="1" scaleY="19" colour="4294967295" rotation="0"/>
-    <instance objName="objBreakableWall" x="1120" y="1177" name="inst_58D1BE10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1152" y="1168" name="inst_C67542EE" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoor" x="1112" y="1008" name="inst_DF58983E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="objEnemyGolem" x="912" y="1024" name="inst_0F107D7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -164,6 +163,7 @@
     <instance objName="objBlockTall" x="1504" y="1168" name="inst_754B2C78" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="1152" y="1152" name="inst_D33F0258" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="1504" y="1040" name="inst_DA4BB15E" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="objDoor" x="1120" y="1176" name="inst_BC77422E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyExterior_Moss" x="1040" y="1936" w="96" h="48" xo="0" yo="32" id="10000960" name="inst_60F149BB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
