@@ -36,6 +36,8 @@ hit = false;
 par = noone;
 target = noone;
 image_speed = 0.18;
+
+audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
 </string>
           </argument>
         </arguments>

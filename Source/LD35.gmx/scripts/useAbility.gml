@@ -14,9 +14,6 @@ switch(ability)
         var stab = instance_create(x, y, objPlayerSlice);
         stab.par = id;
         stab.image_angle = aimAngle;
-        
-        audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
-        
     
         break;
     }
@@ -26,9 +23,7 @@ switch(ability)
         var stab = instance_create(x, y, objPhantomStab);
         stab.par = id;
         stab.image_angle = aimAngle;
-        
-        audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
-        
+
         break;
     }
     
@@ -49,9 +44,7 @@ switch(ability)
     {
         var gunshot = instance_create(x, y, objGunnerGunshot);
         gunshot.angle = aimAngle;
-    
-        audio_play_sound(choose(sndShot_Fire1, sndShot_Fire2), 9, false);
-        
+
         break;
     }
 
@@ -61,9 +54,7 @@ switch(ability)
         punch.par = id;
         punch.image_angle = aimAngle;
         golemWait = GOLEM_WAIT;
-        
-        audio_play_sound(choose(sndStab_Swing1, sndStab_Swing2, sndStab_Swing3), 9, false);
-        
+
         break;
     }
 
@@ -71,9 +62,7 @@ switch(ability)
     {
         var gunshot = instance_create(x, y, objBrainShot);
         gunshot.angle = aimAngle;
-    
-        audio_play_sound(choose(sndBrainshot_Fire1, sndBrainshot_Fire2), 9, false);
-        
+
         break;
     }
     

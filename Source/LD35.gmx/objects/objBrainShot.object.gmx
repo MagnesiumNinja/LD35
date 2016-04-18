@@ -39,6 +39,8 @@ target = noone;
 audioSource = instance_create(x, y, objAudioSource);
 audioSource.par = id;
 audioSource.SCALE = 2;
+
+audio_play_sound(choose(sndBrainshot_Fire1, sndBrainshot_Fire2), 9, false);
 </string>
           </argument>
         </arguments>

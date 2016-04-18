@@ -288,9 +288,9 @@
       <object>objects\objHeartBreakParticle</object>
     </objects>
     <objects name="Abilities">
+      <object>objects\objPlayerSlice</object>
       <object>objects\objPhantomStab</object>
       <object>objects\objGolemPunch</object>
-      <object>objects\objPlayerSlice</object>
       <object>objects\objGunnerGunshot</object>
       <object>objects\objBrainShot</object>
       <object>objects\objBrainFocus</object>
