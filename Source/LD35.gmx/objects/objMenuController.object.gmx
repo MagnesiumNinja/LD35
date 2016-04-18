@@ -28,7 +28,7 @@
             <string>// CONSTANTS //
 
 MENU_START_X = view_wview[0] / 2;
-MENU_START_Y = view_hview[0] / 2 + 64;
+MENU_START_Y = view_hview[0] / 2 + 96;
 MENU_OFFSET = 20;
 
 MENU_BOX_X_OFFSET = 64;
