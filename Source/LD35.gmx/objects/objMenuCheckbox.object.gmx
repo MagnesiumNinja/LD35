@@ -106,7 +106,7 @@ else
             <kind>1</kind>
             <string>draw_set_valign(fa_center);
 draw_set_halign(fa_right);
-draw_set_font(fntText);
+draw_set_font(fntTextMenu);
 
 if (hover)
 {

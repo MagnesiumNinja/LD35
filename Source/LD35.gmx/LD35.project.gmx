@@ -214,6 +214,9 @@
     <background>background\tsEarlyInterior_Floor</background>
     <background>background\tsEarlyInterior_Floor2</background>
     <background>background\tsEarlyInterior_Wall</background>
+    <background>background\tsLateInterior_Floor</background>
+    <background>background\tsLateInteriorFloor2</background>
+    <background>background\tsLateInterior_Wall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -271,6 +274,7 @@
     <font>fonts\fntName</font>
     <font>fonts\fntCreditsTitle</font>
     <font>fonts\fntText</font>
+    <font>fonts\fntTextMenu</font>
     <font>fonts\fntCreditsContent</font>
   </fonts>
   <objects name="objects">
