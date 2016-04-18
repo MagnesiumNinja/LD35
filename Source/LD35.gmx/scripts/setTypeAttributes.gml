@@ -110,4 +110,25 @@ switch(type)
         break;
     }
     
+    case EnemyType.SQORPION:
+    {
+        MAX_SPEED = 4.5;
+        ACCEL = 0.4;
+        FRIC = 0.2;
+        
+        MAX_HP = 4;
+        hp = MAX_HP;
+        
+        idleSprite = sprIdle_Golem;
+        moveSprite = sprMove_Golem;
+        primarySprite = sprPrimary_Golem;
+        secondarySprite = sprSecondary_Golem;
+        
+        idleSpeed = 0.3;
+        moveSpeed = 0.05;
+        primarySpeed = 0.1;
+        secondarySpeed = 0.02;
+        break;
+    }
+    
 }

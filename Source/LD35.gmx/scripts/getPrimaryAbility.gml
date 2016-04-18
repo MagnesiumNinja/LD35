@@ -7,4 +7,5 @@ switch(type)
     case EnemyType.GUNNER: return AbilityType.GUNNER_GUNSHOT;
     case EnemyType.GOLEM: return AbilityType.GOLEM_PUNCH;
     case EnemyType.BRAIN: return AbilityType.BRAIN_SHOT;
+    case EnemyType.SQORPION: return AbilityType.SQORPION_STRANGLE;
 }

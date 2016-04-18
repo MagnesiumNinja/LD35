@@ -85,4 +85,26 @@ switch(ability)
         break;
     }
     
+    case AbilityType.SQORPION_STRANGLE:
+    {
+        var e = instance_place(x, y, objEnemyEntity);
+        
+        if (e)
+        {
+            strangleObj = e;
+            strangleObj.frozen = true;
+            strangleTimer = STRANGLE_TIMER;
+        }
+        break;
+    }
+    
+    case AbilityType.SQORPION_PULL:
+    {
+        wrapObj = instance_create(x, y, objSqorpionPull);
+        wrapObj.par = id;
+        wrapObj.angle = aimAngle;
+        
+        break;
+    }
+    
 }

@@ -12,4 +12,6 @@ switch(ability)
     case AbilityType.GOLEM_PUNCH: return 60;
     case AbilityType.BRAIN_SHOT: return 8;
     case AbilityType.BRAIN_FOCUS: return 100;
+    case AbilityType.SQORPION_STRANGLE: return 60;
+    case AbilityType.SQORPION_PULL: return 20;
 }
