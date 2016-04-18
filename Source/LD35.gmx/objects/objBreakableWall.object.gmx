@@ -65,7 +65,7 @@ hitAngle = 90;
     
     var audio = instance_create(x, y, objAudioSource);
     audio.life = true;
-    audio.SCALE = 10;
+    audio.SCALE = 14;
     
     // Reveal nearby FOWs
     revealFOWs(x, y);
@@ -82,29 +82,6 @@ hitAngle = 90;
     with (objPathfindingEntity)
         updateGrid = 5;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="17">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>broken = true;
 </string>
           </argument>
         </arguments>

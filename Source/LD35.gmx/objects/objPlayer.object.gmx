@@ -411,7 +411,7 @@ if (type == EnemyType.GOLEM)
 {
     var audio = instance_create(x, y, objAudioSource);
     audio.life = true;
-    audio.SCALE = 5;
+    audio.SCALE = 7;
 }
 </string>
           </argument>

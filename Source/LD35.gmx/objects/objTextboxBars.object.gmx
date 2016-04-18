@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-MAX_HEIGHT = 80;
+MAX_HEIGHT = 70;
 IN_RATE = 10;
 OUT_RATE = 6;
 
