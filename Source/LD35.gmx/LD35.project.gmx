@@ -66,6 +66,7 @@
         <sound>sound\sndDoorOpen</sound>
         <sound>sound\sndDoorClose</sound>
       </sounds>
+      <sound>sound\sndAlert</sound>
     </sounds>
     <sounds name="Footsteps">
       <sound>sound\sndFS_Player1</sound>

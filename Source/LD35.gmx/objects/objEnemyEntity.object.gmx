@@ -45,6 +45,7 @@ fowAlpha = 0;
 fowVisible = false;
 alertAlpha = 0;
 alertTime = ALERT_TIME;
+alertSounded = false;
 </string>
           </argument>
         </arguments>
@@ -192,7 +193,12 @@ audio_play_sound(choose(sndFade1, sndFade2), 6, false);
 
 if (alertTime != ALERT_TIME &amp;&amp; alertTime != 0)
 {
-    alertAlpha = 1;    
+    alertAlpha = 1;
+    if (!alertSounded)
+    {
+        audio_play_sound(sndAlert, 10, false);
+        alertSounded = true;
+    }
 }
 else
 {
