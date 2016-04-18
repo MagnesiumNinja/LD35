@@ -25,7 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Save the game
+            <string>// CONSTANTS //
+
+SPEEDRUN_OFF = 16;
+
+
+// VARIABLES AND ACTIONS //
+
+// Save the game
 saveGame(0);
 
 if (global.LAST_PLAYED_LEVEL != room)
@@ -99,9 +106,20 @@ instance_create(0, 0, objLightController);
 if (instance_number(objEnemyEntity) == 1 &amp;&amp; !instance_exists(objLastEnemyArrow))
     instance_create(0, 0, objLastEnemyArrow);
 
+    
+// PAUSING //
+    
 if (!objPlayer.frozen &amp;&amp; keyboard_check_pressed(vk_escape) &amp;&amp; !instance_exists(objPause) &amp;&amp; !instance_exists(objScreenTransition))
 {
     instance_create(x, y, objPause);
+}
+
+
+// TIMER //
+
+if (!objPlayer.frozen &amp;&amp; !objPlayer.dead)
+{
+    global.TIME++;
 }
 
 
@@ -159,6 +177,78 @@ if (instance_exists(global.CAMERA_OBJECT))
     {
         global.SCREEN_SHAKE = false;
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.SPEEDRUN)
+{
+    // Calculate time
+    var ms, s, m;
+    ms = floor(global.TIME / 0.06);
+    
+    s = floor(ms / 1000);
+    ms -= s * 1000;
+    
+    m = floor(s / 60);
+    s -= m * 60;
+    
+    // Draw the timer
+    draw_set_font(fntText);
+
+    draw_set_valign(fa_bottom);    
+
+    if (ms &gt; 99)
+    {
+        draw_set_color(c_black);
+        draw_text(SPEEDRUN_OFF + 2, view_hport[0] - SPEEDRUN_OFF + 2, 
+                string_repeat("0", 2 - string_length(string(m))) + string(m) + ":" + 
+                string_repeat("0", 2 - string_length(string(s))) + string(s) + ":" + 
+                string_repeat("0", 2 - string_length(string_copy(string(ms), 0, 2))) + string_copy(string(ms), 0, 2));
+    
+        draw_set_color(c_white);
+        draw_text(SPEEDRUN_OFF,  view_hport[0] - SPEEDRUN_OFF, 
+                string_repeat("0", 2 - string_length(string(m))) + string(m) + ":" + 
+                string_repeat("0", 2 - string_length(string(s))) + string(s) + ":" + 
+                string_repeat("0", 2 - string_length(string_copy(string(ms), 0, 2))) + string_copy(string(ms), 0, 2));
+    }
+    else
+    {
+        draw_set_color(c_black);
+        draw_text(SPEEDRUN_OFF + 2,  view_hport[0] - SPEEDRUN_OFF + 2, 
+                string_repeat("0", 2 - string_length(string(m))) + string(m) + ":" + 
+                string_repeat("0", 2 - string_length(string(s))) + string(s) + ":" + 
+                string_repeat("0", 2 - string_length(string_copy(string(ms), 1, 1))) + string_copy(string(ms), 1, 1));
+    
+        draw_set_color(c_white);
+        draw_text(SPEEDRUN_OFF,  view_hport[0] - SPEEDRUN_OFF, 
+                string_repeat("0", 2 - string_length(string(m))) + string(m) + ":" + 
+                string_repeat("0", 2 - string_length(string(s))) + string(s) + ":" + 
+                string_repeat("0", 2 - string_length(string_copy(string(ms), 1, 1))) + string_copy(string(ms), 1, 1));
+    }   
+    
+    draw_set_valign(fa_top);   
+
+    draw_set_colour(c_white);
 }
 </string>
           </argument>

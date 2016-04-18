@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>2569</xoffset>
-    <yoffset>1129</yoffset>
+    <xoffset>476</xoffset>
+    <yoffset>126</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -85,9 +85,8 @@
     <instance objName="objDoor" x="1000" y="624" name="inst_8B45C8FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="objPlayer" x="368" y="128" name="inst_3DA82688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEnemyGunner" x="496" y="240" name="inst_A92E1AE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objEnemyGunner" x="1088" y="88" name="inst_0AB19118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="200"/>
+    <instance objName="objEnemyGunner" x="1184" y="112" name="inst_0AB19118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="objEnemyGunner" x="1120" y="576" name="inst_71832575" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="150"/>
-    <instance objName="objEnemyPhantom" x="1048" y="392" name="inst_CE0DF46F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="330"/>
     <instance objName="objEnemyPhantom" x="936" y="208" name="inst_D7C743EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
     <instance objName="objEnemyPhantom" x="1456" y="720" name="inst_01CF5E5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="objBlock" x="688" y="576" name="inst_6370DC8C" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
@@ -95,7 +94,7 @@
     <instance objName="objFOW" x="1008" y="336" name="inst_529362EF" locked="0" code="" scaleX="13" scaleY="22" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="800" y="256" name="inst_BE462421" locked="0" code="" scaleX="26" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="800" y="48" name="inst_818CB4BF" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
-    <instance objName="objEnemyPhantom" x="864" y="400" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objEnemyPhantom" x="896" y="464" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="objEOL" x="1536" y="768" name="inst_20354A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="352" y="112" name="inst_58C22DA4" locked="0" code="addTextbox(&quot;???&quot;, &quot;Use WASD to move, and the Mouse to aim.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Left Click to use your primary ability, Right Click to use your secondary ability.&quot;, false, c_yellow);&#xA;&#xA;" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="400" y="192" name="inst_15831665" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Oh great, just my luck.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;The first creature I run into on this planet has a GUN for a head.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;Whatever. Time to kill him and take his body.&quot;, true, c_white);&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>

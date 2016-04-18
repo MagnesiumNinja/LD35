@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>1000</w>
     <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>1384</xoffset>
-    <yoffset>1153</yoffset>
+    <xoffset>2170</xoffset>
+    <yoffset>2275</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -158,6 +158,8 @@
     <instance objName="objFOW" x="2096" y="2144" name="inst_CAB02BEB" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1920" y="2304" name="inst_9941E9E0" locked="0" code="" scaleX="5" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1920" y="2384" name="inst_EE43BFC5" locked="0" code="" scaleX="23" scaleY="7" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="1536" y="1600" name="inst_288092E6" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;What the heck is that thing?&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;It's got an exposed brain. I guess that means it's smart.&quot;, true, c_white);&#xA;" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="1536" y="1632" name="inst_85C0B5FD" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="90"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyExterior_Moss" x="1040" y="1936" w="96" h="48" xo="0" yo="32" id="10000960" name="inst_60F149BB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

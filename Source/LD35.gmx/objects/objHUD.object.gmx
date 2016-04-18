@@ -59,7 +59,7 @@ hudAlpha = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(objTextbox))
+            <string>if (instance_exists(objTextboxBars))
     hudAlpha = approach(hudAlpha, 0, HUD_ALPHA_FADE);
 else
     hudAlpha = approach(hudAlpha, 1, HUD_ALPHA_FADE);

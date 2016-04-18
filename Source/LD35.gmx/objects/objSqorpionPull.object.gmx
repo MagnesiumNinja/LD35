@@ -93,7 +93,7 @@ if (out)
     else
         e = instance_place(x, y, target);
         
-    if (e)
+    if (e &amp;&amp; e.canBeHit)
     {
         held = e;
         e.frozen = true;

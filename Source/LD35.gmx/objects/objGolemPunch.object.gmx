@@ -38,6 +38,11 @@ target = noone;
 image_speed = 0.3;
 
 audio_play_sound(choose(sndPunch_Swing1, sndPunch_Swing2), 9, false);
+
+var audioSource = instance_create(x + 12, y, objAudioSource);
+audioSource.life = true;
+audioSource.SCALE = 9;
+
 </string>
           </argument>
         </arguments>

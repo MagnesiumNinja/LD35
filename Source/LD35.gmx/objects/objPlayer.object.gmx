@@ -476,6 +476,8 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
             <kind>1</kind>
             <string>/// DEATH event
 
+global.DEATHS++;
+
 // create blood splatter
 for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
 {

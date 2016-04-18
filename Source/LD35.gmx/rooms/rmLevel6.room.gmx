@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>529</xoffset>
-    <yoffset>286</yoffset>
+    <xoffset>366</xoffset>
+    <yoffset>421</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -134,6 +134,9 @@
     <instance objName="objFOW" x="1232" y="1312" name="inst_BB922130" locked="0" code="" scaleX="7" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1344" y="1440" name="inst_38CB53C3" locked="0" code="" scaleX="14" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="2032" y="1504" name="inst_3833C5E0" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="528" y="992" name="inst_C5AA5970" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Alright, I'm inside their den. Time to find that leader.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;A group of misfits like this MUST have someone guiding them, right?&quot;, true, c_white);" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="528" y="992" name="inst_9DD67E4F" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objTitleCardBlock" x="704" y="992" name="inst_351F35AF" locked="0" code="text = &quot;Den of the Misfits&quot;;&#xA;area = 1;&#xA;" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

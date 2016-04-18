@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
-    <h>600</h>
+    <w>1616</w>
+    <h>876</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>64</xoffset>
-    <yoffset>158</yoffset>
+    <xoffset>-2</xoffset>
+    <yoffset>753</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -104,7 +104,7 @@
     <instance objName="objEnemyGunner" x="864" y="992" name="inst_0A7759EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="330"/>
     <instance objName="objEnemyGunner" x="1472" y="1016" name="inst_0C7A59F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="110"/>
     <instance objName="objEnemyGunner" x="1512" y="792" name="inst_4C3F376C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="160"/>
-    <instance objName="objEnemyPhantom" x="1056" y="992" name="inst_D3BF7FEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="250"/>
+    <instance objName="objEnemyPhantom" x="1056" y="1024" name="inst_D3BF7FEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="250"/>
     <instance objName="objEnemyPhantom" x="1616" y="880" name="inst_06689AB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="280"/>
     <instance objName="objPlayer" x="1632" y="1240" name="inst_C377BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEOL" x="112" y="664" name="inst_C7382EBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
