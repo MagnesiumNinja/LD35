@@ -27,13 +27,13 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-CIRCLE_SPEED = 14;
+CIRCLE_SPEED = 16;
 WAIT_TIME = 30;
 
 
 // VARIABLES //
 
-radius = view_wport[0] / 2;
+radius = view_wport[0] / 2 + 128;
 state = 0;
 wait = WAIT_TIME;
 rm = -1;
