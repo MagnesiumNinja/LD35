@@ -122,6 +122,12 @@
         <sprite>sprites\sprPrimary_Brain</sprite>
         <sprite>sprites\sprSecondary_Brain</sprite>
       </sprites>
+      <sprites name="Sqorpion">
+        <sprite>sprites\sprIdle_Sqorp</sprite>
+        <sprite>sprites\sprMove_Sqorp</sprite>
+        <sprite>sprites\sprPrimary_Sqorp</sprite>
+        <sprite>sprites\sprSecondary_Sqorp</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>

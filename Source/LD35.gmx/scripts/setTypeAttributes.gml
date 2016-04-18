@@ -119,10 +119,10 @@ switch(type)
         MAX_HP = 4;
         hp = MAX_HP;
         
-        idleSprite = sprIdle_Golem;
-        moveSprite = sprMove_Golem;
-        primarySprite = sprPrimary_Golem;
-        secondarySprite = sprSecondary_Golem;
+        idleSprite = sprIdle_Sqorp;
+        moveSprite = sprMove_Sqorp;
+        primarySprite = sprPrimary_Sqorp;
+        secondarySprite = sprSecondary_Sqorp;
         
         idleSpeed = 0.3;
         moveSpeed = 0.05;
