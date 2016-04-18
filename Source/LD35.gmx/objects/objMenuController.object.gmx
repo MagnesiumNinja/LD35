@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-MENU_START_X = view_wview[0] - 64;
-MENU_START_Y = view_hview[0] / 2;
-MENU_OFFSET = 48;
+MENU_START_X = view_wview[0] / 2;
+MENU_START_Y = view_hview[0] / 2 + 64;
+MENU_OFFSET = 20;
 
 MENU_BOX_X_OFFSET = 64;
 MENU_BOX_Y_OFFSET = 32;
@@ -126,9 +126,6 @@ global.LAST_PLAYED_LEVEL = -1;
             <kind>1</kind>
             <string>draw_set_font(fntText);
 draw_set_valign(fa_bottom);
-
-draw_set_color(c_black);
-draw_text(0 + 18, view_hport[0] - 14, "magnesiumninja.com");
 
 draw_set_color(c_white);
 draw_text(0 + 16, view_hport[0] - 16, "magnesiumninja.com");
