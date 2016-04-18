@@ -79,6 +79,7 @@
       <sound>sound\sndFS_Golem4</sound>
     </sounds>
     <sound>sound\sndPlayerDeath</sound>
+    <sound>sound\sndNextLevel</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
