@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>2</page>
-    <xoffset>323</xoffset>
-    <yoffset>269</yoffset>
+    <page>0</page>
+    <xoffset>147</xoffset>
+    <yoffset>157</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -117,6 +117,8 @@
     <instance objName="objFOW" x="1040" y="1072" name="inst_7C0B3B2E" locked="0" code="" scaleX="19" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="1248" y="1392" name="inst_B0C390B5" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Man, this place is a dump. it's crawling with weirdos.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I'm going to have to be careful about how I approach this situation.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;If I can engage these guys one at a time, I might be able to stay hidden.&quot;, true, c_white);&#xA;" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="1248" y="1392" name="inst_F9266EEF" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="objBlockTall" x="848" y="368" name="inst_039AB046" locked="0" code="" scaleX="1" scaleY="84" colour="4294967295" rotation="0"/>
+    <instance objName="objBlockTall" x="864" y="592" name="inst_B9D9A13B" locked="0" code="" scaleX="101.333335876465" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1136" w="48" h="48" xo="0" yo="0" id="10000376" name="inst_44A1977F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
