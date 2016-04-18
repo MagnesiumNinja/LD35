@@ -99,6 +99,7 @@ dashTimer = DASH_TIMER;
 
 type = EnemyType.NORMAL;
 changing = false;
+frozen = false;
 changeTarget = noone;
 
 primaryAbility = AbilityType.NOTHING;
@@ -141,7 +142,7 @@ if (!instance_exists(objScreenTransition))
     }
 }
 
-if (!changing &amp;&amp; !dead)
+if (!frozen &amp;&amp; !changing &amp;&amp; !dead)
 {
     if (golemWait &gt; 0)
         golemWait--;
@@ -249,7 +250,7 @@ if (!changing &amp;&amp; !dead)
     }
 }
 // CHANGING //
-else if (!dead)
+else if (!frozen &amp;&amp; !dead)
 {
     canBeHit = false;
     
@@ -294,6 +295,13 @@ else if (!dead)
         // Destroy the enemy
         with (changeTarget) instance_destroy();
     }
+}
+
+// FROZEN //
+if (frozen)
+{
+    hspd = approach(hspd, 0, FRIC);
+    vspd = approach(vspd, 0, FRIC);
 }
 
 // DEATH //

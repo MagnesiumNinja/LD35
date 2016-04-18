@@ -40,6 +40,8 @@ camera.focus = objPlayer;
 instance_create(0, 0, objHUD);
 instance_create(0, 0, objChangeOverlay);
 
+display_set_gui_size(1280, 720);
+
 
 // Set up the path-finding grid
 global.H_CELLS = room_width / global.CELL_SIZE;

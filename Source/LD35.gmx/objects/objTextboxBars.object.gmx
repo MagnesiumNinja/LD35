@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-8000</depth>
+  <depth>-8100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,26 +27,15 @@
             <kind>1</kind>
             <string>// CONSTANTS //
 
-SHADOW_OFFSET = 2;
-
-FADE_IN_RATE = 14;
-FADE_OUT_RATE = 20;
-
-WAIT_TIME = 180;
-
-Y_OFFSET = -256;
+MAX_HEIGHT = 80;
+IN_RATE = 10;
+OUT_RATE = 6;
 
 
 // VARIABLES //
 
-text = "";
-area = 0;
-alpha = 0;
-state = 0;
-waitTime = WAIT_TIME;
-start = false;
-
-//audio_play_sound(sndNewArea, 50, false);
+height = 0;
+die = false;
 </string>
           </argument>
         </arguments>
@@ -69,47 +58,22 @@ start = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!start)
+            <string>if (!die)
 {
-    if (instance_number(objAreaTitleCard) == 1)
+    if (height &lt; MAX_HEIGHT)
     {
-        start = true;
+        height += smoothChange(height, MAX_HEIGHT, IN_RATE);
     }
 }
 else
 {
-    if (state == 0)
+    if (height &gt; 0.1)
     {
-        if (alpha &lt; 0.99)
-        {
-            alpha += smoothChange(alpha, 1, FADE_IN_RATE);
-        }
-        else
-        {
-            state++;
-        }
-    }
-    else if (state == 1)
-    {
-        if (waitTime &gt; 0)
-        {
-            waitTime--;
-        }
-        else
-        {
-            state++;
-        }
+        height += smoothChange(height, 0, OUT_RATE);
     }
     else
     {
-        if (alpha &gt; 0.01)
-        {
-            alpha += smoothChange(alpha, 0, FADE_OUT_RATE);
-        }
-        else
-        {
-            instance_destroy();
-        }
+        instance_destroy();
     }
 }
 </string>
@@ -117,7 +81,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -134,20 +98,12 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(alpha);
-draw_set_font(fntTitleCard);
-draw_set_halign(fa_center);
-draw_set_valign(fa_center);
+            <string>draw_set_color(c_black);
 
-draw_set_color(c_black);
-draw_text(view_wport[0] / 2 + SHADOW_OFFSET, view_hport[0] / 2 + SHADOW_OFFSET + Y_OFFSET, text);
+draw_rectangle(view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + height, false);
+draw_rectangle(view_xview[0], view_yview[0] + view_hview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0] - height, false);
 
 draw_set_color(c_white);
-draw_text(view_wport[0] / 2, view_hport[0] / 2 + Y_OFFSET, text);
-
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

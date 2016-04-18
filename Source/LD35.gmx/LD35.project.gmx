@@ -131,9 +131,11 @@
       <sprite>sprites\sprLightPlayer</sprite>
       <sprite>sprites\sprLightEnemy</sprite>
     </sprites>
-    <sprite>sprites\sprAudioSource</sprite>
     <sprites name="Level">
       <sprite>sprites\sprTitleCardBlock</sprite>
+      <sprite>sprites\sprDialogueBlock</sprite>
+      <sprite>sprites\sprDialogueFreeze</sprite>
+      <sprite>sprites\sprAudioSource</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -184,6 +186,12 @@
       <script>scripts\saveGame.gml</script>
       <script>scripts\loadGame.gml</script>
     </scripts>
+    <scripts name="Dialogue">
+      <script>scripts\addTextbox.gml</script>
+      <script>scripts\makeTextbox.gml</script>
+      <script>scripts\deleteOtherTextboxes.gml</script>
+      <script>scripts\playNextTextbox.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\sh_premultiply.shader</shader>
@@ -191,6 +199,8 @@
   <fonts name="fonts">
     <font>fonts\fntDebug</font>
     <font>fonts\fntTitleCard</font>
+    <font>fonts\fntName</font>
+    <font>fonts\fntText</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
@@ -209,6 +219,8 @@
       <object>objects\objChangeOverlay</object>
       <object>objects\objScreenTransition</object>
       <object>objects\objAreaTitleCard</object>
+      <object>objects\objTextbox</object>
+      <object>objects\objTextboxBars</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -237,6 +249,8 @@
       <objects name="Stage">
         <object>objects\objAudioSource</object>
         <object>objects\objTitleCardBlock</object>
+        <object>objects\objDialogueBlock</object>
+        <object>objects\objDialogueFreeze</object>
       </objects>
     </objects>
     <objects name="Particles">
@@ -262,11 +276,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
-    <room>rooms\rmLevel5</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
+    <room>rooms\rmLevel5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
