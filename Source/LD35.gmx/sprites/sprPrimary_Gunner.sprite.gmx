@@ -23,5 +23,11 @@
     <frame index="0">images\sprPrimary_Gunner_0.png</frame>
     <frame index="1">images\sprPrimary_Gunner_1.png</frame>
     <frame index="2">images\sprPrimary_Gunner_2.png</frame>
+    <frame index="3">images\sprPrimary_Gunner_3.png</frame>
+    <frame index="4">images\sprPrimary_Gunner_4.png</frame>
+    <frame index="5">images\sprPrimary_Gunner_5.png</frame>
+    <frame index="6">images\sprPrimary_Gunner_6.png</frame>
+    <frame index="7">images\sprPrimary_Gunner_7.png</frame>
+    <frame index="8">images\sprPrimary_Gunner_8.png</frame>
   </frames>
 </sprite>
