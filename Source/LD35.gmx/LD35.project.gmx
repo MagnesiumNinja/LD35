@@ -81,6 +81,12 @@
         <sprite>sprites\sprPrimary_Golem</sprite>
         <sprite>sprites\sprSecondary_Golem</sprite>
       </sprites>
+      <sprites name="BrainMachine">
+        <sprite>sprites\sprIdle_Brain</sprite>
+        <sprite>sprites\sprMove_Brain</sprite>
+        <sprite>sprites\sprPrimary_Brain</sprite>
+        <sprite>sprites\sprSecondary_Brain</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
@@ -123,6 +129,8 @@
       <sprite>sprites\sprGunnerGunshot_Enemy</sprite>
       <sprite>sprites\sprGolemPunch</sprite>
       <sprite>sprites\sprGolemPunch_Enemy</sprite>
+      <sprite>sprites\sprBrainshot</sprite>
+      <sprite>sprites\sprBrainshot_Enemy</sprite>
       <sprite>sprites\sprBrainFocus</sprite>
       <sprite>sprites\sprSqorpionPull</sprite>
     </sprites>
@@ -138,6 +146,7 @@
       <sprite>sprites\sprDialogueFreeze</sprite>
       <sprite>sprites\sprAudioSource</sprite>
     </sprites>
+    <sprite>sprites\sprLaserHit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
@@ -261,6 +270,7 @@
       <object>objects\objChangeParticle</object>
       <object>objects\objPhantomDashParticle</object>
       <object>objects\objGunshotHitParticle</object>
+      <object>objects\objLaserHitParticle</object>
       <object>objects\objWallBreakParticle</object>
       <object>objects\objBloodParticle</object>
       <object>objects\objBloodSplatter</object>
@@ -280,11 +290,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmMenu</room>
+    <room>rooms\rmLevel5</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel4</room>
-    <room>rooms\rmLevel5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
