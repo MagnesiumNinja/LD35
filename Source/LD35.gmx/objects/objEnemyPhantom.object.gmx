@@ -200,6 +200,8 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
         case PhantomAIState.DODGE:
         {
             path_end();
+            followingPath = false;
+            hasPath = false;
             
             if (cooldownTime = COOLDOWN_TIME)
             {
@@ -355,6 +357,11 @@ instance_create(x, y, objSliceParticle);
             <kind>1</kind>
             <string>event_inherited();
 
+if (frozen || pullFrozenTime != 0)
+{
+    sprite_index = sprIdle_Phantom;
+    image_speed = 0.3;
+}
 if (state == PhantomAIState.DODGE &amp;&amp; !(hspd == 0 &amp;&amp; vspd == 0))
 {
     sprite_index = sprSecondary_Phantom;
