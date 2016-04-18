@@ -94,7 +94,14 @@ instance_create(0, 0, objLightController);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// LAST ENEMY ARROW //
+
+if (instance_number(objEnemyEntity) == 1 &amp;&amp; !instance_exists(objLastEnemyArrow))
+    instance_create(0, 0, objLastEnemyArrow);
+
+
+// SHAKE //
+
 if (instance_exists(global.CAMERA_OBJECT))
 {
     if (global.CAMERA_OBJECT &gt;= 0)

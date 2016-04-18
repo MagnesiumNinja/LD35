@@ -112,6 +112,7 @@
       </sprites>
       <sprite>sprites\sprChangeOverlay</sprite>
       <sprite>sprites\sprAlert</sprite>
+      <sprite>sprites\sprLastEnemyArrow</sprite>
     </sprites>
     <sprites name="Interactables">
       <sprites name="Door">
@@ -232,6 +233,7 @@
       <object>objects\objAreaTitleCard</object>
       <object>objects\objTextbox</object>
       <object>objects\objTextboxBars</object>
+      <object>objects\objLastEnemyArrow</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
