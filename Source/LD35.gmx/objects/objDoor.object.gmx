@@ -30,7 +30,7 @@
 
 // CONSTANTS //
 
-OPEN_SPEED = 0.1;
+OPEN_SPEED = 0.3;
 
 
 // VARIABLES //
@@ -139,7 +139,7 @@ else
 
 var audio = instance_create(x, y, objAudioSource);
 audio.life = true;
-audio.SCALE = 3;
+audio.SCALE = 6;
 </string>
           </argument>
         </arguments>

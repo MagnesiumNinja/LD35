@@ -6,7 +6,7 @@
   <depth>50</depth>
   <persistent>0</persistent>
   <parentName>objEnemyEntity</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>sprPhantomMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -132,7 +132,7 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
                 {
                     state = PhantomAIState.ATTACK;
                 }
-                else if (distance_to_object(objGunnerGunshot) &lt; DODGE_DIS)
+                else if (distance_to_object(objGunnerGunshot) &lt; DODGE_DIS || distance_to_object(objBrainShot) &lt; DODGE_DIS || distance_to_object(objSqorpionPull) &lt; DODGE_DIS)
                 {
                     state = PhantomAIState.DODGE;
                 }

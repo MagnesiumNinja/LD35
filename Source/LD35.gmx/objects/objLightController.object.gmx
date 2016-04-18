@@ -101,6 +101,13 @@ with (objEnemyEntity)
         draw_sprite_ext(sprLightEnemy, 0, x - view_xview[0], 
             y - view_yview[0], image_xscale, image_yscale, image_angle, c_white, 1);
 }
+
+with (objEOL)
+{
+    if (instance_number(objEnemyEntity) == 0)
+        draw_sprite_ext(sprLightEnemy, 0, x - view_xview[0], 
+            y - view_yview[0], image_xscale, image_yscale, image_angle, c_white, 1);
+}
     
     
 draw_set_blend_mode(bm_normal);
@@ -148,6 +155,12 @@ with (objEnemyEntity)
         draw_sprite_ext(sprLightEnemy, 0, x, y, 1, 1, 0, objLightController.TINT_WARM_COLOUR, objLightController.TINT_WARM_ALPHA);
 }
 
+with (objEOL)
+{
+    if (instance_number(objEnemyEntity) == 0)
+        draw_sprite_ext(sprLightEnemy, 0, x, 
+            y, image_xscale, image_yscale, image_angle, objLightController.TINT_WARM_COLOUR, objLightController.TINT_WARM_ALPHA);
+}
 
 draw_set_alpha(1);
 draw_set_blend_mode(bm_normal);

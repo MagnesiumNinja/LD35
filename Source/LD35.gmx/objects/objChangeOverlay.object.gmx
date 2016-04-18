@@ -56,7 +56,7 @@ image_alpha = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (objPlayer.changing)
+            <string>if (objPlayer.changing &amp;&amp; !objPlayer.dead)
 {
     image_alpha = approach(image_alpha, 1, FADE_RATE);
 }
