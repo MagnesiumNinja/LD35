@@ -91,7 +91,7 @@ if (par != noone &amp;&amp; instance_exists(par))
         {
             e.prevHp = e.hp;
             
-            if (e == objPlayer)
+            if (target == objPlayer)
                 e.hp = max(0, e.hp - DAMAGE * 2);
             else
                 e.hp = max(0, e.hp - DAMAGE);

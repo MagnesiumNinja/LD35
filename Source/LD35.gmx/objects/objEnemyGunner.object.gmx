@@ -43,7 +43,7 @@ MAX_HP = 3;
 MOVE_SPEED = 2.3;
 
 AGGRO_DIS = 750;
-NOTICE_DIS = 48;
+NOTICE_DIS = 32;
 VIEW_ANGLE = 30;
 CHARGE_TIME = 60;
 ATTACK_TIME = 45;
@@ -204,7 +204,12 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 else
 {
     path_end();            
-    
+           
+    if (!objPlayer.changing)
+    {
+        objPlayer.changing = true;
+        objPlayer.changeTarget = id;
+    }
     // Slow down
     hspd = approach(hspd, 0, FRIC);
     vspd = approach(vspd, 0, FRIC);

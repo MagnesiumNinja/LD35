@@ -47,7 +47,7 @@ FRIC = 0.6;
 KNOCKBACK_SPEED = 0;
 
 AGGRO_DIS = 400;
-NOTICE_DIS = 32;
+NOTICE_DIS = 16;
 VIEW_ANGLE = 25;
 ATTACK_DIS = 24;
 DODGE_DIS = 64;
@@ -241,7 +241,12 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
 else
 {
     path_end();
-       
+              
+    if (!objPlayer.changing)
+    {
+        objPlayer.changing = true;
+        objPlayer.changeTarget = id;
+    }
     // Slow down
     hspd = approach(hspd, 0, FRIC);
     vspd = approach(vspd, 0, FRIC);

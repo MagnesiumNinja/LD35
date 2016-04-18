@@ -70,7 +70,7 @@ switch(type)
     
     case EnemyType.GOLEM:
     {
-        MAX_SPEED = 2;
+        MAX_SPEED = 2.5;
         ACCEL = 0.9;
         FRIC = 0.7;
         
