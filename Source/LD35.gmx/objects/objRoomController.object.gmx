@@ -117,7 +117,7 @@ if (!objPlayer.frozen &amp;&amp; keyboard_check_pressed(vk_escape) &amp;&amp; !i
 
 // TIMER //
 
-if (!objPlayer.frozen &amp;&amp; !objPlayer.dead)
+if (!objPlayer.frozen &amp;&amp; !objPlayer.dead &amp;&amp; !instance_exists(objScreenTransition))
 {
     global.TIME++;
 }

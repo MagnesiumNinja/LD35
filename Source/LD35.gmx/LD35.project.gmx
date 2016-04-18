@@ -267,7 +267,9 @@
     <font>fonts\fntDebug</font>
     <font>fonts\fntTitleCard</font>
     <font>fonts\fntName</font>
+    <font>fonts\fntCreditsTitle</font>
     <font>fonts\fntText</font>
+    <font>fonts\fntCreditsContent</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
@@ -294,6 +296,7 @@
       <object>objects\objMenuCheckbox</object>
       <object>objects\objCursor</object>
       <object>objects\objPause</object>
+      <object>objects\objEnding</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objCollide</object>
@@ -362,6 +365,7 @@
     <room>rooms\rmLevel7</room>
     <room>rooms\rmLevel8</room>
     <room>rooms\rmLevel9</room>
+    <room>rooms\rmEnding</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
