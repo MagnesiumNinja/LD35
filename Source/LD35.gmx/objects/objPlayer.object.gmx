@@ -59,6 +59,9 @@ DEATH_WAIT = 60;
 CHANGE_SPEED = 12;
 NUM_CHANGE_PARTICLES = 4;
 NUM_DASH_PARTICLES = 15;
+NUM_BLOOD_SPLATTERS = 2;
+NUM_DEATH_PARTICLES = 20;
+NUM_SMOKE_PARTICLES = 25;
 
 PRIMARY_COOLDOWN = 0;
 SECONDARY_COOLDOWN = 0;
@@ -71,7 +74,6 @@ GOLEM_WAIT = 30;
 BRAIN_PARASITE_SPEED = 0.1;
 BRAIN_PARASITE_FRAMES = sprite_get_number(sprBrainParasite);
 
-NUM_BLOOD_SPLATTERS = 2;
 
 // VARIABLES //
 
@@ -418,7 +420,7 @@ with (objHUD) event_user(0);
 // generate blood splatters
 for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
 {
-    var dashPart = instance_create(x, y, objBloodSplatter);
+    instance_create(x, y, objBloodSplatter);
 }
 
 </string>
@@ -444,6 +446,20 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
           <argument>
             <kind>1</kind>
             <string>// DEATH event
+
+// create blood splatter
+for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
+{
+    instance_create(x, y, objBloodSplatter);
+}
+
+
+//create dust
+for (var i = 0; i &lt; NUM_DEATH_PARTICLES; i++)
+{
+    var destructPart = instance_create(x, y, objGunshotHitParticle);
+    destructPart.angle = random(360);
+}
 
 </string>
           </argument>

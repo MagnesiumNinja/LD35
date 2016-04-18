@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1604</w>
-    <h>873</h>
+    <w>1016</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>456</xoffset>
-    <yoffset>302</yoffset>
+    <page>2</page>
+    <xoffset>632</xoffset>
+    <yoffset>576</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -167,12 +167,9 @@
     <tile bgName="tsEarlyExterior_Stone" x="1104" y="1216" w="16" h="64" xo="0" yo="16" id="10000698" name="inst_B30B5BA1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Stone" x="1104" y="1280" w="16" h="64" xo="0" yo="16" id="10000699" name="inst_B62EE108" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Stone" x="1104" y="1344" w="16" h="64" xo="0" yo="16" id="10000700" name="inst_C03561EF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1568" y="1504" w="80" h="48" xo="16" yo="32" id="10000701" name="inst_500C5C82" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1504" w="80" h="48" xo="16" yo="32" id="10000702" name="inst_A19E3FA6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1728" y="1504" w="80" h="48" xo="16" yo="32" id="10000703" name="inst_3917F122" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1808" y="1504" w="80" h="48" xo="16" yo="32" id="10000704" name="inst_60B4F644" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1488" y="1504" w="80" h="48" xo="16" yo="32" id="10000705" name="inst_C7B935DE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1440" y="1520" w="64" h="32" xo="48" yo="32" id="10000707" name="inst_664C0178" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1440" y="1504" w="32" h="16" xo="32" yo="64" id="10000708" name="inst_93854D48" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1472" y="1504" w="16" h="16" xo="48" yo="16" id="10000709" name="inst_94BC12BF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1888" y="1504" w="32" h="48" xo="48" yo="48" id="10000710" name="inst_87E8D6AB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -626,6 +623,18 @@
     <tile bgName="tsEarlyInterior_Floor2" x="1936" y="1168" w="16" h="16" xo="64" yo="16" id="10002090" name="inst_00CB1C9F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Floor2" x="1728" y="1184" w="16" h="16" xo="64" yo="16" id="10002091" name="inst_A00A73F8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Floor2" x="1728" y="1168" w="16" h="16" xo="64" yo="64" id="10002092" name="inst_11CD7674" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1440" y="1520" w="32" h="32" xo="0" yo="0" id="10002395" name="inst_A3E566B0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1472" y="1520" w="32" h="32" xo="0" yo="0" id="10002396" name="inst_B4E2FF10" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1504" y="1520" w="32" h="32" xo="0" yo="0" id="10002397" name="inst_CC636A20" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1536" y="1520" w="32" h="32" xo="0" yo="0" id="10002398" name="inst_A52B23CD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1568" y="1520" w="32" h="32" xo="0" yo="0" id="10002399" name="inst_B5F7A3DE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1600" y="1520" w="32" h="32" xo="0" yo="0" id="10002400" name="inst_0F576311" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1488" y="1504" w="64" h="16" xo="0" yo="0" id="10002401" name="inst_9F31479A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1552" y="1504" w="64" h="16" xo="0" yo="0" id="10002402" name="inst_A0FE882B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1616" y="1504" w="16" h="16" xo="0" yo="0" id="10002403" name="inst_D2601083" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1632" y="1504" w="16" h="16" xo="0" yo="0" id="10002404" name="inst_7BBD18F7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1632" y="1520" w="16" h="16" xo="48" yo="16" id="10002407" name="inst_F4F37D10" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1632" y="1536" w="16" h="16" xo="48" yo="16" id="10002408" name="inst_2509A911" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

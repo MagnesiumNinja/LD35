@@ -18,7 +18,7 @@
     <isSet>-1</isSet>
     <w>1616</w>
     <h>876</h>
-    <showGrid>0</showGrid>
+    <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
     <showBackgrounds>-1</showBackgrounds>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>2000</xoffset>
-    <yoffset>1672</yoffset>
+    <page>2</page>
+    <xoffset>2438</xoffset>
+    <yoffset>2082</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -122,9 +122,6 @@
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1136" w="48" h="48" xo="0" yo="0" id="10000376" name="inst_44A1977F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1232" w="48" h="48" xo="0" yo="0" id="10000377" name="inst_343316A4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1712" y="1264" w="48" h="48" xo="0" yo="0" id="10000378" name="inst_89D3450F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1760" y="1264" w="48" h="48" xo="0" yo="0" id="10000379" name="inst_AA5DE496" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1856" y="1264" w="48" h="48" xo="0" yo="0" id="10000380" name="inst_D4E54F2F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsEarlyExterior_Moss" x="1808" y="1264" w="64" h="48" xo="48" yo="48" id="10000381" name="inst_3674A4C9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1184" w="64" h="48" xo="48" yo="48" id="10000382" name="inst_BB374A9D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1296" w="48" h="16" xo="0" yo="80" id="10000383" name="inst_08BD9C38" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Moss" x="1648" y="1280" w="48" h="16" xo="0" yo="80" id="10000384" name="inst_A3E92E2A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -458,6 +455,9 @@
     <tile bgName="tsEarlyInterior_Floor2" x="1088" y="848" w="16" h="16" xo="16" yo="64" id="10001791" name="inst_B7A08961" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Floor2" x="1072" y="832" w="16" h="48" xo="0" yo="16" id="10001792" name="inst_536DB728" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Floor2" x="1200" y="784" w="64" h="80" xo="16" yo="0" id="10001793" name="inst_761BED43" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1760" y="1264" w="48" h="48" xo="0" yo="0" id="10002392" name="inst_5A254F98" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1808" y="1264" w="48" h="48" xo="0" yo="0" id="10002393" name="inst_D7B4713E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Moss" x="1856" y="1264" w="48" h="48" xo="0" yo="0" id="10002394" name="inst_3160B562" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
