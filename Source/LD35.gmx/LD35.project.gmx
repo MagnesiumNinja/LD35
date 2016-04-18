@@ -156,10 +156,10 @@
       <sprites name="Health">
         <sprite>sprites\sprHealthHeart</sprite>
         <sprite>sprites\sprHealthBreak</sprite>
-        <sprite>sprites\sprMenuButton</sprite>
+        <sprite>sprites\sprHurtOverlay</sprite>
       </sprites>
-      <sprite>sprites\sprMenuCheckbox</sprite>
-      <sprite>sprites\sprMenuCheckMark</sprite>
+      <sprite>sprites\sprChangeOverlay</sprite>
+      <sprite>sprites\sprAlert</sprite>
       <sprite>sprites\sprLastEnemyArrow</sprite>
       <sprites name="Menu">
         <sprite>sprites\sprMenuButton</sprite>
