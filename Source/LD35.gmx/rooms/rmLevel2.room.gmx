@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-20</xoffset>
-    <yoffset>819</yoffset>
+    <xoffset>2626</xoffset>
+    <yoffset>1836</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -126,6 +126,8 @@
     <instance objName="objFOW" x="1104" y="848" name="inst_68EB3E4E" locked="0" code="" scaleX="29" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1152" y="640" name="inst_C1F3F5A1" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="352" y="864" name="inst_B98956C7" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="1584" y="1104" name="inst_7CACAC03" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;I've found plenty of grunts, but where's their leader?&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I'll bet the leader has a nice strong body for me to settle down in.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="1584" y="1136" name="inst_790B38D9" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyExterior_Stone" x="1600" y="976" w="64" h="64" xo="16" yo="16" id="10000534" name="inst_3EC7D951" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

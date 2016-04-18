@@ -81,6 +81,12 @@
         <sprite>sprites\sprPrimary_Golem</sprite>
         <sprite>sprites\sprSecondary_Golem</sprite>
       </sprites>
+      <sprites name="BrainMachine">
+        <sprite>sprites\sprIdle_Brain</sprite>
+        <sprite>sprites\sprMove_Brain</sprite>
+        <sprite>sprites\sprPrimary_Brain</sprite>
+        <sprite>sprites\sprSecondary_Brain</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlock</sprite>
