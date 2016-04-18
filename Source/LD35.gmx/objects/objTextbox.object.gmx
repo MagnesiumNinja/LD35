@@ -247,7 +247,7 @@ typeFreq = TYPE_FREQ;
                 typeFreq = TYPE_FREQ - irandom(MAX_TYPE_OFF);
                 
                 var snd = irandom(2);
-                //audio_play_sound(sound[snd], 50, false);
+                audio_play_sound(choose(sndType1, sndType2, sndType3, sndType4, sndType5), 50, false);
             }
         }
     }

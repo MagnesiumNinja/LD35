@@ -55,6 +55,7 @@ hover = false;
     mouse_y &gt;= bbox_top &amp;&amp; mouse_y &lt;= bbox_bottom &amp;&amp;
     !objMenuController.selected)
 {
+    audio_play_sound(sndClick, 10, false);
     switch(selection)
     {  
         case 0: // Load Game
