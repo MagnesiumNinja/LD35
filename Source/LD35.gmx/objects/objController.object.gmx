@@ -29,6 +29,12 @@
 
 global.CAMERA_OBJECT = noone;
 
+// LEVEL //
+
+global.LAST_PLAYED_LEVEL = -1;
+global.VIEWED_TEXTBOXES[0] = -1;
+global.NUM_VIEWED_TEXTBOXES = 0;
+
 
 // PATH-FINDING //
 
