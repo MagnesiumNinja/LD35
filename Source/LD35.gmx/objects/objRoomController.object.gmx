@@ -28,6 +28,13 @@
             <string>// Save the game
 saveGame(0);
 
+if (global.LAST_PLAYED_LEVEL != room)
+{
+    global.NUM_VIEWED_TEXTBOXES = 0;
+}
+
+global.LAST_PLAYED_LEVEL = room;
+
 // Create the camera
 global.CAMERA_OBJECT = noone;
 global.CAMERA_X = 0;

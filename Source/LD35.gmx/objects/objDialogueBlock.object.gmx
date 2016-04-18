@@ -37,6 +37,11 @@ colour[0] = -1;
 
 numTextboxes = 0;
 
+for (var i = 0; i &lt; global.NUM_VIEWED_TEXTBOXES; i++)
+{
+    if (global.VIEWED_TEXTBOXES[i] == id)
+        instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -66,6 +71,9 @@ numTextboxes = 0;
     {
         makeTextbox(name[i], text[i], isPlayer[i], colour[i]);
     }
+    
+    global.VIEWED_TEXTBOXES[global.NUM_VIEWED_TEXTBOXES] = id;
+    global.NUM_VIEWED_TEXTBOXES++;
     
     instance_destroy();
 }
