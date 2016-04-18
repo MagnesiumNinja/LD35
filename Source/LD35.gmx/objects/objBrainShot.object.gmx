@@ -64,10 +64,17 @@ audio_play_sound(choose(sndBrainshot_Fire1, sndBrainshot_Fire2), 9, false);
           <argument>
             <kind>1</kind>
             <string>/// Destruction particles
+
 for (var i = 0; i &lt; NUM_DESTRUCT_PARTICLES; i++)
 {
     var destructPart = instance_create(x, y, objLaserHitParticle);
     destructPart.angle = angle - 180;
+    
+    //fire orange particles instead if it is an enemy
+    if (sprite_index == sprBrainshot_Enemy)
+    {
+        destructPart.sprite_index = sprLaserHitEnem;
+    }
 }
 
 with (audioSource) instance_destroy();

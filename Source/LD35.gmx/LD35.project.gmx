@@ -183,6 +183,7 @@
       <sprite>sprites\sprAudioSource</sprite>
     </sprites>
     <sprite>sprites\sprLaserHit</sprite>
+    <sprite>sprites\sprLaserHitEnem</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tsEarlyExterior_Moss</background>
