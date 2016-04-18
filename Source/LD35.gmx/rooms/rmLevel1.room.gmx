@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1596</w>
-    <h>870</h>
+    <w>1580</w>
+    <h>864</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>-48</xoffset>
-    <yoffset>-17</yoffset>
+    <xoffset>483</xoffset>
+    <yoffset>113</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -84,14 +84,14 @@
     <instance objName="objFOW" x="800" y="48" name="inst_818CB4BF" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objEnemyPhantom" x="896" y="464" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="objEOL" x="1536" y="752" name="inst_20354A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDialogueBlock" x="352" y="112" name="inst_58C22DA4" locked="0" code="addTextbox(&quot;???&quot;, &quot;Use WASD to move, and the Mouse to aim.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Left Click to use your primary ability, Right Click to use your secondary ability.&quot;, false, c_yellow);&#xA;&#xA;" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="352" y="112" name="inst_58C22DA4" locked="0" code="addTextbox(&quot;???&quot;, &quot;Use WASD to move, and the Mouse to aim.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Left Click to use your primary ability.&quot;, false, c_yellow);" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="400" y="192" name="inst_15831665" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Oh great, just my luck.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;The first creature I run into on this planet has a GUN for a head.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;Whatever. Time to kill him and take his body.&quot;, true, c_white);&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="752" y="336" name="inst_71C0067D" locked="0" code="addTextbox(&quot;???&quot;, &quot;Press E to interact with outlined objects.&quot;, false, c_yellow);&#xA;" scaleX="0.75" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="352" y="112" name="inst_5CA04AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="400" y="192" name="inst_62E00194" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="688" y="288" name="inst_0891E714" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Much better. Now I blend right in with the locals.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I should probably clear out any witnesses as I pass through here...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...Something tells me these gang members won't take kindly to a body snatcher in their midst.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="688" y="320" name="inst_66D611D0" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
-    <instance objName="objDialogueBlock" x="960" y="576" name="inst_A63A0C81" locked="0" code="addTextbox(&quot;???&quot;, &quot;Different creatures have different abilities.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;To succeed, you'll have to learn to adapt on the fly.&quot;, false, c_yellow);&#xA;" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="960" y="576" name="inst_A63A0C81" locked="0" code="addTextbox(&quot;???&quot;, &quot;Right click to use your secondary ability&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Different creatures have different abilities.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;To succeed, you'll have to learn to adapt on the fly.&quot;, false, c_yellow);&#xA;" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="960" y="576" name="inst_669BF141" locked="0" code="" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="-16" y="176" name="inst_48A1323C" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="336" y="0" name="inst_8CDCE146" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
@@ -106,6 +106,7 @@
     <instance objName="objBlock" x="352" y="48" name="inst_294107E6" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="112" y="192" name="inst_39B028FF" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="768" y="0" name="inst_A2672CE0" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="1232" y="192" name="inst_9AF738F7" locked="0" code="addTextbox(&quot;???&quot;, &quot;Press R to restart the level, Press Escape to pause&quot;, false, c_yellow);&#xA;" scaleX="2.5" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyInterior_Floor" x="816" y="352" w="64" h="64" xo="16" yo="16" id="10000001" name="inst_66FE01F9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

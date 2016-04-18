@@ -127,7 +127,7 @@ if (e &amp;&amp; e.canBeHit)
     if (target == objPlayer)
         e.hp = max(0, e.hp - DAMAGE);
     else
-        e.hp = max(0, e.hp - DAMAGE / 2);
+        e.hp = max(0, e.hp - DAMAGE);
         
     e.hitX = xprevious;
     e.hitY = yprevious;

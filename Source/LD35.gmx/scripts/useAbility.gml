@@ -45,6 +45,7 @@ switch(ability)
         var gunshot = instance_create(x, y, objGunnerGunshot);
         gunshot.angle = aimAngle;
 
+        shakeScreen(1, 0.1);
         break;
     }
 
@@ -55,6 +56,7 @@ switch(ability)
         punch.image_angle = aimAngle;
         golemWait = GOLEM_WAIT;
 
+        shakeScreen(1, 0.1);
         break;
     }
 
@@ -63,7 +65,7 @@ switch(ability)
         var gunshot = instance_create(x, y, objBrainShot);
         gunshot.angle = aimAngle;
         gunshot.image_angle = aimAngle;
-
+        
         break;
     }
     
@@ -96,6 +98,7 @@ switch(ability)
         wrapObj.par = id;
         wrapObj.angle = aimAngle;
         
+        shakeScreen(1, 0.2);
         break;
     }
     

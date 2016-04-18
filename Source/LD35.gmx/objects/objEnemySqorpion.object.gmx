@@ -181,7 +181,7 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
                     wrapCooldown--;
                 else
                 {
-                    if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; WRAP_DIS)
+                    if (point_distance(x, y, objPlayer.x, objPlayer.y) &lt; WRAP_DIS &amp;&amp; !collision_line(x, y, objPlayer.x, objPlayer.y, objCollide, false, true))
                     {
                         state = SqorpionAIState.WRAP;
                     }

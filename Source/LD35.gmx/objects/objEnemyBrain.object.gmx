@@ -40,10 +40,10 @@ enum BrainAIState
 
 RECALCULATE_TIME = 10;
 MAX_HP = 2;
-MOVE_SPEED = 2.5;
+MOVE_SPEED = 2.25;
 
 AGGRO_DIS = 750;
-NOTICE_DIS = 96;
+NOTICE_DIS = 80;
 VIEW_ANGLE = 45;
 CHARGE_TIME = 40;
 ATTACK_TIME = 30;
@@ -226,7 +226,7 @@ if (pullFrozenTime == 0 &amp;&amp; !frozen &amp;&amp; !dead)
                 if (chargeTime &gt; 0)
                     chargeTime--;
                 
-                if (chargeTime == ATTACK_TIME || chargeTime == ATTACK_TIME - 5 || chargeTime == ATTACK_TIME - 10)
+                if (chargeTime == ATTACK_TIME || chargeTime == ATTACK_TIME - 3 || chargeTime == ATTACK_TIME - 6)
                 {
                     // Attack
                     image_index = 0;
