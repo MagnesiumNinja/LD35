@@ -67,6 +67,16 @@
         <sound>sound\sndDoorClose</sound>
       </sounds>
     </sounds>
+    <sounds name="Footsteps">
+      <sound>sound\sndFS_Player1</sound>
+      <sound>sound\sndFS_Player2</sound>
+      <sound>sound\sndFS_Player3</sound>
+      <sound>sound\sndFS_Player4</sound>
+      <sound>sound\sndFS_Golem1</sound>
+      <sound>sound\sndFS_Golem2</sound>
+      <sound>sound\sndFS_Golem3</sound>
+      <sound>sound\sndFS_Golem4</sound>
+    </sounds>
     <sound>sound\sndPlayerDeath</sound>
   </sounds>
   <sprites name="sprites">

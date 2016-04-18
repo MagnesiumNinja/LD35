@@ -412,6 +412,11 @@ if (type == EnemyType.GOLEM)
     var audio = instance_create(x, y, objAudioSource);
     audio.life = true;
     audio.SCALE = 7;
+    audio_play_sound(choose(sndFS_Golem1, sndFS_Golem2, sndFS_Golem3, sndFS_Golem4), 7, false);
+}
+else
+{
+    audio_play_sound(choose(sndFS_Player1, sndFS_Player2, sndFS_Player3, sndFS_Player4), 7, false);
 }
 </string>
           </argument>
