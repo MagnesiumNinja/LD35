@@ -16,9 +16,9 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1612</w>
-    <h>876</h>
-    <showGrid>-1</showGrid>
+    <w>1016</w>
+    <h>600</h>
+    <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
     <showBackgrounds>-1</showBackgrounds>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
-    <xoffset>1564</xoffset>
-    <yoffset>492</yoffset>
+    <page>0</page>
+    <xoffset>1095</xoffset>
+    <yoffset>391</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -104,6 +104,8 @@
     <instance objName="objDialogueFreeze" x="400" y="192" name="inst_62E00194" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="688" y="288" name="inst_0891E714" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Much better. Now I blend right in with the locals.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I should probably clear out any witnesses as I pass through here...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...Something tells me these gang members won't take kindly to a body snatcher in their midst.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="688" y="320" name="inst_66D611D0" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
+    <instance objName="objDialogueBlock" x="960" y="576" name="inst_A63A0C81" locked="0" code="addTextbox(&quot;???&quot;, &quot;Different creatures have different abilities.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;To succeed, you'll have to learn to adapt on the fly.&quot;, false, c_yellow);&#xA;" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="960" y="576" name="inst_669BF141" locked="0" code="" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tsEarlyInterior_Floor" x="816" y="352" w="64" h="64" xo="16" yo="16" id="10000001" name="inst_66FE01F9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
