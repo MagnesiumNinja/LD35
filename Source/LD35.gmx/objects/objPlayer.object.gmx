@@ -99,6 +99,7 @@ dashTimer = DASH_TIMER;
 
 type = EnemyType.NORMAL;
 changing = false;
+frozen = false;
 changeTarget = noone;
 
 primaryAbility = AbilityType.NOTHING;
@@ -141,7 +142,7 @@ if (!instance_exists(objScreenTransition))
     }
 }
 
-if (!changing &amp;&amp; !dead)
+if (!frozen &amp;&amp; !changing &amp;&amp; !dead)
 {
     if (golemWait &gt; 0)
         golemWait--;
@@ -204,7 +205,18 @@ if (!changing &amp;&amp; !dead)
         
     // AIMING //
     
-    aimAngle = point_direction(x, y, mouse_x, mouse_y);
+    if (window_mouse_get_x() != global.MOUSE_XPREV || window_mouse_get_y() != global.MOUSE_YPREV)
+    {
+        aimAngle = point_direction(x, y, mouse_x, mouse_y);
+    }
+    else if (gamepad_is_connected(0) &amp;&amp; gamepad_axis_value(0, gp_axisrh) &lt; -0.3 || gamepad_axis_value(0, gp_axisrh) &gt; 0.3 ||
+        gamepad_axis_value(0, gp_axisrv) &lt; -0.3 || gamepad_axis_value(0, gp_axisrv) &gt; 0.3)
+    {
+        var axisH = gamepad_axis_value(0, gp_axisrh);
+        var axisV = gamepad_axis_value(0, gp_axisrv);
+        
+        aimAngle = point_direction(0, 0, axisH, axisV);
+    }
 
     // ABILITIES //
     
@@ -238,7 +250,7 @@ if (!changing &amp;&amp; !dead)
     }
 }
 // CHANGING //
-else if (!dead)
+else if (!frozen &amp;&amp; !dead)
 {
     canBeHit = false;
     
@@ -283,6 +295,13 @@ else if (!dead)
         // Destroy the enemy
         with (changeTarget) instance_destroy();
     }
+}
+
+// FROZEN //
+if (frozen)
+{
+    hspd = approach(hspd, 0, FRIC);
+    vspd = approach(vspd, 0, FRIC);
 }
 
 // DEATH //
@@ -450,7 +469,12 @@ for (var i = 0; i &lt; NUM_BLOOD_SPLATTERS; i++)
             <kind>1</kind>
             <string>// Set the sprite index
 
-if (primaryCooldown != PRIMARY_COOLDOWN &amp;&amp; primaryCooldown != 0)
+if (dead)
+{
+    sprite_index = sprPlayerDead;
+    image_speed = 0;
+}
+else if (primaryCooldown != PRIMARY_COOLDOWN &amp;&amp; primaryCooldown != 0)
 {
     sprite_index = primarySprite;
     image_speed = primarySpeed;
