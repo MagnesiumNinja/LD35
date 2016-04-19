@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>652</xoffset>
-    <yoffset>-201</yoffset>
+    <page>2</page>
+    <xoffset>90</xoffset>
+    <yoffset>-55</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -85,13 +85,13 @@
     <instance objName="objEnemyPhantom" x="896" y="464" name="inst_48C10800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="objEOL" x="1536" y="752" name="inst_20354A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="352" y="112" name="inst_58C22DA4" locked="0" code="addTextbox(&quot;???&quot;, &quot;Use WASD to move, and the Mouse to aim.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Left Click to use your primary ability.&quot;, false, c_yellow);" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDialogueBlock" x="400" y="192" name="inst_15831665" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Oh great, just my luck.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;The first creature I run into on this planet has a GUN for a head.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;Whatever. Time to kill him and take his body.&quot;, true, c_white);&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="400" y="192" name="inst_15831665" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Oh great, just my luck.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I was looking for somewhere nice and peaceful to settle down...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;... But this guy has a GUN for a head!&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;Whatever. Time to kill him and take his body.&quot;, true, c_white);&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="752" y="336" name="inst_71C0067D" locked="0" code="addTextbox(&quot;???&quot;, &quot;Press E to interact with outlined objects.&quot;, false, c_yellow);&#xA;" scaleX="0.75" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="352" y="112" name="inst_5CA04AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="400" y="192" name="inst_62E00194" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="objDialogueBlock" x="688" y="288" name="inst_0891E714" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Much better. Now I blend right in with the locals.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I should probably clear out any witnesses as I pass through here...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...Something tells me these gang members won't take kindly to a body snatcher in their midst.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="688" y="288" name="inst_0891E714" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;Much better. Now I blend right in with the others.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I should probably clear out any witnesses as I pass through here...&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;...Something tells me these gang members won't take kindly to a body snatcher in their midst.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="688" y="320" name="inst_66D611D0" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
-    <instance objName="objDialogueBlock" x="960" y="576" name="inst_A63A0C81" locked="0" code="addTextbox(&quot;???&quot;, &quot;Right click to use your secondary ability.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Different creatures have different abilities.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;To succeed, you'll have to learn to adapt on the fly.&quot;, false, c_yellow);&#xA;" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="960" y="576" name="inst_A63A0C81" locked="0" code="addTextbox(&quot;???&quot;, &quot;Right click to use your secondary ability.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;Different creatures have different abilities.&quot;, false, c_yellow);&#xA;addTextbox(&quot;???&quot;, &quot;To succeed, you'll have to learn to adapt on the fly.&quot;, false, c_yellow);" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="960" y="576" name="inst_669BF141" locked="0" code="" scaleX="1" scaleY="2.5" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="-16" y="176" name="inst_48A1323C" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="336" y="0" name="inst_8CDCE146" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
@@ -650,6 +650,12 @@
     <tile bgName="tsEarlyInterior_Wall" x="784" y="320" w="16" h="16" xo="0" yo="80" id="10003913" name="inst_10D594E6" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Wall" x="784" y="32" w="16" h="16" xo="32" yo="16" id="10003914" name="inst_9AC586FB" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyInterior_Wall" x="1216" y="32" w="16" h="16" xo="48" yo="64" id="10003915" name="inst_E9A3569D" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="704" w="16" h="16" xo="0" yo="16" id="10012098" name="inst_4D041070" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="720" w="16" h="16" xo="0" yo="16" id="10012099" name="inst_A288BB34" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="736" w="16" h="16" xo="0" yo="16" id="10012100" name="inst_60E6CFEC" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="752" w="16" h="16" xo="0" yo="16" id="10012101" name="inst_6DB0DA5A" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="768" w="16" h="16" xo="0" yo="16" id="10012102" name="inst_642B6D46" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1568" y="784" w="16" h="16" xo="0" yo="16" id="10012103" name="inst_8C549FE4" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="672" y="288" w="16" h="16" xo="64" yo="0" id="10002415" name="inst_5B4BE2C9" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="672" y="304" w="16" h="48" xo="64" yo="16" id="10002416" name="inst_E6D0BB9D" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="672" y="352" w="16" h="48" xo="64" yo="16" id="10002417" name="inst_D9FC79CA" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

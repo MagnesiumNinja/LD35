@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1588</w>
-    <h>867</h>
+    <w>1016</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>2</page>
-    <xoffset>-251</xoffset>
-    <yoffset>194</yoffset>
+    <page>0</page>
+    <xoffset>2</xoffset>
+    <yoffset>84</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tsEarlyExterior_Moss" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -125,7 +125,7 @@
     <instance objName="objFOW" x="1104" y="848" name="inst_68EB3E4E" locked="0" code="" scaleX="29" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="1152" y="640" name="inst_C1F3F5A1" locked="0" code="" scaleX="26" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="objFOW" x="352" y="864" name="inst_B98956C7" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objDialogueBlock" x="1584" y="1104" name="inst_7CACAC03" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;I've found plenty of grunts, but where's their leader?&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I'll bet the leader has a nice strong body for me to settle down in.&quot;, true, c_white);&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueBlock" x="1584" y="1104" name="inst_7CACAC03" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;I've found plenty of grunts, but where's their leader?&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;I'll bet the leader has a nice strong body for me to settle down in.&quot;, true, c_white);" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="1584" y="1136" name="inst_790B38D9" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="90"/>
     <instance objName="objTitleCardBlock" x="1584" y="656" name="inst_6D0FD82C" locked="0" code="text = &quot;The Eldritch Slums&quot;;&#xA;area = 0;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlockTall" x="928" y="800" name="inst_F902F39E" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
