@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>1008</w>
     <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>2</xoffset>
-    <yoffset>84</yoffset>
+    <page>2</page>
+    <xoffset>316</xoffset>
+    <yoffset>316</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tsEarlyExterior_Moss" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -1397,6 +1397,15 @@
     <tile bgName="tsEarlyExterior_Wall" x="1584" y="944" w="16" h="16" xo="16" yo="16" id="10010002" name="inst_88BB1040" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Wall" x="1664" y="944" w="16" h="16" xo="16" yo="16" id="10010003" name="inst_7403BF9B" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Wall" x="1680" y="944" w="16" h="16" xo="32" yo="32" id="10010004" name="inst_5E17ED6F" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="64" y="640" w="16" h="16" xo="0" yo="16" id="10012125" name="inst_C174B3BF" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="64" y="656" w="16" h="16" xo="0" yo="16" id="10012126" name="inst_6A5BEB52" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="64" y="672" w="16" h="16" xo="0" yo="16" id="10012127" name="inst_BD62AAF1" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1584" y="1280" w="16" h="16" xo="16" yo="16" id="10012128" name="inst_4866292A" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1600" y="1280" w="16" h="16" xo="16" yo="16" id="10012129" name="inst_FBB765D9" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1616" y="1280" w="16" h="16" xo="16" yo="16" id="10012130" name="inst_82D18F64" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1632" y="1280" w="16" h="16" xo="16" yo="16" id="10012131" name="inst_96A35C1D" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1648" y="1280" w="16" h="16" xo="16" yo="16" id="10012132" name="inst_0A8B9859" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1664" y="1280" w="16" h="16" xo="16" yo="16" id="10012133" name="inst_3487C074" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="176" y="720" w="16" h="48" xo="64" yo="16" id="10003927" name="inst_94AC448A" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="176" y="768" w="16" h="48" xo="64" yo="16" id="10003928" name="inst_97140613" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="176" y="816" w="16" h="48" xo="64" yo="16" id="10003929" name="inst_8BFC3F4B" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

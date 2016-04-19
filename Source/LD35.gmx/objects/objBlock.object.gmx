@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sprite_index, image_index, x + 7, y + 7, image_xscale, image_yscale, image_angle, c_black, 0.6);
-draw_self();
+//draw_self();
 </string>
           </argument>
         </arguments>

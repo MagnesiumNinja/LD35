@@ -16,19 +16,19 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1016</w>
+    <w>992</w>
     <h>600</h>
     <showGrid>0</showGrid>
-    <showObjects>-1</showObjects>
+    <showObjects>0</showObjects>
     <showTiles>-1</showTiles>
     <showBackgrounds>-1</showBackgrounds>
     <showForegrounds>-1</showForegrounds>
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>2036</xoffset>
-    <yoffset>660</yoffset>
+    <page>2</page>
+    <xoffset>2633</xoffset>
+    <yoffset>606</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -562,7 +562,6 @@
     <tile bgName="tsLateInteriorFloor2" x="1072" y="384" w="16" h="48" xo="0" yo="16" id="10007919" name="inst_F18901F6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1072" y="432" w="16" h="48" xo="0" yo="16" id="10007920" name="inst_4B1A8CD7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1072" y="480" w="16" h="48" xo="0" yo="16" id="10007921" name="inst_20175F48" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tsLateInteriorFloor2" x="960" y="176" w="16" h="48" xo="0" yo="16" id="10007922" name="inst_4CED9D6C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="960" y="224" w="16" h="48" xo="0" yo="16" id="10007923" name="inst_DB44C461" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1360" y="240" w="16" h="48" xo="0" yo="16" id="10007926" name="inst_0C32DAEA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1360" y="288" w="16" h="48" xo="0" yo="16" id="10007927" name="inst_5D590D22" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -841,6 +840,10 @@
     <tile bgName="tsLateInteriorFloor2" x="1104" y="288" w="16" h="16" xo="48" yo="64" id="10008212" name="inst_BF3E239B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1104" y="304" w="16" h="16" xo="48" yo="64" id="10008213" name="inst_B433A336" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInteriorFloor2" x="1104" y="320" w="16" h="16" xo="48" yo="64" id="10008214" name="inst_9F04C097" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsLateInteriorFloor2" x="960" y="176" w="16" h="16" xo="0" yo="16" id="10012104" name="inst_89F0E3B1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsLateInteriorFloor2" x="960" y="192" w="16" h="16" xo="0" yo="16" id="10012105" name="inst_DB8481EC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsLateInteriorFloor2" x="960" y="208" w="16" h="16" xo="0" yo="16" id="10012106" name="inst_4D82912C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsLateInteriorFloor2" x="960" y="272" w="16" h="16" xo="0" yo="48" id="10012107" name="inst_86DD80E6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInterior_Wall" x="944" y="160" w="16" h="16" xo="0" yo="16" id="10010060" name="inst_D2821590" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInterior_Wall" x="944" y="176" w="16" h="16" xo="0" yo="16" id="10010061" name="inst_159CF463" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsLateInterior_Wall" x="944" y="192" w="16" h="16" xo="0" yo="16" id="10010062" name="inst_7F39CFE5" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

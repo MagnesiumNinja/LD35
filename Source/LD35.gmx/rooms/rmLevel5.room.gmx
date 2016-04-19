@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1596</w>
-    <h>870</h>
+    <w>1008</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>2061</xoffset>
-    <yoffset>2497</yoffset>
+    <page>2</page>
+    <xoffset>136</xoffset>
+    <yoffset>230</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="tsEarlyExterior_Moss" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -1451,6 +1451,9 @@
     <tile bgName="tsEarlyExterior_Wall" x="1584" y="1536" w="16" h="16" xo="80" yo="16" id="10012063" name="inst_F8A22F72" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Wall" x="1584" y="1120" w="16" h="16" xo="80" yo="16" id="10012064" name="inst_05F13B3A" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Wall" x="2048" y="1776" w="16" h="16" xo="80" yo="16" id="10012065" name="inst_3E83B7EE" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1872" y="1136" w="16" h="16" xo="0" yo="16" id="10012134" name="inst_07C37DD7" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1872" y="1152" w="16" h="16" xo="0" yo="16" id="10012135" name="inst_64596F6B" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tsEarlyExterior_Wall" x="1872" y="1168" w="16" h="16" xo="0" yo="16" id="10012136" name="inst_FC27E966" depth="900" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="1152" y="1040" w="16" h="16" xo="0" yo="0" id="10004870" name="inst_CE192BCA" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="1104" y="1616" w="16" h="16" xo="0" yo="0" id="10004871" name="inst_981EA706" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tsEarlyExterior_Roof" x="1104" y="1904" w="16" h="16" xo="0" yo="64" id="10004873" name="inst_54C52712" depth="-100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
