@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1616</w>
-    <h>876</h>
+    <w>1016</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>2</page>
-    <xoffset>196</xoffset>
-    <yoffset>1</yoffset>
+    <page>0</page>
+    <xoffset>2036</xoffset>
+    <yoffset>660</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -144,6 +144,8 @@
     <instance objName="objFOW" x="2096" y="816" name="inst_FDD636A2" locked="0" code="" scaleX="8" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBlock" x="960" y="272" name="inst_24439434" locked="0" code="addTextbox(&quot;Scuttle&quot;, &quot;That thing looks like it's dying to strangle someone.&quot;, true, c_white);&#xA;addTextbox(&quot;Scuttle&quot;, &quot;... Hopefully it doesn't end up being me.&quot;, true, c_white);&#xA;" scaleX="5.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueFreeze" x="960" y="304" name="inst_4CCD36DF" locked="0" code="" scaleX="1" scaleY="5.5" colour="4294967295" rotation="90"/>
+    <instance objName="objDialogueBlock" x="1072" y="464" name="inst_7540782B" locked="0" code="addTextbox(&quot;???&quot;, &quot;Pull enemies in with Right Click, and Strangle them with Left Click.&quot;, false, c_yellow);&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDialogueFreeze" x="1072" y="496" name="inst_6A29AEE5" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="90"/>
   </instances>
   <tiles>
     <tile bgName="tsLateInterior_Floor" x="1152" y="384" w="16" h="16" xo="0" yo="0" id="10007486" name="inst_1064ECEF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
